@@ -28,17 +28,20 @@
     .nav-social.inst:hover { color: #E1306C; transform: translateY(-2px); }
     .nav-social.linkd:hover { color: #0077B5; transform: translateY(-2px); }
 
-    /* Seção Destaque (Refinaria) */
+    /* Seção Destaque (Refinaria) - Texto Atualizado */
     .hero-section {
-      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('img/refinaria.jpeg') no-repeat center center;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('img/refinaria.jpeg') no-repeat center center;
       background-size: cover;
-      height: 400px;
+      min-height: 450px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+      padding: 40px 20px;
     }
+    .hero-title { font-size: 3.5rem; font-weight: 800; margin-bottom: 10px; }
+    .hero-subtitle { font-size: 1.4rem; max-width: 800px; margin: 0 auto; line-height: 1.4; }
 
     /* Seção Sobre */
     .section-title {
@@ -59,19 +62,19 @@
       background-color: #0d6efd;
     }
 
-    /* Rodapé */
+    /* Rodapé - Espessura reduzida */
     footer { background-color: #0d6efd; color: white; }
     .footer-logos img {
-      height: 55px; width: auto; background-color: #ffffff;
-      padding: 6px; border-radius: 4px; transition: transform 0.2s;
+      height: 45px; width: auto; background-color: #ffffff;
+      padding: 5px; border-radius: 4px; transition: transform 0.2s;
     }
     .footer-logos img:hover { transform: scale(1.05); }
     
     .logo-label {
-      font-size: 0.75rem; text-transform: uppercase; margin-bottom: 8px;
-      min-height: 40px; display: flex; align-items: center; justify-content: center;
-      font-weight: 600;
+      font-size: 0.65rem; text-transform: uppercase; margin-bottom: 5px;
+      display: block; font-weight: 600;
     }
+    .copyright-text { font-size: 0.9rem; margin-bottom: 15px !important; }
   </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -109,10 +112,13 @@
 </header>
 
 <main class="flex-grow-1">
+  
   <section class="hero-section text-center">
     <div class="container">
-      <h1 class="display-4 fw-bold">PRH 31 - UFC</h1>
-      <p class="lead">Formando Líderes para o Setor de Energia</p>
+      <h1 class="hero-title">PRH 31</h1>
+      <p class="hero-subtitle">
+        Programa Institucional da UFC para Formação de Recursos Humanos em Engenharia e Ciências do Petróleo e Gás Natural
+      </p>
     </div>
   </section>
 
@@ -131,25 +137,25 @@
   </section>
 </main>
 
-<footer class="py-5 mt-auto">
+<footer class="py-3 mt-auto">
   <div class="container text-center">
-    <p class="mb-5 fw-bold">© 2026 PRH 31 - Universidade Federal do Ceará (UFC)</p>
+    <p class="copyright-text">© 2026 PRH 31 - Universidade Federal do Ceará (UFC)</p>
     
-    <div class="row justify-content-center align-items-start g-4 footer-logos">
+    <div class="row justify-content-center align-items-start g-3 footer-logos">
       <div class="col-6 col-md-auto text-center">
-        <p class="logo-label">Programa</p>
+        <span class="logo-label">Programa</span>
         <a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos" target="_blank">
           <img src="img/logo-prh-anp.jpeg" alt="Logo PRH ANP">
         </a>
       </div>
       <div class="col-6 col-md-auto text-center">
-        <p class="logo-label">Fomento</p>
+        <span class="logo-label">Fomento</span>
         <a href="https://www.gov.br/anp/pt-br" target="_blank">
           <img src="img/logo-anp.jpeg" alt="Logo ANP">
         </a>
       </div>
       <div class="col-6 col-md-auto text-center">
-        <p class="logo-label">Gestão</p>
+        <span class="logo-label">Gestão</span>
         <a href="https://fapesp.br/" target="_blank">
           <img src="img/logo-fapesp.jpeg" alt="Logo FAPESP">
         </a>
