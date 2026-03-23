@@ -9,26 +9,31 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Evita que a página balance para os lados */
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* ==========================================================================
-   NAVBAR (CABEÇALHO) - PADRONIZAÇÃO TOTAL
+   NAVBAR (CABEÇALHO) - TRAVAMENTO TOTAL
    ========================================================================== */
 .navbar {
     background-color: #ffffff !important;
     border-bottom: 1px solid #e0e0e0;
     min-height: 100px !important; 
-    padding: 0 !important; /* Remove paddings que variam entre páginas */
+    padding: 0 !important;
 }
 
 .container {
-    max-width: 1200px; /* Força o alinhamento central igual em todas as abas */
+    max-width: 1200px;
 }
 
 .navbar-brand {
     margin-right: 0 !important;
     padding: 10px 0 !important;
+    display: flex;
+    align-items: center;
 }
 
 .navbar-brand img {
@@ -43,15 +48,21 @@ body {
     font-weight: 500;
     margin-left: 25px;
     font-size: 1.05rem;
+    transition: 0.2s;
+}
+
+.nav-link:hover {
+    color: #005596 !important;
 }
 
 .nav-link.active {
     color: #005596 !important;
     font-weight: 700;
+    border-bottom: 2px solid #005596;
 }
 
 /* ==========================================================================
-   HERO E PÁGINAS INTERNAS
+   HERO (PÁGINA INICIAL)
    ========================================================================== */
 .hero-refinaria {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/refinaria.jpeg');
@@ -63,12 +74,41 @@ body {
     text-align: center;
 }
 
+.hero-refinaria h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
 /* ==========================================================================
-   FOOTER
+   CARDS E PÁGINAS INTERNAS
+   ========================================================================== */
+.card {
+    border: none;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.1) !important;
+}
+
+.text-primary { color: #005596 !important; }
+.btn-primary { background-color: #005596; border: none; padding: 12px 30px; border-radius: 8px; font-weight: 600; }
+.btn-primary:hover { background-color: #003d6b; }
+
+/* ==========================================================================
+   FOOTER (RODAPÉ)
    ========================================================================== */
 footer {
     background-color: #002d52;
     color: white !important;
-    padding: 30px 0;
+    padding: 40px 0;
+    margin-top: auto;
     text-align: center;
 }
+
+footer p, footer small { color: #ffffff !important; margin: 5px 0; }
