@@ -8,17 +8,26 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* Estilo extra para os logos do rodapé */
+    /* Estilo para os logos clicáveis no rodapé */
     .footer-logos img {
-      height: 50px; /* Altura dos logos */
+      height: 55px; /* Altura ideal para visualização */
       width: auto;
-      background-color: white; /* Fundo branco para os logos aparecerem bem */
-      padding: 5px;
-      border-radius: 5px;
-      transition: transform 0.2s;
+      background-color: #ffffff; /* Fundo branco para destacar o logo .jpeg */
+      padding: 6px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
     .footer-logos img:hover {
-      transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+      transform: translateY(-3px); /* Leve subida ao passar o mouse */
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+    .logo-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      opacity: 0.9;
     }
   </style>
 </head>
@@ -65,9 +74,9 @@
       <div class="col-md-10">
         <h2 class="fw-bold text-primary mb-4 border-bottom pb-3 d-inline-block">Sobre o Programa</h2>
         <p class="lead text-muted mt-3">
-          O <strong>PRH 31</strong> é uma iniciativa estratégica da <strong>Universidade Federal do Ceará (UFC)</strong>, 
-          fomentada pela <strong>ANP</strong> e pela <strong>FAPESP</strong>, visando a formação de recursos humanos 
-          para o setor de óleo e gás com excelência técnica e científica.
+          O <strong>PRH 31</strong> é fruto da parceria entre a <strong>Universidade Federal do Ceará (UFC)</strong>, 
+          a <strong>ANP</strong> e a <strong>FAPESP</strong>, focando na formação de recursos humanos para o setor de 
+          óleo e gás com excelência técnica e científica.
         </p>
       </div>
     </div>
@@ -78,18 +87,18 @@
   <div class="container text-white text-center">
     <p class="mb-4">© 2026 PRH 31 - Universidade Federal do Ceará (UFC)</p>
     
-    <div class="row justify-content-center align-items-center g-4 footer-logos">
-      <div class="col-auto text-center">
-        <p class="small mb-2">Fomento / Financiamento:</p>
-        <a href="https://www.gov.br/anp/pt-br" target="_blank">
-          <img src="https://www.gov.br/anp/pt-br/logo-anp.png/@@images/image.png" alt="Site ANP" onerror="this.src='https://via.placeholder.com/150x50?text=Logo+ANP'">
+    <div class="row justify-content-center align-items-start g-5 footer-logos">
+      <div class="col-auto">
+        <p class="logo-label">Fomento / Financiamento</p>
+        <a href="https://www.gov.br/anp/pt-br" target="_blank" title="Ir para o site da ANP">
+          <img src="img/logo-anp.jpeg" alt="Logo ANP">
         </a>
       </div>
 
-      <div class="col-auto text-center">
-        <p class="small mb-2">Gestão Financeira / Administrativa:</p>
-        <a href="https://fapesp.br/" target="_blank">
-          <img src="https://fapesp.br/static/img/fapesp-logo.png" alt="Site FAPESP" onerror="this.src='https://via.placeholder.com/150x50?text=Logo+FAPESP'">
+      <div class="col-auto">
+        <p class="logo-label">Gestão Financeira / Administrativa</p>
+        <a href="https://fapesp.br/" target="_blank" title="Ir para o site da FAPESP">
+          <img src="img/logo-fapesp.jpeg" alt="Logo FAPESP">
         </a>
       </div>
     </div>
