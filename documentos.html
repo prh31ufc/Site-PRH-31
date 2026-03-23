@@ -8,38 +8,50 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* Padronização dos logos no topo */
-    .navbar-brand img {
-      height: 45px;
-      width: auto;
-    }
+    .navbar-brand img { height: 45px; width: auto; }
     
-    /* Estilo para os logos no rodapé */
-    .footer-logos img {
-      height: 55px;
-      width: auto;
-      background-color: #ffffff;
-      padding: 6px;
-      border-radius: 4px;
-      transition: all 0.3s ease;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    /* Card Central de Documentos */
+    .doc-container {
+      max-width: 600px;
+      margin: 80px auto;
+      text-align: center;
+      padding: 40px;
+      background: #f8f9fa;
+      border-radius: 15px;
+      border: 1px solid #dee2e6;
     }
-    .footer-logos img:hover {
+
+    .btn-drive {
+      background-color: #008552; /* Cor característica do Google Drive/UFC */
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: none;
+      margin-top: 20px;
+    }
+
+    .btn-drive:hover {
+      background-color: #006b42;
+      color: white;
       transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .footer-logos img {
+      height: 55px; width: auto; background-color: #ffffff;
+      padding: 6px; border-radius: 4px;
     }
     .logo-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-      opacity: 0.9;
-      min-height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
+      font-size: 0.75rem; text-transform: uppercase; margin-bottom: 8px;
+      color: white; min-height: 40px; display: flex; align-items: center; justify-content: center;
     }
+    footer { background-color: #0d6efd; }
   </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -48,19 +60,12 @@
   <nav class="navbar navbar-expand-lg sticky-top shadow-sm bg-white">
     <div class="container">
       <div class="navbar-brand d-flex align-items-center">
-        <a href="index.html">
-          <img src="img/logo.jpeg" alt="Logo PRH 31">
-        </a>
-        
-        <a href="https://www.ufc.br" target="_blank" title="Ir para o site da UFC">
-          <img src="img/logo-ufc.jpeg" alt="Logo UFC" class="border-start ps-2 ms-2">
-        </a>
+        <a href="index.html"><img src="img/logo.jpeg" alt="Logo PRH 31"></a>
+        <a href="https://www.ufc.br" target="_blank"><img src="img/logo-ufc.jpeg" alt="Logo UFC" class="border-start ps-2 ms-2"></a>
       </div>
-      
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
         <span class="navbar-toggler-icon"></span>
       </button>
-      
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
@@ -75,53 +80,30 @@
   </nav>
 </header>
 
-<main class="container my-5 py-5 flex-grow-1">
-  <div class="text-center mb-5">
-    <h2 class="fw-bold text-primary display-5">Documentos</h2>
-    <p class="lead text-muted">Acesse formulários, regulamentos e arquivos importantes do PRH 31.</p>
-    <hr class="w-25 mx-auto border-primary border-3">
-  </div>
-
-  <div class="row g-4">
-    <div class="col-md-6 col-lg-4">
-      <div class="card h-100 shadow-sm border-0">
-        <div class="card-body text-center">
-          <i class="bi bi-file-earmark-pdf text-danger display-4 mb-3"></i>
-          <h5 class="card-title fw-bold">Regulamento do Programa</h5>
-          <p class="card-text text-muted small">Normas gerais para bolsistas e pesquisadores.</p>
-          <a href="#" class="btn btn-outline-primary btn-sm mt-2">Download PDF</a>
-        </div>
-      </div>
-    </div>
+<main class="container flex-grow-1">
+  <div class="doc-container shadow-sm">
+    <i class="bi bi-folder-fill text-warning" style="font-size: 4rem;"></i>
+    <h2 class="fw-bold text-primary mt-3">Documentos e Formulários</h2>
+    <p class="text-muted">Acesse nossa pasta oficial no Google Drive para visualizar e baixar documentos, formulários de bolsas e outros arquivos do PRH 31.</p>
     
-    </div>
+    <a href="https://drive.google.com/drive/u/1/folders/1Adsp1AuhG-0qn7DkWhsiy7_5KLdinODc" target="_blank" class="btn-drive shadow">
+      <i class="bi bi-google"></i>
+      Acessar Pasta no Drive
+    </a>
+    
+    <p class="small text-secondary mt-4">
+      <i class="bi bi-info-circle me-1"></i> Você será redirecionado para uma página externa.
+    </p>
+  </div>
 </main>
 
-<footer>
-  <div class="container text-white text-center py-4">
+<footer class="py-4 mt-auto">
+  <div class="container text-white text-center">
     <p class="mb-4">© 2026 PRH 31 - Universidade Federal do Ceará (UFC)</p>
-    
     <div class="row justify-content-center align-items-start g-4 footer-logos">
-      
-      <div class="col-6 col-md-auto text-center">
-        <p class="logo-label">Programa</p>
-        <img src="img/logo-prh-anp.jpeg" alt="Logo PRH ANP">
-      </div>
-
-      <div class="col-6 col-md-auto text-center">
-        <p class="logo-label">Fomento / Financiamento</p>
-        <a href="https://www.gov.br/anp/pt-br" target="_blank">
-          <img src="img/logo-anp.jpeg" alt="Logo ANP">
-        </a>
-      </div>
-
-      <div class="col-6 col-md-auto text-center">
-        <p class="logo-label">Gestão Financeira / Administrativa</p>
-        <a href="https://fapesp.br/" target="_blank">
-          <img src="img/logo-fapesp.jpeg" alt="Logo FAPESP">
-        </a>
-      </div>
-
+      <div class="col-6 col-md-auto text-center"><p class="logo-label">Programa</p><img src="img/logo-prh-anp.jpeg" alt="Logo PRH ANP"></div>
+      <div class="col-6 col-md-auto text-center"><p class="logo-label">Fomento</p><a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg" alt="Logo ANP"></a></div>
+      <div class="col-6 col-md-auto text-center"><p class="logo-label">Gestão</p><a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg" alt="Logo FAPESP"></a></div>
     </div>
   </div>
 </footer>
