@@ -3,89 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PRH 31 - UFC | Equipe</title>
+  <title>PRH 31 - UFC | Início</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/style.css">
   <style>
+    /* Estilos Gerais */
     .navbar-brand img { height: 45px; width: auto; }
     
-    /* Estilos do Rodapé */
+    /* Container do Vídeo Animado */
+    .video-container {
+      background-color: #f8f9fa;
+      padding: 40px 0;
+      border-bottom: 1px solid #dee2e6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .logo-video {
+      max-width: 350px; 
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    /* Seção Sobre */
+    .section-title {
+      color: #0d6efd;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 15px;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 60px;
+      height: 4px;
+      background-color: #0d6efd;
+    }
+
+    /* Rodapé */
     .footer-logos img {
       height: 55px; width: auto; background-color: #ffffff;
-      padding: 6px; border-radius: 4px; transition: all 0.3s ease;
+      padding: 6px; border-radius: 4px;
     }
     .logo-label {
       font-size: 0.75rem; text-transform: uppercase; margin-bottom: 8px;
       color: white; min-height: 40px; display: flex; align-items: center; justify-content: center;
     }
-
-    /* Estilo das Fotos de Perfil (Otimizadas para 5 em linha) */
-    .foto-perfil {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid #0d6efd;
-      margin-bottom: 12px;
-      transition: transform 0.3s ease;
-      background-color: #f8f9fa;
-    }
-    
-    .equipe-card {
-      border: none;
-      transition: all 0.3s ease;
-      height: 100%;
-    }
-    .equipe-card:hover {
-      transform: translateY(-5px);
-    }
-    .equipe-card:hover .foto-perfil {
-      transform: scale(1.05);
-      border-color: #00509d;
-    }
-
-    .nome-membro {
-      font-size: 0.85rem;
-      font-weight: bold;
-      color: #0d6efd;
-      min-height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      line-height: 1.2;
-    }
-
-    .cargo-membro {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      font-weight: bold;
-      color: #6c757d;
-      margin-bottom: 10px;
-    }
-
-    .btn-lattes {
-      background-color: #003366;
-      color: white;
-      border-radius: 20px;
-      font-size: 0.7rem;
-      padding: 5px 10px;
-      transition: 0.3s;
-      text-decoration: none;
-    }
-    .btn-lattes:hover {
-      background-color: #00509d;
-      color: white;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    /* Customização para 5 colunas em telas grandes (Desktop) */
-    @media (min-width: 992px) {
-      .col-5-custom {
-        flex: 0 0 auto;
-        width: 20%;
-      }
-    }
+    footer { background-color: #0d6efd; }
   </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -97,13 +67,17 @@
         <a href="index.html"><img src="img/logo.jpeg" alt="Logo PRH 31"></a>
         <a href="https://www.ufc.br" target="_blank"><img src="img/logo-ufc.jpeg" alt="Logo UFC" class="border-start ps-2 ms-2"></a>
       </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"><span class="navbar-toggler-icon"></span></button>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
           <li class="nav-item"><a class="nav-link" href="editais.html">Editais</a></li>
           <li class="nav-item"><a class="nav-link" href="resultados.html">Resultados</a></li>
-          <li class="nav-item"><a class="nav-link active" href="equipe.html">Equipe</a></li>
+          <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
           <li class="nav-item"><a class="nav-link" href="documentos.html">Documentos</a></li>
           <li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
         </ul>
@@ -112,80 +86,83 @@
   </nav>
 </header>
 
-<main class="container-fluid px-lg-5 my-5 flex-grow-1">
-  <div class="text-center mb-5">
-    <h2 class="fw-bold text-primary display-5">Equipe</h2>
-    <p class="lead text-muted">Coordenação e Comitê Gestor do PRH 31 - UFC</p>
-    <hr class="w-25 mx-auto border-primary border-3">
-  </div>
+<main class="flex-grow-1">
+  
+  <section class="video-container">
+    <div class="container text-center">
+      <video autoplay loop muted playsinline class="logo-video shadow-sm">
+        <source src="img/logo-animado.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos.
+      </video>
+    </div>
+  </section>
 
-  <div class="row g-3 justify-content-center text-center">
-    
-    <div class="col-md-4 col-5-custom">
-      <div class="card equipe-card shadow-sm p-3 bg-white border">
-        <img src="img/coo.jpeg" alt="Jorge Barbosa Soares" class="foto-perfil mx-auto shadow-sm">
-        <div class="nome-membro">Jorge Barbosa Soares</div>
-        <div class="cargo-membro text-primary">Coordenador</div>
-        <div class="d-grid px-2">
-          <a href="https://lattes.cnpq.br/9212256013670303" target="_blank" class="btn btn-lattes">Lattes</a>
+  <section class="container py-5">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="section-title">Sobre o Programa</h2>
+        <p class="lead text-dark">
+          O <strong>PRH 31 - UFC</strong> é parte do Programa de Formação de Recursos Humanos da ANP (Agência Nacional do Petróleo, Gás Natural e Biocombustíveis).
+        </p>
+        <p>
+          Nosso objetivo é a formação acadêmica de excelência voltada para o setor de petróleo, gás natural e biocombustíveis, integrando graduação e pós-graduação em projetos de pesquisa e desenvolvimento tecnológico de alto impacto.
+        </p>
+
+        <div class="row mt-5 g-4">
+          <div class="col-md-4">
+            <div class="d-flex align-items-start">
+              <i class="bi bi-mortarboard-fill text-primary fs-2 me-3"></i>
+              <div>
+                <h5 class="fw-bold">Bolsas</h5>
+                <p class="small text-muted">Oferecemos bolsas de estudo para graduação, mestrado e doutorado.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex align-items-start">
+              <i class="bi bi-gear-fill text-primary fs-2 me-3"></i>
+              <div>
+                <h5 class="fw-bold">Pesquisa</h5>
+                <p class="small text-muted">Desenvolvimento de tecnologias aplicadas à indústria de energia.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex align-items-start">
+              <i class="bi bi-briefcase-fill text-primary fs-2 me-3"></i>
+              <div>
+                <h5 class="fw-bold">Carreira</h5>
+                <p class="small text-muted">Conexão direta entre a academia e o mercado de trabalho.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="col-md-4 col-5-custom">
-      <div class="card equipe-card shadow-sm p-3 bg-white border">
-        <img src="img/cg1.jpeg" alt="Cleiton Carvalho Silva" class="foto-perfil mx-auto shadow-sm">
-        <div class="nome-membro">Cleiton Carvalho Silva</div>
-        <div class="cargo-membro">Comitê Gestor</div>
-        <div class="d-grid px-2">
-          <a href="https://lattes.cnpq.br/2862541276328123" target="_blank" class="btn btn-lattes">Lattes</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 col-5-custom">
-      <div class="card equipe-card shadow-sm p-3 bg-white border">
-        <img src="img/cg2.jpeg" alt="Hélio Cordeiro de Miranda" class="foto-perfil mx-auto shadow-sm">
-        <div class="nome-membro">Hélio Cordeiro de Miranda</div>
-        <div class="cargo-membro">Comitê Gestor</div>
-        <div class="d-grid px-2">
-          <a href="https://lattes.cnpq.br/6420338928006265" target="_blank" class="btn btn-lattes">Lattes</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 col-5-custom">
-      <div class="card equipe-card shadow-sm p-3 bg-white border">
-        <img src="img/cg3.jpeg" alt="Lucas Babadopulos" class="foto-perfil mx-auto shadow-sm">
-        <div class="nome-membro">Lucas F. de A. L. Babadopulos</div>
-        <div class="cargo-membro">Comitê Gestor</div>
-        <div class="d-grid px-2">
-          <a href="https://lattes.cnpq.br/4032413277446483" target="_blank" class="btn btn-lattes">Lattes</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 col-5-custom">
-      <div class="card equipe-card shadow-sm p-3 bg-white border">
-        <img src="img/cg4.jpeg" alt="Francisco Murilo Tavares de Luna" class="foto-perfil mx-auto shadow-sm">
-        <div class="nome-membro">Francisco Murilo Tavares de Luna</div>
-        <div class="cargo-membro">Comitê Gestor</div>
-        <div class="d-grid px-2">
-          <a href="https://lattes.cnpq.br/9515868229218114" target="_blank" class="btn btn-lattes">Lattes</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
 </main>
 
-<footer class="bg-primary py-4 mt-auto">
+<footer class="py-4 mt-auto">
   <div class="container text-white text-center">
     <p class="mb-4">© 2026 PRH 31 - Universidade Federal do Ceará (UFC)</p>
     <div class="row justify-content-center align-items-start g-4 footer-logos">
-      <div class="col-6 col-md-auto text-center"><p class="logo-label">Programa</p><img src="img/logo-prh-anp.jpeg" alt="Logo PRH ANP"></div>
-      <div class="col-6 col-md-auto text-center"><p class="logo-label">Fomento</p><a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg" alt="Logo ANP"></a></div>
-      <div class="col-6 col-md-auto text-center"><p class="logo-label">Gestão</p><a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg" alt="Logo FAPESP"></a></div>
+      <div class="col-6 col-md-auto text-center">
+        <p class="logo-label">Programa</p>
+        <img src="img/logo-prh-anp.jpeg" alt="Logo PRH ANP">
+      </div>
+      <div class="col-6 col-md-auto text-center">
+        <p class="logo-label">Fomento</p>
+        <a href="https://www.gov.br/anp/pt-br" target="_blank">
+          <img src="img/logo-anp.jpeg" alt="Logo ANP">
+        </a>
+      </div>
+      <div class="col-6 col-md-auto text-center">
+        <p class="logo-label">Gestão</p>
+        <a href="https://fapesp.br/" target="_blank">
+          <img src="img/logo-fapesp.jpeg" alt="Logo FAPESP">
+        </a>
+      </div>
     </div>
   </div>
 </footer>
