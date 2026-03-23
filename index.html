@@ -11,21 +11,28 @@
     /* Estilos Gerais */
     .navbar-brand img { height: 45px; width: auto; }
     
-    /* Ícones Sociais na Navbar */
+    /* Rótulo e Ícones Sociais na Navbar */
+    .social-label-nav {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #6c757d;
+      margin-right: 5px;
+    }
     .nav-social {
       font-size: 1.2rem;
       transition: all 0.3s ease;
       color: #6c757d;
-      padding: 0 10px;
+      padding: 0 8px;
     }
     .nav-social.inst:hover { color: #E1306C; transform: translateY(-2px); }
     .nav-social.linkd:hover { color: #0077B5; transform: translateY(-2px); }
 
     /* Seção Destaque (Refinaria) */
     .hero-section {
-      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('img/refinaria.jpeg') no-repeat center center;
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('img/refinaria.jpeg') no-repeat center center;
       background-size: cover;
-      height: 400px; /* Ajuste a altura conforme necessário */
+      height: 400px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -58,9 +65,13 @@
       height: 55px; width: auto; background-color: #ffffff;
       padding: 6px; border-radius: 4px;
     }
-    .logo-label {
-      font-size: 0.75rem; text-transform: uppercase; margin-bottom: 8px;
-      min-height: 40px; display: flex; align-items: center; justify-content: center;
+    .social-label-footer {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      display: block;
+      font-weight: 600;
     }
     .social-footer a {
       color: white;
@@ -70,6 +81,10 @@
       display: inline-block;
     }
     .social-footer a:hover { transform: scale(1.2); opacity: 0.9; }
+    .logo-label {
+      font-size: 0.75rem; text-transform: uppercase; margin-bottom: 8px;
+      min-height: 40px; display: flex; align-items: center; justify-content: center;
+    }
   </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -95,13 +110,10 @@
           <li class="nav-item"><a class="nav-link" href="documentos.html">Documentos</a></li>
           <li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
           
-          <li class="nav-item d-flex ms-lg-3 border-start ps-lg-3">
-            <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank" class="nav-social inst" title="Siga-nos no Instagram">
-              <i class="bi bi-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/prh31ufc/" target="_blank" class="nav-social linkd" title="Conecte-se no LinkedIn">
-              <i class="bi bi-linkedin"></i>
-            </a>
+          <li class="nav-item d-flex align-items-center ms-lg-3 border-start ps-lg-3">
+            <span class="social-label-nav d-none d-xl-inline">Mídias sociais</span>
+            <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank" class="nav-social inst"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/prh31ufc/" target="_blank" class="nav-social linkd"><i class="bi bi-linkedin"></i></a>
           </li>
         </ul>
       </div>
@@ -133,39 +145,30 @@
           <div class="col-md-4">
             <div class="d-flex align-items-start">
               <i class="bi bi-mortarboard-fill text-primary fs-2 me-3"></i>
-              <div>
-                <h5 class="fw-bold">Bolsas</h5>
-                <p class="small text-muted">Oferecemos bolsas de estudo para graduação, mestrado e doutorado.</p>
-              </div>
+              <div><h5 class="fw-bold">Bolsas</h5><p class="small text-muted">Oferecemos bolsas de estudo para graduação, mestrado e doutorado.</p></div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="d-flex align-items-start">
               <i class="bi bi-gear-fill text-primary fs-2 me-3"></i>
-              <div>
-                <h5 class="fw-bold">Pesquisa</h5>
-                <p class="small text-muted">Desenvolvimento de tecnologias aplicadas à indústria de energia.</p>
-              </div>
+              <div><h5 class="fw-bold">Pesquisa</h5><p class="small text-muted">Desenvolvimento de tecnologias aplicadas à indústria de energia.</p></div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="d-flex align-items-start">
               <i class="bi bi-briefcase-fill text-primary fs-2 me-3"></i>
-              <div>
-                <h5 class="fw-bold">Carreira</h5>
-                <p class="small text-muted">Conexão direta entre a academia e o mercado de trabalho.</p>
-              </div>
+              <div><h5 class="fw-bold">Carreira</h5><p class="small text-muted">Conexão direta entre a academia e o mercado de trabalho.</p></div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
 </main>
 
 <footer class="py-4 mt-auto">
   <div class="container text-center">
+    <span class="social-label-footer">Mídias sociais</span>
     <div class="social-footer mb-4">
       <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank"><i class="bi bi-instagram"></i></a>
       <a href="https://www.linkedin.com/in/prh31ufc/" target="_blank"><i class="bi bi-linkedin"></i></a>
@@ -174,22 +177,9 @@
     <p class="mb-4">© 2026 PRH 31 - Universidade Federal do Ceará (UFC)</p>
     
     <div class="row justify-content-center align-items-start g-4 footer-logos">
-      <div class="col-6 col-md-auto text-center">
-        <p class="logo-label">Programa</p>
-        <img src="img/logo-prh-anp.jpeg" alt="Logo PRH ANP">
-      </div>
-      <div class="col-6 col-md-auto text-center">
-        <p class="logo-label">Fomento</p>
-        <a href="https://www.gov.br/anp/pt-br" target="_blank">
-          <img src="img/logo-anp.jpeg" alt="Logo ANP">
-        </a>
-      </div>
-      <div class="col-6 col-md-auto text-center">
-        <p class="logo-label">Gestão</p>
-        <a href="https://fapesp.br/" target="_blank">
-          <img src="img/logo-fapesp.jpeg" alt="Logo FAPESP">
-        </a>
-      </div>
+      <div class="col-6 col-md-auto text-center"><p class="logo-label">Programa</p><img src="img/logo-prh-anp.jpeg" alt="Logo PRH ANP"></div>
+      <div class="col-6 col-md-auto text-center"><p class="logo-label">Fomento</p><a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg" alt="Logo ANP"></a></div>
+      <div class="col-6 col-md-auto text-center"><p class="logo-label">Gestão</p><a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg" alt="Logo FAPESP"></a></div>
     </div>
   </div>
 </footer>
