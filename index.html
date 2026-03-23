@@ -63,8 +63,10 @@
     footer { background-color: #0d6efd; color: white; }
     .footer-logos img {
       height: 55px; width: auto; background-color: #ffffff;
-      padding: 6px; border-radius: 4px;
+      padding: 6px; border-radius: 4px; transition: transform 0.2s;
     }
+    .footer-logos img:hover { transform: scale(1.05); }
+    
     .social-label-footer {
       font-size: 0.85rem;
       text-transform: uppercase;
@@ -122,7 +124,6 @@
 </header>
 
 <main class="flex-grow-1">
-  
   <section class="hero-section text-center">
     <div class="container">
       <h1 class="display-4 fw-bold">PRH 31 - UFC</h1>
@@ -140,27 +141,6 @@
         <p>
           Nosso objetivo é a formação acadêmica de excelência voltada para o setor de petróleo, gás natural e biocombustíveis, integrando graduação e pós-graduação em projetos de pesquisa e desenvolvimento tecnológico de alto impacto.
         </p>
-
-        <div class="row mt-5 g-4">
-          <div class="col-md-4">
-            <div class="d-flex align-items-start">
-              <i class="bi bi-mortarboard-fill text-primary fs-2 me-3"></i>
-              <div><h5 class="fw-bold">Bolsas</h5><p class="small text-muted">Oferecemos bolsas de estudo para graduação, mestrado e doutorado.</p></div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="d-flex align-items-start">
-              <i class="bi bi-gear-fill text-primary fs-2 me-3"></i>
-              <div><h5 class="fw-bold">Pesquisa</h5><p class="small text-muted">Desenvolvimento de tecnologias aplicadas à indústria de energia.</p></div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="d-flex align-items-start">
-              <i class="bi bi-briefcase-fill text-primary fs-2 me-3"></i>
-              <div><h5 class="fw-bold">Carreira</h5><p class="small text-muted">Conexão direta entre a academia e o mercado de trabalho.</p></div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -177,9 +157,24 @@
     <p class="mb-4">© 2026 PRH 31 - Universidade Federal do Ceará (UFC)</p>
     
     <div class="row justify-content-center align-items-start g-4 footer-logos">
-      <div class="col-6 col-md-auto text-center"><p class="logo-label">Programa</p><img src="img/logo-prh-anp.jpeg" alt="Logo PRH ANP"></div>
-      <div class="col-6 col-md-auto text-center"><p class="logo-label">Fomento</p><a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg" alt="Logo ANP"></a></div>
-      <div class="col-6 col-md-auto text-center"><p class="logo-label">Gestão</p><a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg" alt="Logo FAPESP"></a></div>
+      <div class="col-6 col-md-auto text-center">
+        <p class="logo-label">Programa</p>
+        <a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos" target="_blank">
+          <img src="img/logo-prh-anp.jpeg" alt="Logo PRH ANP">
+        </a>
+      </div>
+      <div class="col-6 col-md-auto text-center">
+        <p class="logo-label">Fomento</p>
+        <a href="https://www.gov.br/anp/pt-br" target="_blank">
+          <img src="img/logo-anp.jpeg" alt="Logo ANP">
+        </a>
+      </div>
+      <div class="col-6 col-md-auto text-center">
+        <p class="logo-label">Gestão</p>
+        <a href="https://fapesp.br/" target="_blank">
+          <img src="img/logo-fapesp.jpeg" alt="Logo FAPESP">
+        </a>
+      </div>
     </div>
   </div>
 </footer>
