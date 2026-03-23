@@ -11,20 +11,29 @@
     /* Estilos Gerais */
     .navbar-brand img { height: 45px; width: auto; }
     
-    /* Container do Vídeo Animado */
-    .video-container {
+    /* Ícones Sociais na Navbar */
+    .nav-social {
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      color: #6c757d;
+      padding: 0 10px;
+    }
+    .nav-social.inst:hover { color: #E1306C; transform: translateY(-2px); }
+    .nav-social.linkd:hover { color: #0077B5; transform: translateY(-2px); }
+
+    /* Container do Logo Animado (GIF) */
+    .gif-container {
       background-color: #f8f9fa;
-      padding: 40px 0;
+      padding: 30px 0;
       border-bottom: 1px solid #dee2e6;
       display: flex;
       justify-content: center;
       align-items: center;
     }
-    .logo-video {
-      max-width: 350px; 
+    .logo-gif {
+      max-width: 220px; 
       width: 100%;
       height: auto;
-      border-radius: 12px;
     }
 
     /* Seção Sobre */
@@ -47,15 +56,23 @@
     }
 
     /* Rodapé */
+    footer { background-color: #0d6efd; color: white; }
     .footer-logos img {
       height: 55px; width: auto; background-color: #ffffff;
       padding: 6px; border-radius: 4px;
     }
     .logo-label {
       font-size: 0.75rem; text-transform: uppercase; margin-bottom: 8px;
-      color: white; min-height: 40px; display: flex; align-items: center; justify-content: center;
+      min-height: 40px; display: flex; align-items: center; justify-content: center;
     }
-    footer { background-color: #0d6efd; }
+    .social-footer a {
+      color: white;
+      font-size: 1.8rem;
+      margin: 0 15px;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    .social-footer a:hover { transform: scale(1.2); opacity: 0.9; }
   </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -73,13 +90,22 @@
       </button>
       
       <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ms-auto align-items-center">
           <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
           <li class="nav-item"><a class="nav-link" href="editais.html">Editais</a></li>
           <li class="nav-item"><a class="nav-link" href="resultados.html">Resultados</a></li>
           <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
           <li class="nav-item"><a class="nav-link" href="documentos.html">Documentos</a></li>
           <li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
+          
+          <li class="nav-item d-flex ms-lg-3 border-start ps-lg-3">
+            <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank" class="nav-social inst" title="Siga-nos no Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/prh31ufc/" target="_blank" class="nav-social linkd" title="Conecte-se no LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -88,12 +114,9 @@
 
 <main class="flex-grow-1">
   
-  <section class="video-container">
+  <section class="gif-container">
     <div class="container text-center">
-      <video autoplay loop muted playsinline class="logo-video shadow-sm">
-        <source src="img/logo-animado.mp4" type="video/mp4">
-        Seu navegador não suporta vídeos.
-      </video>
+      <img src="img/logo-animado.gif" alt="Logo Animado PRH 31" class="logo-gif">
     </div>
   </section>
 
@@ -112,57 +135,40 @@
           <div class="col-md-4">
             <div class="d-flex align-items-start">
               <i class="bi bi-mortarboard-fill text-primary fs-2 me-3"></i>
-              <div>
-                <h5 class="fw-bold">Bolsas</h5>
-                <p class="small text-muted">Oferecemos bolsas de estudo para graduação, mestrado e doutorado.</p>
-              </div>
+              <div><h5 class="fw-bold">Bolsas</h5><p class="small text-muted">Oferecemos bolsas de estudo para graduação, mestrado e doutorado.</p></div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="d-flex align-items-start">
               <i class="bi bi-gear-fill text-primary fs-2 me-3"></i>
-              <div>
-                <h5 class="fw-bold">Pesquisa</h5>
-                <p class="small text-muted">Desenvolvimento de tecnologias aplicadas à indústria de energia.</p>
-              </div>
+              <div><h5 class="fw-bold">Pesquisa</h5><p class="small text-muted">Desenvolvimento de tecnologias aplicadas à indústria de energia.</p></div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="d-flex align-items-start">
               <i class="bi bi-briefcase-fill text-primary fs-2 me-3"></i>
-              <div>
-                <h5 class="fw-bold">Carreira</h5>
-                <p class="small text-muted">Conexão direta entre a academia e o mercado de trabalho.</p>
-              </div>
+              <div><h5 class="fw-bold">Carreira</h5><p class="small text-muted">Conexão direta entre a academia e o mercado de trabalho.</p></div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
 </main>
 
 <footer class="py-4 mt-auto">
-  <div class="container text-white text-center">
+  <div class="container text-center">
+    <div class="social-footer mb-4">
+      <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/prh31ufc/" target="_blank"><i class="bi bi-linkedin"></i></a>
+    </div>
+
     <p class="mb-4">© 2026 PRH 31 - Universidade Federal do Ceará (UFC)</p>
+    
     <div class="row justify-content-center align-items-start g-4 footer-logos">
-      <div class="col-6 col-md-auto text-center">
-        <p class="logo-label">Programa</p>
-        <img src="img/logo-prh-anp.jpeg" alt="Logo PRH ANP">
-      </div>
-      <div class="col-6 col-md-auto text-center">
-        <p class="logo-label">Fomento</p>
-        <a href="https://www.gov.br/anp/pt-br" target="_blank">
-          <img src="img/logo-anp.jpeg" alt="Logo ANP">
-        </a>
-      </div>
-      <div class="col-6 col-md-auto text-center">
-        <p class="logo-label">Gestão</p>
-        <a href="https://fapesp.br/" target="_blank">
-          <img src="img/logo-fapesp.jpeg" alt="Logo FAPESP">
-        </a>
-      </div>
+      <div class="col-6 col-md-auto text-center"><p class="logo-label">Programa</p><img src="img/logo-prh-anp.jpeg" alt="Logo PRH ANP"></div>
+      <div class="col-6 col-md-auto text-center"><p class="logo-label">Fomento</p><a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg" alt="Logo ANP"></a></div>
+      <div class="col-6 col-md-auto text-center"><p class="logo-label">Gestão</p><a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg" alt="Logo FAPESP"></a></div>
     </div>
   </div>
 </footer>
