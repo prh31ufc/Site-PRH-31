@@ -6,7 +6,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-    body{font-family:'Inter',sans-serif;background:#f8f9fa}.navbar-brand img{height:45px}.nav-link{font-weight:600;color:#495057;border-bottom:2px solid transparent}.nav-link.active{color:#0d6efd!important;border-bottom:2px solid #0d6efd}.team-card{border:none;border-radius:15px;background:#fff;box-shadow:0 4px 15px rgba(0,0,0,.05);margin-top:50px}.member-img{width:130px;height:130px;object-fit:cover;border-radius:50%;border:4px solid #fff;margin-top:-65px;box-shadow:0 4px 10px rgba(0,0,0,.1)}.member-role{font-size:.75rem;font-weight:700;color:#0d6efd;text-transform:uppercase;margin-top:10px}footer{background:#0d6efd;color:#fff;padding:30px 0}.footer-logos img{height:42px;background:#fff;padding:4px;border-radius:4px}
+    body{font-family:'Inter',sans-serif;background:#f8f9fa}.navbar-brand img{height:45px}.nav-link{font-weight:600;color:#495057;border-bottom:2px solid transparent}.nav-link.active{color:#0d6efd!important;border-bottom:2px solid #0d6efd}
+    .team-card{border:none;border-radius:12px;background:#fff;box-shadow:0 4px 10px rgba(0,0,0,.05);margin-top:40px;height:100%}
+    .member-img{width:90px;height:90px;object-fit:cover;border-radius:50%;margin-top:-45px;border:3px solid #fff;box-shadow:0 3px 6px rgba(0,0,0,.1)}
+    .member-role{font-size:.65rem;font-weight:700;color:#0d6efd;text-transform:uppercase;margin-top:8px}
+    .member-name{font-size:.9rem;font-weight:700}
+    footer{background:#0d6efd;color:#fff;padding:30px 0}
   </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -15,13 +20,12 @@
   <div class="collapse navbar-collapse"><ul class="navbar-nav ms-auto align-items-center">
     <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li><li class="nav-item"><a class="nav-link active" href="equipe.html">Equipe</a></li><li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li><li class="nav-item"><a class="nav-link" href="documentos.html">Documentos</a></li><li class="nav-item"><a class="nav-link" href="editais.html">Editais</a></li><li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
   </ul></div></div></nav>
-<main class="container py-5 flex-grow-1"><h2 class="text-center fw-bold text-primary mb-5 mt-4">Nossa Equipe</h2><div class="row g-5 justify-content-center">
-  <div class="col-md-4 text-center"><div class="card team-card p-4"><img src="img/coo.jpeg" class="member-img mx-auto"><p class="member-role">Coordenador Geral</p><h5 class="fw-bold">Jorge Barbosa Soares</h5><a href="https://lattes.cnpq.br/9212256013670303" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill">Lattes</a></div></div>
-  <div class="col-md-4 text-center"><div class="card team-card p-4"><img src="img/cg1.jpeg" class="member-img mx-auto"><p class="member-role">Membro do Comitê</p><h5 class="fw-bold">Cleiton Carvalho Silva</h5><a href="https://lattes.cnpq.br/2862541276328123" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill">Lattes</a></div></div>
-  <div class="col-md-4 text-center"><div class="card team-card p-4"><img src="img/cg2.jpeg" class="member-img mx-auto"><p class="member-role">Membro do Comitê</p><h5 class="fw-bold">Francisco Murilo Tavares de Luna</h5><a href="https://lattes.cnpq.br/9515868229218114" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill">Lattes</a></div></div>
-  <div class="col-md-4 text-center"><div class="card team-card p-4"><img src="img/cg3.jpeg" class="member-img mx-auto"><p class="member-role">Membro do Comitê</p><h5 class="fw-bold">Hélio Cordeiro de Miranda</h5><a href="https://lattes.cnpq.br/6420338928006265" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill">Lattes</a></div></div>
-  <div class="col-md-4 text-center"><div class="card team-card p-4"><img src="img/cg4.jpeg" class="member-img mx-auto"><p class="member-role">Membro do Comitê</p><h5 class="fw-bold">Lucas Feitosa Babadopulos</h5><a href="https://lattes.cnpq.br/4032413277446483" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill">Lattes</a></div></div>
+<main class="container-fluid px-4 py-5 flex-grow-1"><h2 class="text-center fw-bold text-primary mb-5">NOSSA EQUIPE</h2>
+<div class="row row-cols-1 row-cols-md-5 g-3 justify-content-center text-center">
+  <div class="col"><div class="card team-card p-3"><img src="img/coo.jpeg" class="member-img mx-auto"><p class="member-role">Coordenador Geral</p><p class="member-name">Jorge Barbosa Soares</p><a href="https://lattes.cnpq.br/9212256013670303" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill py-0">Lattes</a></div></div>
+  <div class="col"><div class="card team-card p-3"><img src="img/cg1.jpeg" class="member-img mx-auto"><p class="member-role">Membro do Comitê</p><p class="member-name">Cleiton Carvalho Silva</p><a href="https://lattes.cnpq.br/2862541276328123" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill py-0">Lattes</a></div></div>
+  <div class="col"><div class="card team-card p-3"><img src="img/cg2.jpeg" class="member-img mx-auto"><p class="member-role">Membro do Comitê</p><p class="member-name">Francisco Murilo T. de Luna</p><a href="https://lattes.cnpq.br/9515868229218114" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill py-0">Lattes</a></div></div>
+  <div class="col"><div class="card team-card p-3"><img src="img/cg3.jpeg" class="member-img mx-auto"><p class="member-role">Membro do Comitê</p><p class="member-name">Hélio Cordeiro de Miranda</p><a href="https://lattes.cnpq.br/6420338928006265" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill py-0">Lattes</a></div></div>
+  <div class="col"><div class="card team-card p-3"><img src="img/cg4.jpeg" class="member-img mx-auto"><p class="member-role">Membro do Comitê</p><p class="member-name">Lucas Feitosa Babadopulos</p><a href="https://lattes.cnpq.br/4032413277446483" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill py-0">Lattes</a></div></div>
 </div></main>
-<footer class="text-center"><div class="container"><p class="mb-3 small">© 2026 PRH 31 - UFC</p><div class="row justify-content-center g-4 footer-logos">
-<div class="col-auto"><img src="img/logo-prh-anp.jpeg" style="height:42px;background:#fff;padding:4px;border-radius:4px"></div><div class="col-auto"><img src="img/logo-anp.jpeg" style="height:42px;background:#fff;padding:4px;border-radius:4px"></div><div class="col-auto"><img src="img/logo-fapesp.jpeg" style="height:42px;background:#fff;padding:4px;border-radius:4px"></div>
-</div></div></footer></body></html>
+<footer class="text-center py-4"><div class="container"><p class="mb-3 small">© 2026 PRH 31 - UFC</p></div></footer></body></html>
