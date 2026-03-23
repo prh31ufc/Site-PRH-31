@@ -9,26 +9,28 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* ==========================================================================
-   CABEÇALHO (NAVBAR) E LOGO - PADRONIZAÇÃO TOTAL
+   CABEÇALHO (NAVBAR) E LOGO
    ========================================================================== */
 .navbar {
     background-color: #ffffff !important;
     border-bottom: 1px solid #e0e0e0;
-    min-height: 90px; /* Garante que a barra tenha sempre a mesma altura */
+    min-height: 90px;
     display: flex;
     align-items: center;
     padding: 10px 0 !important;
 }
 
-/* Força o logo a ter exatamente o mesmo tamanho em todas as abas */
 .navbar-brand img {
-    height: 70px !important; /* Ajuste aqui se quiser o logo maior ou menor */
+    height: 70px !important;
     width: auto !important;
     display: block;
-    transition: none !important; /* Remove qualquer "pulo" ao carregar */
+    transition: none !important;
 }
 
 .nav-link {
@@ -40,18 +42,17 @@ body {
 }
 
 .nav-link:hover, .nav-link.active {
-    color: #005596 !important; /* Azul Oficial UFC */
+    color: #005596 !important;
 }
 
 /* ==========================================================================
-   SEÇÃO HERO (IMAGEM DA REFINARIA)
+   SEÇÃO HERO (PÁGINA INICIAL)
    ========================================================================== */
 .hero-refinaria {
-    /* O gradiente abaixo cria uma camada escura para as letras brancas aparecerem */
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/refinaria.jpeg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Efeito de profundidade (parallax) */
+    background-attachment: fixed;
     color: white;
     padding: 140px 0;
     text-align: center;
@@ -65,27 +66,25 @@ body {
     text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 
-.hero-refinaria p {
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-}
-
 /* ==========================================================================
-   CARTÕES (CARDS) E BOTÕES
+   ESTILOS DE PÁGINAS INTERNAS (DOCUMENTOS, ETC)
    ========================================================================== */
 .card {
     border: none;
     border-radius: 12px;
     transition: all 0.3s ease;
     background: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
 }
 
-.text-primary { 
-    color: #005596 !important; 
+/* Ícone do Google Drive Customizado */
+.bi-google {
+    color: #0F9D58 !important; /* Verde Google */
 }
 
 .btn-primary { 
@@ -96,47 +95,20 @@ body {
     border-radius: 8px;
 }
 
-.btn-primary:hover { 
-    background-color: #003d6b; 
-}
-
-.btn-outline-primary {
-    color: #005596;
-    border-color: #005596;
-    border-radius: 8px;
-}
-
-.btn-outline-primary:hover {
-    background-color: #005596;
-    color: white;
-}
+.btn-primary:hover { background-color: #003d6b; }
 
 /* ==========================================================================
    RODAPÉ (FOOTER)
    ========================================================================== */
 footer {
     background-color: #002d52;
-    color: white;
-    padding: 50px 0;
-    margin-top: auto; /* Empurra o rodapé para o final em páginas com pouco conteúdo */
+    color: white !important;
+    padding: 40px 0;
+    margin-top: auto;
+    text-align: center;
 }
 
-footer p {
-    margin-bottom: 5px;
-}
-
-footer small {
-    opacity: 0.8;
-}
-
-/* ==========================================================================
-   CORREÇÃO PARA MOBILE
-   ========================================================================== */
-@media (max-width: 768px) {
-    .hero-refinaria h1 {
-        font-size: 2.2rem;
-    }
-    .navbar-brand img {
-        height: 55px !important;
-    }
+footer p, footer small {
+    color: white !important;
+    margin: 5px 0;
 }
