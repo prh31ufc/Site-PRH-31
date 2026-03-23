@@ -8,18 +8,11 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
     body{font-family:'Inter',sans-serif;background:#f8f9fa}.navbar-brand img{height:45px}.nav-link{font-weight:600;color:#495057;border-bottom:2px solid transparent}.nav-link.active{color:#0d6efd!important;border-bottom:2px solid #0d6efd}
-    
-    /* Estilo do Botão do Drive */
-    .drive-card {
-      max-width: 400px; margin: 0 auto; padding: 40px; border-radius: 20px;
-      background: white; border: 1px solid #eee; transition: 0.3s; text-decoration: none; display: block;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    }
-    .drive-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); border-color: #0d6efd; }
-    .drive-icon { font-size: 4rem; color: #34a853; /* Cor verde do Drive */ }
-    .drive-text { color: #444; font-weight: 700; margin-top: 15px; font-size: 1.2rem; }
-    
+    .drive-card{max-width:400px;margin:0 auto;padding:40px;border-radius:20px;background:#fff;border:1px solid #eee;transition:0.3s;text-decoration:none;display:block;box-shadow:0 10px 30px rgba(0,0,0,0.05)}
+    .drive-card:hover{transform:translateY(-10px);box-shadow:0 15px 40px rgba(0,0,0,0.1);border-color:#0d6efd}
+    .drive-icon{font-size:4rem;color:#34a853}.drive-text{color:#444;font-weight:700;margin-top:15px;font-size:1.2rem}
     footer{background:#0d6efd;color:#fff;padding:40px 0}.footer-logos img{height:42px;background:#fff;padding:4px;border-radius:4px;transition:0.2s}.footer-logos a:hover img{transform:scale(1.1)}
+    .logo-label{font-size:.65rem;text-transform:uppercase;font-weight:700;margin-bottom:8px;display:block}.social-icons a{color:#fff;font-size:1.6rem;margin:0 10px;transition:0.3s}.social-icons a:hover{color:#ffc107;transform:scale(1.2);display:inline-block}
   </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -28,18 +21,15 @@
   <div class="collapse navbar-collapse"><ul class="navbar-nav ms-auto align-items-center">
     <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li><li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li><li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li><li class="nav-item"><a class="nav-link active" href="documentos.html">Documentos</a></li><li class="nav-item"><a class="nav-link" href="editais.html">Editais</a></li><li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
   </ul></div></div></nav>
-
-<main class="container py-5 flex-grow-1 text-center">
-  <h2 class="text-primary fw-bold mb-5 mt-4">DOCUMENTOS E FORMULÁRIOS</h2>
-  
-  <p class="text-muted mb-5">Acesse nossa pasta compartilhada para visualizar resoluções, normas e formulários oficiais.</p>
-
+<main class="container py-5 flex-grow-1 text-center"><h2 class="text-primary fw-bold mb-5 mt-4">DOCUMENTOS</h2><p class="text-muted mb-5">Acesse nossa pasta compartilhada para resoluções, normas e formulários.</p>
   <a href="https://drive.google.com/drive/u/1/folders/1Adsp1AuhG-0qn7DkWhsiy7_5KLdinODc" target="_blank" class="drive-card">
-    <i class="bi bi-google-play drive-icon"></i> <div class="drive-text">Acessar Pasta no Google Drive</div>
-    <span class="badge bg-primary mt-2">Repositório Oficial</span>
-  </a>
-</main>
-
-<footer class="text-center"><div class="container"><p class="mb-4 small">© 2026 PRH 31 - UFC</p><div class="row justify-content-center g-4 footer-logos">
-  <div class="col-auto"><a href="https://www.gov.br/anp/pt-br/assuntos/pesquisa-desenvolvimento-e-inovacao/formacao-de-recursos-humanos" target="_blank"><img src="img/logo-prh-anp.jpeg"></a></div><div class="col-auto"><a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg"></a></div><div class="col-auto"><a href="https://fapeu.org.br" target="_blank"><img src="img/logo-fapesp.jpeg"></a></div>
+    <i class="bi bi-google-drive drive-icon"></i><div class="drive-text">Acessar Pasta no Google Drive</div><span class="badge bg-primary mt-2">Repositório Oficial</span>
+  </a></main>
+<footer class="text-center"><div class="container"><div class="social-icons mb-4">
+  <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank"><i class="bi bi-instagram"></i></a>
+  <a href="https://www.linkedin.com/in/prh31ufc/" target="_blank"><i class="bi bi-linkedin"></i></a>
+</div><p class="mb-4 small">© 2026 PRH 31 - UFC</p><div class="row justify-content-center g-4 footer-logos">
+  <div class="col-auto"><span class="logo-label">Programa</span><a href="https://www.gov.br/anp/pt-br/assuntos/pesquisa-desenvolvimento-e-inovacao/formacao-de-recursos-humanos" target="_blank"><img src="img/logo-prh-anp.jpeg"></a></div>
+  <div class="col-auto"><span class="logo-label">Fomento</span><a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg"></a></div>
+  <div class="col-auto"><span class="logo-label">Gestão</span><a href="https://fapeu.org.br" target="_blank"><img src="img/logo-fapesp.jpeg"></a></div>
 </div></div></footer></body></html>
