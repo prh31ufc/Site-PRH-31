@@ -20,11 +20,11 @@
     .nav-social { font-size: 1.2rem; transition: all 0.3s ease; color: #6c757d; padding: 0 8px; }
     .nav-social:hover { transform: translateY(-2px); }
 
-    /* Hero Section - Mantendo o original */
+    /* Hero Section */
     .hero-section {
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('img/refinaria.jpeg') no-repeat center center;
       background-size: cover;
-      min-height: 500px;
+      min-height: 480px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -33,17 +33,15 @@
       padding: 60px 20px;
       text-align: center;
     }
-    .hero-title { font-size: 4.5rem; font-weight: 800; margin-bottom: 10px; }
-    .hero-subtitle { font-size: 1.5rem; max-width: 800px; margin: 0 auto; font-weight: 400; }
+    .hero-title { font-size: 4rem; font-weight: 800; margin-bottom: 15px; }
+    .hero-subtitle { font-size: 1.3rem; max-width: 900px; margin: 0 auto; line-height: 1.5; font-weight: 400; }
 
-    /* Conteúdo */
-    .section-title { color: #0d6efd; font-weight: 800; margin-bottom: 30px; text-transform: uppercase; }
-
-    /* Rodapé Centralizado e Estreito */
+    /* Rodapé Centralizado e Fino */
     footer { background-color: #0d6efd; color: white; }
     .footer-logos img { height: 42px; width: auto; background-color: #ffffff; padding: 4px; border-radius: 4px; transition: transform 0.2s; }
+    .footer-logos img:hover { transform: scale(1.08); }
     .logo-label { font-size: 0.6rem; text-transform: uppercase; margin-bottom: 4px; display: block; font-weight: 700; opacity: 0.9; }
-    .copyright-text { font-size: 0.85rem; opacity: 0.9; }
+    .copyright-text { font-size: 0.85rem; opacity: 0.9; font-weight: 400; }
   </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -84,25 +82,24 @@
   <section class="hero-section">
     <div class="container">
       <h1 class="hero-title">PRH 31</h1>
-      <p class="hero-subtitle">Programa de Formação de Recursos Humanos da ANP</p>
+      <p class="hero-subtitle">
+        Programa Institucional da UFC para Formação de Recursos Humanos em Engenharia e Ciências do Petróleo e Gás Natural
+      </p>
     </div>
   </section>
 
-  <section class="container py-5">
-    <div class="row justify-content-center">
-      <div class="col-lg-10 text-center">
-        <h2 class="section-title">Sobre o PRH 31</h2>
-        <p class="lead text-muted" style="text-align: justify;">
-          O PRH 31.1 é um programa da Agência Nacional do Petróleo, Gás Natural e Biocombustíveis (ANP) que visa a formação de recursos humanos qualificados para atuar no setor de petróleo, gás natural e biocombustíveis. O programa é realizado na Universidade Federal do Ceará (UFC) e oferece bolsas de estudo para alunos de graduação e pós-graduação, além de recursos para a melhoria da infraestrutura de ensino e pesquisa.
-        </p>
-      </div>
-    </div>
+  <section class="container py-5 text-center">
+    <h2 class="fw-bold text-primary mb-4 text-uppercase" style="font-size: 1.5rem; letter-spacing: 1px;">Sobre o Programa</h2>
+    <p class="text-muted mx-auto" style="max-width: 900px; line-height: 1.8; text-align: justify;">
+      O PRH 31 - UFC integra o Programa de Formação de Recursos Humanos da ANP. Nosso objetivo primordial é promover a formação académica de alto nível técnico e científico para o setor de petróleo, gás natural e biocombustíveis. Através da integração entre a graduação e a pós-graduação, o programa fomenta projetos de pesquisa, inovação e desenvolvimento tecnológico que atendam às demandas energéticas contemporâneas.
+    </p>
   </section>
 </main>
 
 <footer class="py-3 mt-auto">
   <div class="container text-center">
     <p class="copyright-text mb-3">© 2026 PRH 31 - Universidade Federal do Ceará (UFC)</p>
+    
     <div class="row justify-content-center g-4 footer-logos">
       <div class="col-auto">
         <span class="logo-label">Programa</span>
