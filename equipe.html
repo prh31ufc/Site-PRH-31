@@ -10,7 +10,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
     body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
 
-    /* Navbar Estabilizada */
+    /* Navbar */
     .navbar-brand img { height: 45px; width: auto; }
     .nav-link { font-weight: 600; color: #495057; }
     .nav-link.active { color: #0d6efd !important; border-bottom: 2px solid #0d6efd; }
@@ -18,20 +18,20 @@
     /* Mídias Sociais Navbar */
     .social-label-nav { font-size: 0.7rem; text-transform: uppercase; font-weight: 800; color: #adb5bd; margin-right: 8px; letter-spacing: 0.5px; }
     .nav-social { font-size: 1.2rem; transition: all 0.3s ease; color: #6c757d; padding: 0 8px; }
-    .nav-social.inst:hover { color: #E1306C; transform: translateY(-2px); }
-    .nav-social.linkd:hover { color: #0077B5; transform: translateY(-2px); }
+    .nav-social:hover { transform: translateY(-2px); }
 
     /* Estilo da Equipe */
-    .team-card { border: none; border-radius: 15px; transition: transform 0.3s; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .team-card { border: none; border-radius: 15px; transition: transform 0.3s; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-top: 50px; height: 100%; }
     .team-card:hover { transform: translateY(-5px); }
-    .member-img { width: 120px; height: 120px; object-fit: cover; border-radius: 50%; border: 4px solid #eef2f7; margin-top: -60px; }
-    .member-role { font-size: 0.85rem; font-weight: 700; color: #0d6efd; text-transform: uppercase; letter-spacing: 1px; }
+    .member-img { width: 130px; height: 130px; object-fit: cover; border-radius: 50%; border: 4px solid #fff; margin-top: -65px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    .member-role { font-size: 0.75rem; font-weight: 700; color: #0d6efd; text-transform: uppercase; letter-spacing: 1px; margin-top: 10px; }
 
-    /* Rodapé Estreito */
+    /* Rodapé Centralizado */
     footer { background-color: #0d6efd; color: white; }
-    .footer-logos img { height: 42px; width: auto; background-color: #ffffff; padding: 4px; border-radius: 4px; }
+    .footer-logos img { height: 42px; width: auto; background-color: #ffffff; padding: 4px; border-radius: 4px; transition: transform 0.2s; }
+    .footer-logos img:hover { transform: scale(1.08); }
     .logo-label { font-size: 0.6rem; text-transform: uppercase; margin-bottom: 4px; display: block; font-weight: 700; opacity: 0.9; }
-    .copyright-text { font-size: 0.85rem; opacity: 0.8; }
+    .copyright-text { font-size: 0.85rem; opacity: 0.9; }
   </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -50,14 +50,14 @@
         <ul class="navbar-nav ms-auto align-items-center">
           <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
           <li class="nav-item"><a class="nav-link active" href="equipe.html">Equipe</a></li>
-          <li class="nav-item"><a class="nav-link" href="documentos.html">Documentos</a></li>
           <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="documentos.html">Documentos</a></li>
           <li class="nav-item"><a class="nav-link" href="editais.html">Editais</a></li>
           <li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
           <li class="nav-item d-flex align-items-center ms-lg-3 border-start ps-lg-3">
             <span class="social-label-nav d-none d-xl-inline">Mídias sociais</span>
-            <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank" class="nav-social inst"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/prh31ufc/" target="_blank" class="nav-social linkd"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank" class="nav-social text-danger"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/prh31ufc/" target="_blank" class="nav-social text-primary"><i class="bi bi-linkedin"></i></a>
           </li>
         </ul>
       </div>
@@ -68,48 +68,88 @@
 <main class="container py-5 flex-grow-1">
   <div class="text-center mb-5 mt-4">
     <h2 class="fw-bold text-primary">Nossa Equipe</h2>
-    <p class="text-muted">Corpo docente e administrativo responsável pela excelência do PRH 31.</p>
+    <p class="text-muted">Gestão e operação do PRH 31 na UFC.</p>
   </div>
 
-  <div class="row g-5 justify-content-center mt-5">
-    <div class="col-md-4">
+  <div class="row g-5 justify-content-center">
+    <div class="col-md-4 mb-4">
       <div class="card team-card text-center p-4">
-        <img src="img/membro-exemplo.jpg" class="member-img mx-auto shadow-sm" alt="Coordenador">
+        <img src="img/coo.jpeg" class="member-img mx-auto" alt="Jorge Barbosa Soares">
         <div class="card-body">
-          <p class="member-role mb-2">Coordenação Geral</p>
-          <h5 class="fw-bold mb-1">Nome do Professor</h5>
-          <p class="small text-muted mb-3">Departamento de Engenharia Química</p>
-          <div class="d-flex justify-content-center gap-2">
-            <a href="#" class="btn btn-light btn-sm"><i class="bi bi-envelope"></i></a>
-            <a href="#" class="btn btn-light btn-sm"><i class="bi bi-journal-text"></i> Lattes</a>
-          </div>
+          <p class="member-role">Coordenador Geral</p>
+          <h5 class="fw-bold">Jorge Barbosa Soares</h5>
+          <a href="https://lattes.cnpq.br/9212256013670303" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill mt-2">Lattes</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card team-card text-center p-4">
+        <img src="img/cg1.jpeg" class="member-img mx-auto" alt="Cleiton Carvalho Silva">
+        <div class="card-body">
+          <p class="member-role">Membro do Comitê</p>
+          <h5 class="fw-bold">Cleiton Carvalho Silva</h5>
+          <a href="https://lattes.cnpq.br/2862541276328123" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill mt-2">Lattes</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card team-card text-center p-4">
+        <img src="img/cg2.jpeg" class="member-img mx-auto" alt="Francisco Murilo Tavares de Luna">
+        <div class="card-body">
+          <p class="member-role">Membro do Comitê</p>
+          <h5 class="fw-bold">Francisco Murilo Tavares de Luna</h5>
+          <a href="https://lattes.cnpq.br/9515868229218114" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill mt-2">Lattes</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card team-card text-center p-4">
+        <img src="img/cg3.jpeg" class="member-img mx-auto" alt="Hélio Cordeiro de Miranda">
+        <div class="card-body">
+          <p class="member-role">Membro do Comitê</p>
+          <h5 class="fw-bold">Hélio Cordeiro de Miranda</h5>
+          <a href="https://lattes.cnpq.br/6420338928006265" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill mt-2">Lattes</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card team-card text-center p-4">
+        <img src="img/cg4.jpeg" class="member-img mx-auto" alt="Lucas Feitosa Babadopulos">
+        <div class="card-body">
+          <p class="member-role">Membro do Comitê</p>
+          <h5 class="fw-bold">Lucas Feitosa de Albuquerque Lima Babadopulos</h5>
+          <a href="https://lattes.cnpq.br/4032413277446483" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill mt-2">Lattes</a>
         </div>
       </div>
     </div>
   </div>
 </main>
 
-<footer class="py-2 mt-auto">
+<footer class="py-3 mt-auto">
   <div class="container text-center">
-    <div class="row align-items-center">
-      <div class="col-md-4 text-md-start text-center mb-3 mb-md-0">
-        <p class="copyright-text mb-0">© 2026 PRH 31 - UFC</p>
+    <p class="copyright-text mb-3">© 2026 PRH 31 - Universidade Federal do Ceará (UFC)</p>
+    <div class="row justify-content-center g-4 footer-logos">
+      <div class="col-auto text-center">
+        <span class="logo-label">Programa</span>
+        <a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos" target="_blank">
+          <img src="img/logo-prh-anp.jpeg" alt="Logo PRH">
+        </a>
       </div>
-      <div class="col-md-8">
-        <div class="row justify-content-center justify-content-md-end g-3 footer-logos">
-          <div class="col-auto text-center">
-            <span class="logo-label">Programa</span>
-            <a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos" target="_blank"><img src="img/logo-prh-anp.jpeg" alt="Logo PRH"></a>
-          </div>
-          <div class="col-auto text-center">
-            <span class="logo-label">Fomento</span>
-            <a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg" alt="Logo ANP"></a>
-          </div>
-          <div class="col-auto text-center">
-            <span class="logo-label">Gestão</span>
-            <a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg" alt="Logo FAPESP"></a>
-          </div>
-        </div>
+      <div class="col-auto text-center">
+        <span class="logo-label">Fomento</span>
+        <a href="https://www.gov.br/anp/pt-br" target="_blank">
+          <img src="img/logo-anp.jpeg" alt="Logo ANP">
+        </a>
+      </div>
+      <div class="col-auto text-center">
+        <span class="logo-label">Gestão</span>
+        <a href="https://fapesp.br/" target="_blank">
+          <img src="img/logo-fapesp.jpeg" alt="Logo FAPESP">
+        </a>
       </div>
     </div>
   </div>
