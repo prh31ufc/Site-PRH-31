@@ -6,18 +6,25 @@
   <title>PRH 31 - UFC | Início</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="css/style.css">
   <style>
-    /* Estilos Gerais */
+    /* Importação de fonte para um ar mais moderno */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+    body { font-family: 'Inter', sans-serif; }
+
+    /* Navbar */
     .navbar-brand img { height: 45px; width: auto; }
-    
-    /* Rótulo e Ícones Sociais na Navbar */
+    .nav-link { font-weight: 600; color: #495057; }
+    .nav-link.active { color: #0d6efd !important; }
+
+    /* Mídias Sociais Navbar */
     .social-label-nav {
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       text-transform: uppercase;
-      font-weight: bold;
-      color: #6c757d;
-      margin-right: 5px;
+      font-weight: 800;
+      color: #adb5bd;
+      margin-right: 8px;
+      letter-spacing: 0.5px;
     }
     .nav-social {
       font-size: 1.2rem;
@@ -28,53 +35,61 @@
     .nav-social.inst:hover { color: #E1306C; transform: translateY(-2px); }
     .nav-social.linkd:hover { color: #0077B5; transform: translateY(-2px); }
 
-    /* Seção Destaque (Refinaria) */
+    /* Seção Hero (Refinaria) */
     .hero-section {
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('img/refinaria.jpeg') no-repeat center center;
       background-size: cover;
-      min-height: 450px;
+      min-height: 480px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-      padding: 40px 20px;
+      padding: 60px 20px;
+      text-align: center;
     }
-    .hero-title { font-size: 3.5rem; font-weight: 800; margin-bottom: 10px; }
-    .hero-subtitle { font-size: 1.4rem; max-width: 800px; margin: 0 auto; line-height: 1.4; }
+    .hero-title { font-size: 4rem; font-weight: 800; margin-bottom: 15px; }
+    .hero-subtitle { 
+      font-size: 1.3rem; 
+      max-width: 900px; 
+      margin: 0 auto; 
+      line-height: 1.5; 
+      font-weight: 400;
+      opacity: 0.95;
+    }
 
-    /* Seção Sobre */
+    /* Títulos de Seção */
     .section-title {
       color: #0d6efd;
-      font-weight: 700;
+      font-weight: 800;
       position: relative;
       padding-bottom: 15px;
       margin-bottom: 30px;
       text-transform: uppercase;
+      font-size: 1.5rem;
     }
     .section-title::after {
       content: '';
       position: absolute;
       left: 0;
       bottom: 0;
-      width: 60px;
+      width: 50px;
       height: 4px;
       background-color: #0d6efd;
     }
 
-    /* Rodapé */
+    /* Rodapé Estreito */
     footer { background-color: #0d6efd; color: white; }
     .footer-logos img {
-      height: 45px; width: auto; background-color: #ffffff;
-      padding: 5px; border-radius: 4px; transition: transform 0.2s;
+      height: 42px; width: auto; background-color: #ffffff;
+      padding: 4px; border-radius: 4px; transition: transform 0.2s;
     }
-    .footer-logos img:hover { transform: scale(1.05); }
-    
+    .footer-logos img:hover { transform: scale(1.08); }
     .logo-label {
-      font-size: 0.65rem; text-transform: uppercase; margin-bottom: 5px;
-      display: block; font-weight: 600;
+      font-size: 0.6rem; text-transform: uppercase; margin-bottom: 4px;
+      display: block; font-weight: 700; opacity: 0.9;
     }
-    .copyright-text { font-size: 0.9rem; margin-bottom: 15px !important; }
+    .copyright-text { font-size: 0.85rem; opacity: 0.8; }
   </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -84,7 +99,9 @@
     <div class="container">
       <div class="navbar-brand d-flex align-items-center">
         <a href="index.html"><img src="img/logo.jpeg" alt="Logo PRH 31"></a>
-        <a href="https://www.ufc.br" target="_blank"><img src="img/logo-ufc.jpeg" alt="Logo UFC" class="border-start ps-2 ms-2"></a>
+        <a href="https://www.ufc.br" target="_blank">
+          <img src="img/logo-ufc.jpeg" alt="Logo UFC" class="border-start ps-2 ms-2">
+        </a>
       </div>
       
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -96,14 +113,18 @@
           <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
           <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
           <li class="nav-item"><a class="nav-link" href="documentos.html">Documentos</a></li>
+          <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
           <li class="nav-item"><a class="nav-link" href="editais.html">Editais</a></li>
-          <li class="nav-item"><a class="nav-link" href="resultados.html">Resultados</a></li>
           <li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
           
           <li class="nav-item d-flex align-items-center ms-lg-3 border-start ps-lg-3">
             <span class="social-label-nav d-none d-xl-inline">Mídias sociais</span>
-            <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank" class="nav-social inst"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/prh31ufc/" target="_blank" class="nav-social linkd"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank" class="nav-social inst">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/prh31ufc/" target="_blank" class="nav-social linkd">
+              <i class="bi bi-linkedin"></i>
+            </a>
           </li>
         </ul>
       </div>
@@ -112,7 +133,8 @@
 </header>
 
 <main class="flex-grow-1">
-  <section class="hero-section text-center">
+  
+  <section class="hero-section">
     <div class="container">
       <h1 class="hero-title">PRH 31</h1>
       <p class="hero-subtitle">
@@ -125,39 +147,45 @@
     <div class="row">
       <div class="col-lg-12">
         <h2 class="section-title">Sobre o Programa</h2>
-        <p class="lead text-dark">
-          O <strong>PRH 31 - UFC</strong> é parte do Programa de Formação de Recursos Humanos da ANP (Agência Nacional do Petróleo, Gás Natural e Biocombustíveis).
+        <p class="lead text-dark fw-semibold">
+          O PRH 31 - UFC integra o Programa de Formação de Recursos Humanos da ANP.
         </p>
-        <p>
-          Nosso objetivo é a formação acadêmica de excelência voltada para o setor de petróleo, gás natural e biocombustíveis, integrando graduação e pós-graduação em projetos de pesquisa e desenvolvimento tecnológico de alto impacto.
+        <p class="text-muted" style="text-align: justify; line-height: 1.8;">
+          Nosso objetivo primordial é promover a formação acadêmica de alto nível técnico e científico para o setor de petróleo, gás natural e biocombustíveis. Através da integração entre a graduação e a pós-graduação, o programa fomenta projetos de pesquisa, inovação e desenvolvimento tecnológico que atendam às demandas energéticas contemporâneas, preparando profissionais capacitados para os desafios do mercado global.
         </p>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="py-3 mt-auto">
+<footer class="py-2 mt-auto">
   <div class="container text-center">
-    <p class="copyright-text">© 2026 PRH 31 - Universidade Federal do Ceará (UFC)</p>
-    
-    <div class="row justify-content-center align-items-start g-3 footer-logos">
-      <div class="col-6 col-md-auto text-center">
-        <span class="logo-label">Programa</span>
-        <a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos" target="_blank">
-          <img src="img/logo-prh-anp.jpeg" alt="Logo PRH ANP">
-        </a>
+    <div class="row align-items-center">
+      <div class="col-md-4 text-md-start text-center mb-3 mb-md-0">
+        <p class="copyright-text mb-0">© 2026 PRH 31 - UFC</p>
       </div>
-      <div class="col-6 col-md-auto text-center">
-        <span class="logo-label">Fomento</span>
-        <a href="https://www.gov.br/anp/pt-br" target="_blank">
-          <img src="img/logo-anp.jpeg" alt="Logo ANP">
-        </a>
-      </div>
-      <div class="col-6 col-md-auto text-center">
-        <span class="logo-label">Gestão</span>
-        <a href="https://fapesp.br/" target="_blank">
-          <img src="img/logo-fapesp.jpeg" alt="Logo FAPESP">
-        </a>
+      
+      <div class="col-md-8">
+        <div class="row justify-content-center justify-content-md-end g-3 footer-logos">
+          <div class="col-auto text-center">
+            <span class="logo-label">Programa</span>
+            <a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos" target="_blank">
+              <img src="img/logo-prh-anp.jpeg" alt="Logo PRH ANP">
+            </a>
+          </div>
+          <div class="col-auto text-center">
+            <span class="logo-label">Fomento</span>
+            <a href="https://www.gov.br/anp/pt-br" target="_blank">
+              <img src="img/logo-anp.jpeg" alt="Logo ANP">
+            </a>
+          </div>
+          <div class="col-auto text-center">
+            <span class="logo-label">Gestão</span>
+            <a href="https://fapesp.br/" target="_blank">
+              <img src="img/logo-fapesp.jpeg" alt="Logo FAPESP">
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
