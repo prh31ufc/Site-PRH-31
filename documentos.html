@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PRH 31 - UFC | Documentos</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -13,7 +14,7 @@
   <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <img src="img/logo.jpeg" alt="Logo PRH 31" height="60">
+        <img src="img/logo.jpeg" alt="Logo PRH 31">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
         <span class="navbar-toggler-icon"></span>
@@ -33,21 +34,41 @@
 </header>
 
 <main class="container my-5 flex-grow-1">
-  <h2 class="fw-bold text-primary border-bottom pb-2">Documentos e Formulários</h2>
-  <p class="lead text-muted">Acesse normas, resoluções e formulários oficiais do programa.</p>
+  <div class="d-flex align-items-center mb-4 border-bottom pb-3">
+    <h2 class="fw-bold text-primary mb-0">Documentos e Formulários</h2>
+    <div class="ms-3 d-flex align-items-center">
+        <i class="bi bi-folder2-open fs-2 text-warning me-2"></i>
+        <i class="bi bi-google fs-3" style="color: #0F9D58;" title="Arquivos no Google Drive"></i>
+    </div>
+  </div>
+
+  <p class="lead text-muted">Acesse abaixo o repositório oficial de documentos do PRH 31.</p>
   
-  <div class="card mt-4 shadow-sm border-0">
-    <div class="card-body p-5 text-center">
-      <i class="bi bi-file-earmark-pdf fs-1 text-secondary mb-3"></i>
-      <p class="text-muted">A seção de downloads está sendo organizada e estará disponível em breve.</p>
+  <div class="row mt-5">
+    <div class="col-md-8 mx-auto text-center">
+      <div class="card shadow-sm border-0 p-5">
+        <div class="card-body">
+          <div class="mb-4">
+             <i class="bi bi-file-earmark-pdf fs-1 text-primary"></i>
+             <i class="bi bi-plus-lg mx-2 fs-3 text-muted"></i>
+             <i class="bi bi-google fs-1" style="color: #0F9D58;"></i>
+          </div>
+          <h4 class="fw-bold">Repositório Digital no Google Drive</h4>
+          <p class="text-muted mb-4">Clique no botão abaixo para acessar a pasta compartilhada contendo editais antigos, formulários de inscrição e normas do programa.</p>
+          
+          <a href="#" target="_blank" class="btn btn-primary btn-lg px-5 shadow-sm">
+            <i class="bi bi-box-arrow-up-right me-2"></i> Abrir Google Drive
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </main>
 
-<footer class="text-center py-4 bg-primary">
-  <div class="container text-white">
+<footer>
+  <div class="container">
     <p class="mb-1">© 2026 PRH 31 - Universidade Federal do Ceará (UFC)</p>
-    <small class="opacity-75">Fomento: ANP / FINEP</small>
+    <small>Fomento: ANP / FINEP</small>
   </div>
 </footer>
 
