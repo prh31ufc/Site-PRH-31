@@ -43,33 +43,39 @@
 
     /* Estilo Específico da Equipe */
     .foto-perfil {
-      width: 180px;
-      height: 180px;
+      width: 200px;
+      height: 200px;
       object-fit: cover; /* Garante que a foto não distorça */
       border-radius: 50%;
       border: 5px solid #0d6efd;
       margin-bottom: 20px;
       transition: transform 0.3s ease;
+      background-color: #f8f9fa;
     }
     .coord-card {
       border: none;
       transition: all 0.3s ease;
     }
+    .coord-card:hover {
+      transform: translateY(-5px);
+    }
     .coord-card:hover .foto-perfil {
       transform: scale(1.05);
+      border-color: #00509d;
     }
     .btn-lattes {
       background-color: #003366;
       color: white;
       border-radius: 20px;
-      padding: 8px 20px;
+      padding: 10px 25px;
       font-weight: 500;
       transition: 0.3s;
+      text-decoration: none;
     }
     .btn-lattes:hover {
       background-color: #00509d;
       color: white;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
   </style>
 </head>
@@ -108,27 +114,26 @@
 <main class="container my-5 flex-grow-1">
   <div class="text-center mb-5">
     <h2 class="fw-bold text-primary display-5">Equipe</h2>
-    <p class="lead text-muted">Coordenação e Corpo Docente</p>
+    <p class="lead text-muted">Coordenação e Corpo Docente do PRH 31 - UFC</p>
     <hr class="w-25 mx-auto border-primary border-3">
   </div>
 
   <div class="row justify-content-center">
-    <div class="col-md-6 col-lg-4">
-      <div class="card coord-card shadow-sm p-4 text-center bg-light">
-        <img src="img/jorge-soares.jpeg" alt="Jorge Barbosa Soares" class="foto-perfil mx-auto shadow">
+    <div class="col-md-6 col-lg-5">
+      <div class="card coord-card shadow-sm p-4 text-center bg-white border">
+        <img src="img/coo.jpeg" alt="Jorge Barbosa Soares" class="foto-perfil mx-auto shadow-sm">
         
         <h4 class="text-primary fw-bold mb-1">Jorge Barbosa Soares</h4>
-        <p class="text-secondary mb-4">Coordenador do PRH 31</p>
+        <p class="text-secondary fw-semibold mb-4">Coordenador do PRH 31</p>
         
-        <div class="d-grid gap-2">
+        <div class="d-grid gap-2 col-10 mx-auto">
           <a href="https://lattes.cnpq.br/9212256013670303" target="_blank" class="btn btn-lattes">
             <i class="bi bi-file-earmark-person-fill me-2"></i>Currículo Lattes
           </a>
         </div>
       </div>
     </div>
-
-    </div>
+  </div>
 </main>
 
 <footer>
