@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PRH 31 - UFC | Início</title>
+  <title>PRH 31 - UFC | Equipe</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-    body { font-family: 'Inter', sans-serif; }
+    body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
 
     /* Navbar */
     .navbar-brand img { height: 45px; width: auto; }
@@ -20,28 +20,18 @@
     .nav-social { font-size: 1.2rem; transition: all 0.3s ease; color: #6c757d; padding: 0 8px; }
     .nav-social:hover { transform: translateY(-2px); }
 
-    /* Hero Section */
-    .hero-section {
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('img/refinaria.jpeg') no-repeat center center;
-      background-size: cover;
-      min-height: 480px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-      padding: 60px 20px;
-      text-align: center;
-    }
-    .hero-title { font-size: 4rem; font-weight: 800; margin-bottom: 15px; }
-    .hero-subtitle { font-size: 1.3rem; max-width: 900px; margin: 0 auto; line-height: 1.5; font-weight: 400; }
+    /* Estilo da Equipe */
+    .team-card { border: none; border-radius: 15px; transition: transform 0.3s; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-top: 50px; }
+    .team-card:hover { transform: translateY(-5px); }
+    .member-img { width: 120px; height: 120px; object-fit: cover; border-radius: 50%; border: 4px solid #fff; margin-top: -60px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    .member-role { font-size: 0.75rem; font-weight: 700; color: #0d6efd; text-transform: uppercase; letter-spacing: 1px; margin-top: 10px; }
 
-    /* Rodapé Centralizado e Fino */
+    /* Rodapé Centralizado */
     footer { background-color: #0d6efd; color: white; }
     .footer-logos img { height: 42px; width: auto; background-color: #ffffff; padding: 4px; border-radius: 4px; transition: transform 0.2s; }
     .footer-logos img:hover { transform: scale(1.08); }
     .logo-label { font-size: 0.6rem; text-transform: uppercase; margin-bottom: 4px; display: block; font-weight: 700; opacity: 0.9; }
-    .copyright-text { font-size: 0.85rem; opacity: 0.9; font-weight: 400; }
+    .copyright-text { font-size: 0.85rem; opacity: 0.9; }
   </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -53,20 +43,17 @@
         <a href="index.html"><img src="img/logo.jpeg" alt="Logo PRH 31"></a>
         <a href="https://www.ufc.br" target="_blank"><img src="img/logo-ufc.jpeg" alt="Logo UFC" class="border-start ps-2 ms-2"></a>
       </div>
-      
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
         <span class="navbar-toggler-icon"></span>
       </button>
-      
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ms-auto align-items-center">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
-          <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link active" href="equipe.html">Equipe</a></li>
           <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
           <li class="nav-item"><a class="nav-link" href="documentos.html">Documentos</a></li>
           <li class="nav-item"><a class="nav-link" href="editais.html">Editais</a></li>
           <li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
-          
           <li class="nav-item d-flex align-items-center ms-lg-3 border-start ps-lg-3">
             <span class="social-label-nav d-none d-xl-inline">Mídias sociais</span>
             <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank" class="nav-social text-danger"><i class="bi bi-instagram"></i></a>
@@ -78,28 +65,78 @@
   </nav>
 </header>
 
-<main class="flex-grow-1">
-  <section class="hero-section">
-    <div class="container">
-      <h1 class="hero-title">PRH 31</h1>
-      <p class="hero-subtitle">
-        Programa Institucional da UFC para Formação de Recursos Humanos em Engenharia e Ciências do Petróleo e Gás Natural
-      </p>
-    </div>
-  </section>
+<main class="container py-5 flex-grow-1">
+  <div class="text-center mb-5 mt-4">
+    <h2 class="fw-bold text-primary">Nossa Equipe</h2>
+    <p class="text-muted">Conheça os responsáveis pela gestão e operação do PRH 31 na UFC.</p>
+  </div>
 
-  <section class="container py-5 text-center">
-    <h2 class="fw-bold text-primary mb-4 text-uppercase" style="font-size: 1.5rem; letter-spacing: 1px;">Sobre o Programa</h2>
-    <p class="text-muted mx-auto" style="max-width: 900px; line-height: 1.8; text-align: justify;">
-      O PRH 31 - UFC integra o Programa de Formação de Recursos Humanos da ANP. Nosso objetivo primordial é promover a formação académica de alto nível técnico e científico para o setor de petróleo, gás natural e biocombustíveis. Através da integração entre a graduação e a pós-graduação, o programa fomenta projetos de pesquisa, inovação e desenvolvimento tecnológico que atendam às demandas energéticas contemporâneas.
-    </p>
-  </section>
+  <div class="row g-4 justify-content-center">
+    <div class="col-md-4 mb-4">
+      <div class="card team-card text-center p-4">
+        <img src="img/equipe1.jpg" class="member-img mx-auto" alt="Coordenador">
+        <div class="card-body">
+          <p class="member-role">Coordenador Geral</p>
+          <h5 class="fw-bold">Prof. Dr. Nome do Coordenador</h5>
+          <p class="small text-muted">Departamento de Engenharia Química</p>
+          <a href="#" class="btn btn-outline-primary btn-sm rounded-pill mt-2">Ver Lattes</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card team-card text-center p-4">
+        <img src="img/equipe2.jpg" class="member-img mx-auto" alt="Vice-Coordenador">
+        <div class="card-body">
+          <p class="member-role">Vice-Coordenador</p>
+          <h5 class="fw-bold">Prof. Dr. Nome do Vice</h5>
+          <p class="small text-muted">Departamento de Engenharia Elétrica</p>
+          <a href="#" class="btn btn-outline-primary btn-sm rounded-pill mt-2">Ver Lattes</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card team-card text-center p-4">
+        <img src="img/equipe3.jpg" class="member-img mx-auto" alt="Apoio Técnico">
+        <div class="card-body">
+          <p class="member-role">Apoio Técnico</p>
+          <h5 class="fw-bold">Nome do Profissional</h5>
+          <p class="small text-muted">Gestão Administrativa</p>
+          <a href="#" class="btn btn-outline-primary btn-sm rounded-pill mt-2">Ver Lattes</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card team-card text-center p-4">
+        <img src="img/equipe4.jpg" class="member-img mx-auto" alt="Docente Pesquisador">
+        <div class="card-body">
+          <p class="member-role">Docente Pesquisador</p>
+          <h5 class="fw-bold">Prof. Dr. Nome do Docente</h5>
+          <p class="small text-muted">Departamento de Geologia</p>
+          <a href="#" class="btn btn-outline-primary btn-sm rounded-pill mt-2">Ver Lattes</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card team-card text-center p-4">
+        <img src="img/equipe5.jpg" class="member-img mx-auto" alt="Secretaria">
+        <div class="card-body">
+          <p class="member-role">Secretaria Executiva</p>
+          <h5 class="fw-bold">Nome da Secretária</h5>
+          <p class="small text-muted">Atendimento e Suporte</p>
+          <a href="#" class="btn btn-outline-primary btn-sm rounded-pill mt-2">Ver Lattes</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
 
 <footer class="py-3 mt-auto">
   <div class="container text-center">
     <p class="copyright-text mb-3">© 2026 PRH 31 - Universidade Federal do Ceará (UFC)</p>
-    
     <div class="row justify-content-center g-4 footer-logos">
       <div class="col-auto">
         <span class="logo-label">Programa</span>
