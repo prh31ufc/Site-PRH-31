@@ -21,19 +21,16 @@
     .nav-social.inst:hover { color: #E1306C; transform: translateY(-2px); }
     .nav-social.linkd:hover { color: #0077B5; transform: translateY(-2px); }
 
-    /* Container do Logo Animado (GIF) */
-    .gif-container {
-      background-color: #f8f9fa;
-      padding: 30px 0;
-      border-bottom: 1px solid #dee2e6;
+    /* Seção Destaque (Refinaria) */
+    .hero-section {
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('img/refinaria.jpeg') no-repeat center center;
+      background-size: cover;
+      height: 400px; /* Ajuste a altura conforme necessário */
       display: flex;
-      justify-content: center;
       align-items: center;
-    }
-    .logo-gif {
-      max-width: 220px; 
-      width: 100%;
-      height: auto;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
 
     /* Seção Sobre */
@@ -114,9 +111,10 @@
 
 <main class="flex-grow-1">
   
-  <section class="gif-container">
-    <div class="container text-center">
-      <img src="img/logo-animado.gif" alt="Logo Animado PRH 31" class="logo-gif">
+  <section class="hero-section text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold">PRH 31 - UFC</h1>
+      <p class="lead">Formando Líderes para o Setor de Energia</p>
     </div>
   </section>
 
@@ -135,25 +133,35 @@
           <div class="col-md-4">
             <div class="d-flex align-items-start">
               <i class="bi bi-mortarboard-fill text-primary fs-2 me-3"></i>
-              <div><h5 class="fw-bold">Bolsas</h5><p class="small text-muted">Oferecemos bolsas de estudo para graduação, mestrado e doutorado.</p></div>
+              <div>
+                <h5 class="fw-bold">Bolsas</h5>
+                <p class="small text-muted">Oferecemos bolsas de estudo para graduação, mestrado e doutorado.</p>
+              </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="d-flex align-items-start">
               <i class="bi bi-gear-fill text-primary fs-2 me-3"></i>
-              <div><h5 class="fw-bold">Pesquisa</h5><p class="small text-muted">Desenvolvimento de tecnologias aplicadas à indústria de energia.</p></div>
+              <div>
+                <h5 class="fw-bold">Pesquisa</h5>
+                <p class="small text-muted">Desenvolvimento de tecnologias aplicadas à indústria de energia.</p>
+              </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="d-flex align-items-start">
               <i class="bi bi-briefcase-fill text-primary fs-2 me-3"></i>
-              <div><h5 class="fw-bold">Carreira</h5><p class="small text-muted">Conexão direta entre a academia e o mercado de trabalho.</p></div>
+              <div>
+                <h5 class="fw-bold">Carreira</h5>
+                <p class="small text-muted">Conexão direta entre a academia e o mercado de trabalho.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
 </main>
 
 <footer class="py-4 mt-auto">
@@ -166,9 +174,22 @@
     <p class="mb-4">© 2026 PRH 31 - Universidade Federal do Ceará (UFC)</p>
     
     <div class="row justify-content-center align-items-start g-4 footer-logos">
-      <div class="col-6 col-md-auto text-center"><p class="logo-label">Programa</p><img src="img/logo-prh-anp.jpeg" alt="Logo PRH ANP"></div>
-      <div class="col-6 col-md-auto text-center"><p class="logo-label">Fomento</p><a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg" alt="Logo ANP"></a></div>
-      <div class="col-6 col-md-auto text-center"><p class="logo-label">Gestão</p><a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg" alt="Logo FAPESP"></a></div>
+      <div class="col-6 col-md-auto text-center">
+        <p class="logo-label">Programa</p>
+        <img src="img/logo-prh-anp.jpeg" alt="Logo PRH ANP">
+      </div>
+      <div class="col-6 col-md-auto text-center">
+        <p class="logo-label">Fomento</p>
+        <a href="https://www.gov.br/anp/pt-br" target="_blank">
+          <img src="img/logo-anp.jpeg" alt="Logo ANP">
+        </a>
+      </div>
+      <div class="col-6 col-md-auto text-center">
+        <p class="logo-label">Gestão</p>
+        <a href="https://fapesp.br/" target="_blank">
+          <img src="img/logo-fapesp.jpeg" alt="Logo FAPESP">
+        </a>
+      </div>
     </div>
   </div>
 </footer>
