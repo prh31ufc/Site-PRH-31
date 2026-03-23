@@ -8,11 +8,69 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .navbar-brand img { height: 45px; width: auto; }
-    .footer-logos img { height: 55px; width: auto; background-color: #ffffff; padding: 6px; border-radius: 4px; }
-    .logo-label { font-size: 0.75rem; text-transform: uppercase; margin-bottom: 8px; opacity: 0.9; color: white; min-height: 40px; display: flex; align-items: center; justify-content: center; }
-    .coord-card { border-left: 5px solid #0d6efd; transition: 0.3s; }
-    .coord-card:hover { transform: translateX(10px); }
+    /* Padronização dos logos no topo */
+    .navbar-brand img {
+      height: 45px;
+      width: auto;
+    }
+    
+    /* Estilo para os logos no rodapé */
+    .footer-logos img {
+      height: 55px;
+      width: auto;
+      background-color: #ffffff;
+      padding: 6px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .footer-logos img:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+    .logo-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      opacity: 0.9;
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    /* Estilo Específico da Equipe */
+    .foto-perfil {
+      width: 180px;
+      height: 180px;
+      object-fit: cover; /* Garante que a foto não distorça */
+      border-radius: 50%;
+      border: 5px solid #0d6efd;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+    .coord-card {
+      border: none;
+      transition: all 0.3s ease;
+    }
+    .coord-card:hover .foto-perfil {
+      transform: scale(1.05);
+    }
+    .btn-lattes {
+      background-color: #003366;
+      color: white;
+      border-radius: 20px;
+      padding: 8px 20px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    .btn-lattes:hover {
+      background-color: #00509d;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
   </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -21,10 +79,18 @@
   <nav class="navbar navbar-expand-lg sticky-top shadow-sm bg-white">
     <div class="container">
       <div class="navbar-brand d-flex align-items-center">
-        <a href="index.html"><img src="img/logo.jpeg" alt="Logo PRH 31"></a>
-        <a href="https://www.ufc.br" target="_blank"><img src="img/logo-ufc.jpeg" alt="Logo UFC" class="border-start ps-2 ms-2"></a>
+        <a href="index.html">
+          <img src="img/logo.jpeg" alt="Logo PRH 31">
+        </a>
+        <a href="https://www.ufc.br" target="_blank" title="Ir para o site da UFC">
+          <img src="img/logo-ufc.jpeg" alt="Logo UFC" class="border-start ps-2 ms-2">
+        </a>
       </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"><span class="navbar-toggler-icon"></span></button>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
@@ -42,37 +108,56 @@
 <main class="container my-5 flex-grow-1">
   <div class="text-center mb-5">
     <h2 class="fw-bold text-primary display-5">Equipe</h2>
-    <p class="lead text-muted">Docentes e pesquisadores que coordenam o programa.</p>
+    <p class="lead text-muted">Coordenação e Corpo Docente</p>
     <hr class="w-25 mx-auto border-primary border-3">
   </div>
-  
-  <div class="row g-4 justify-content-center">
-    <div class="col-md-6 col-lg-5">
-      <div class="card coord-card shadow-sm p-4">
-        <h4 class="text-primary fw-bold mb-1">Coordenador do Programa</h4>
-        <p class="fs-5 mb-1">Prof. Dr. [Nome do Coordenador]</p>
-        <p class="text-muted small">Universidade Federal do Ceará - UFC</p>
+
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-4">
+      <div class="card coord-card shadow-sm p-4 text-center bg-light">
+        <img src="img/jorge-soares.jpeg" alt="Jorge Barbosa Soares" class="foto-perfil mx-auto shadow">
+        
+        <h4 class="text-primary fw-bold mb-1">Jorge Barbosa Soares</h4>
+        <p class="text-secondary mb-4">Coordenador do PRH 31</p>
+        
+        <div class="d-grid gap-2">
+          <a href="https://lattes.cnpq.br/9212256013670303" target="_blank" class="btn btn-lattes">
+            <i class="bi bi-file-earmark-person-fill me-2"></i>Currículo Lattes
+          </a>
+        </div>
       </div>
     </div>
-    <div class="col-md-6 col-lg-5">
-      <div class="card coord-card shadow-sm p-4 border-primary">
-        <h4 class="text-primary fw-bold mb-1">Coordenador Adjunto</h4>
-        <p class="fs-5 mb-1">Prof. Dr. [Nome do Adjunto]</p>
-        <p class="text-muted small">Universidade Federal do Ceará - UFC</p>
-      </div>
+
     </div>
-  </div>
 </main>
 
 <footer>
   <div class="container text-white text-center py-4">
     <p class="mb-4">© 2026 PRH 31 - Universidade Federal do Ceará (UFC)</p>
+    
     <div class="row justify-content-center align-items-start g-4 footer-logos">
-      <div class="col-6 col-md-auto text-center"><p class="logo-label">Programa</p><img src="img/logo-prh-anp.jpeg" alt="Logo PRH ANP"></div>
-      <div class="col-6 col-md-auto text-center"><p class="logo-label">Fomento</p><a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg" alt="Logo ANP"></a></div>
-      <div class="col-6 col-md-auto text-center"><p class="logo-label">Gestão</p><a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg" alt="Logo FAPESP"></a></div>
+      <div class="col-6 col-md-auto text-center">
+        <p class="logo-label">Programa</p>
+        <img src="img/logo-prh-anp.jpeg" alt="Logo PRH ANP">
+      </div>
+
+      <div class="col-6 col-md-auto text-center">
+        <p class="logo-label">Fomento / Financiamento</p>
+        <a href="https://www.gov.br/anp/pt-br" target="_blank">
+          <img src="img/logo-anp.jpeg" alt="Logo ANP">
+        </a>
+      </div>
+
+      <div class="col-6 col-md-auto text-center">
+        <p class="logo-label">Gestão Financeira / Administrativa</p>
+        <a href="https://fapesp.br/" target="_blank">
+          <img src="img/logo-fapesp.jpeg" alt="Logo FAPESP">
+        </a>
+      </div>
     </div>
   </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
