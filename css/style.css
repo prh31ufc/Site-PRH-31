@@ -1,29 +1,64 @@
-/* Garante que o rodapé fique no final da página mesmo se houver pouco conteúdo */
+/* Importando uma fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
 }
 
-main {
-  flex: 1 0 auto;
+/* Navbar Branca para o Logo aparecer perfeitamente */
+.navbar {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 0;
 }
 
-/* Estilo do Banner Principal (Hero) */
-.hero {
-  background: linear-gradient(135deg, #003366 0%, #0055a5 100%);
-  padding: 120px 20px;
-  box-shadow: inset 0 0 50px rgba(0,0,0,0.3);
+.nav-link {
+    color: #444 !important;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-/* Efeito Hover nos Cards */
+.nav-link:hover, .nav-link.active {
+    color: #005596 !important; /* Azul UFC */
+}
+
+/* SEÇÃO HERO (Com a imagem refinaria.jpeg) */
+.hero-refinaria {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/refinaria.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero-refinaria h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Cartões (Cards) das páginas */
 .card {
-  border: none;
-  border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 12px;
+    transition: 0.3s;
 }
 
-.card-hover:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.text-primary { color: #005596 !important; }
+.btn-primary { background-color: #005596; border: none; }
+.btn-primary:hover { background-color: #003d6b; }
+
+footer {
+    background-color: #002d52;
+    color: white;
+    padding: 40px 0;
 }
