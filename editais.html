@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Editais | PRH 31 - UFC</title>
+  <title>PRH 31 - UFC | Editais</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-
-<body>
+<body class="d-flex flex-column min-vh-100">
 
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">PRH 31 - UFC</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.jpeg" alt="Logo PRH 31" height="50">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Alternar navegação">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div id="menu" class="collapse navbar-collapse">
@@ -23,6 +24,7 @@
           <li class="nav-item"><a class="nav-link active" href="editais.html">Editais</a></li>
           <li class="nav-item"><a class="nav-link" href="resultados.html">Resultados</a></li>
           <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
+          <li class="nav-item"><a class="nav-link" href="documentos.html">Documentos</a></li>
           <li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
         </ul>
       </div>
@@ -30,25 +32,11 @@
   </nav>
 </header>
 
-<main class="container my-5">
-  <h2 class="fw-bold mb-4 text-primary border-bottom pb-2">Editais Abertos e Encerrados</h2>
-
-  <div class="list-group mt-4 shadow-sm">
-    <a href="docs/edital_01_2026.pdf" target="_blank" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center p-3">
-      <div>
-        <h5 class="mb-1">Edital 01/2026 - Seleção de Bolsistas de Graduação</h5>
-        <small class="text-muted">Publicado em: 15 de Março de 2026</small>
-      </div>
-      <span class="badge bg-success rounded-pill">Aberto</span>
-    </a>
-    
-    <a href="#" target="_blank" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center p-3 text-muted">
-      <div>
-        <h5 class="mb-1">Edital 02/2025 - Seleção de Doutorado</h5>
-        <small>Publicado em: 10 de Agosto de 2025</small>
-      </div>
-      <span class="badge bg-secondary rounded-pill">Encerrado</span>
-    </a>
+<main class="container my-5 flex-grow-1">
+  <h2 class="fw-bold mb-4 text-primary border-bottom pb-2">Editais Abertos</h2>
+  
+  <div class="alert alert-info shadow-sm" role="alert">
+    No momento, não há editais com inscrições abertas. Acompanhe nosso site para futuras seleções.
   </div>
 </main>
 
@@ -60,5 +48,6 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
