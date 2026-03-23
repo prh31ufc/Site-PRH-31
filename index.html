@@ -20,19 +20,18 @@
       color: white; min-height: 40px; display: flex; align-items: center; justify-content: center;
     }
 
-    /* Estilo das Fotos de Perfil (Tamanho Otimizado para 5 em linha) */
+    /* Estilo das Fotos de Perfil (Otimizadas para 5 em linha) */
     .foto-perfil {
       width: 120px;
       height: 120px;
       object-fit: cover;
       border-radius: 50%;
-      border: 3px solid #0d6efd;
+      border: 4px solid #0d6efd;
       margin-bottom: 12px;
       transition: transform 0.3s ease;
       background-color: #f8f9fa;
     }
     
-    /* Card da Equipe */
     .equipe-card {
       border: none;
       transition: all 0.3s ease;
@@ -50,12 +49,11 @@
       font-size: 0.85rem;
       font-weight: bold;
       color: #0d6efd;
-      min-height: 45px;
+      min-height: 50px;
       display: flex;
       align-items: center;
       justify-content: center;
       line-height: 1.2;
-      margin-bottom: 5px;
     }
 
     .cargo-membro {
@@ -78,9 +76,10 @@
     .btn-lattes:hover {
       background-color: #00509d;
       color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
-    /* Forçar 5 colunas em telas grandes */
+    /* Customização para 5 colunas em telas grandes (Desktop) */
     @media (min-width: 992px) {
       .col-5-custom {
         flex: 0 0 auto;
@@ -113,17 +112,17 @@
   </nav>
 </header>
 
-<main class="container-fluid px-4 my-5 flex-grow-1">
+<main class="container-fluid px-lg-5 my-5 flex-grow-1">
   <div class="text-center mb-5">
     <h2 class="fw-bold text-primary display-5">Equipe</h2>
     <p class="lead text-muted">Coordenação e Comitê Gestor do PRH 31 - UFC</p>
     <hr class="w-25 mx-auto border-primary border-3">
   </div>
 
-  <div class="row g-3 justify-content-center">
+  <div class="row g-3 justify-content-center text-center">
     
     <div class="col-md-4 col-5-custom">
-      <div class="card equipe-card shadow-sm p-3 text-center bg-white border">
+      <div class="card equipe-card shadow-sm p-3 bg-white border">
         <img src="img/coo.jpeg" alt="Jorge Barbosa Soares" class="foto-perfil mx-auto shadow-sm">
         <div class="nome-membro">Jorge Barbosa Soares</div>
         <div class="cargo-membro text-primary">Coordenador</div>
@@ -134,7 +133,7 @@
     </div>
 
     <div class="col-md-4 col-5-custom">
-      <div class="card equipe-card shadow-sm p-3 text-center bg-white border">
+      <div class="card equipe-card shadow-sm p-3 bg-white border">
         <img src="img/cg1.jpeg" alt="Cleiton Carvalho Silva" class="foto-perfil mx-auto shadow-sm">
         <div class="nome-membro">Cleiton Carvalho Silva</div>
         <div class="cargo-membro">Comitê Gestor</div>
@@ -145,7 +144,7 @@
     </div>
 
     <div class="col-md-4 col-5-custom">
-      <div class="card equipe-card shadow-sm p-3 text-center bg-white border">
+      <div class="card equipe-card shadow-sm p-3 bg-white border">
         <img src="img/cg2.jpeg" alt="Hélio Cordeiro de Miranda" class="foto-perfil mx-auto shadow-sm">
         <div class="nome-membro">Hélio Cordeiro de Miranda</div>
         <div class="cargo-membro">Comitê Gestor</div>
@@ -156,7 +155,7 @@
     </div>
 
     <div class="col-md-4 col-5-custom">
-      <div class="card equipe-card shadow-sm p-3 text-center bg-white border">
+      <div class="card equipe-card shadow-sm p-3 bg-white border">
         <img src="img/cg3.jpeg" alt="Lucas Babadopulos" class="foto-perfil mx-auto shadow-sm">
         <div class="nome-membro">Lucas F. de A. L. Babadopulos</div>
         <div class="cargo-membro">Comitê Gestor</div>
@@ -167,12 +166,12 @@
     </div>
 
     <div class="col-md-4 col-5-custom">
-      <div class="card equipe-card shadow-sm p-3 text-center bg-white border">
+      <div class="card equipe-card shadow-sm p-3 bg-white border">
         <img src="img/cg4.jpeg" alt="Francisco Murilo Tavares de Luna" class="foto-perfil mx-auto shadow-sm">
         <div class="nome-membro">Francisco Murilo Tavares de Luna</div>
         <div class="cargo-membro">Comitê Gestor</div>
         <div class="d-grid px-2">
-          <a href="https://lattes.cnpq.br/8965681617279313" target="_blank" class="btn btn-lattes">Lattes</a>
+          <a href="https://lattes.cnpq.br/9515868229218114" target="_blank" class="btn btn-lattes">Lattes</a>
         </div>
       </div>
     </div>
