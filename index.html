@@ -32,17 +32,13 @@
     .hero-section {
       background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('img/refinaria.jpeg') no-repeat center center;
       background-size: cover;
-      min-height: 450px;
+      height: 400px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-      padding: 40px 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
-    .hero-title { font-size: 3.5rem; font-weight: 800; margin-bottom: 0.5rem; }
-    .hero-subtitle { font-size: 1.8rem; font-weight: 600; line-height: 1.2; margin-bottom: 1.5rem; }
-    .hero-tagline { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; background: rgba(13, 110, 253, 0.7); display: inline-block; padding: 5px 15px; border-radius: 4px; }
 
     /* Seção Sobre */
     .section-title {
@@ -71,25 +67,10 @@
     }
     .footer-logos img:hover { transform: scale(1.05); }
     
-    .social-label-footer {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-      display: block;
-      font-weight: 600;
-    }
-    .social-footer a {
-      color: white;
-      font-size: 1.8rem;
-      margin: 0 15px;
-      transition: all 0.3s ease;
-      display: inline-block;
-    }
-    .social-footer a:hover { transform: scale(1.2); opacity: 0.9; }
     .logo-label {
       font-size: 0.75rem; text-transform: uppercase; margin-bottom: 8px;
       min-height: 40px; display: flex; align-items: center; justify-content: center;
+      font-weight: 600;
     }
   </style>
 </head>
@@ -130,12 +111,8 @@
 <main class="flex-grow-1">
   <section class="hero-section text-center">
     <div class="container">
-      <div class="hero-title">PRH 31</div>
-      <div class="hero-subtitle">
-        Engenharia de Petróleo, Gás Natural,<br>
-        Biocombustíveis e Energias Renováveis
-      </div>
-      <div class="hero-tagline">Universidade Federal do Ceará</div>
+      <h1 class="display-4 fw-bold">PRH 31 - UFC</h1>
+      <p class="lead">Formando Líderes para o Setor de Energia</p>
     </div>
   </section>
 
@@ -154,15 +131,9 @@
   </section>
 </main>
 
-<footer class="py-4 mt-auto">
+<footer class="py-5 mt-auto">
   <div class="container text-center">
-    <span class="social-label-footer">Mídias sociais</span>
-    <div class="social-footer mb-4">
-      <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank"><i class="bi bi-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/prh31ufc/" target="_blank"><i class="bi bi-linkedin"></i></a>
-    </div>
-
-    <p class="mb-4">© 2026 PRH 31 - Universidade Federal do Ceará (UFC)</p>
+    <p class="mb-5 fw-bold">© 2026 PRH 31 - Universidade Federal do Ceará (UFC)</p>
     
     <div class="row justify-content-center align-items-start g-4 footer-logos">
       <div class="col-6 col-md-auto text-center">
