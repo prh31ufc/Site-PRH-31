@@ -14,18 +14,25 @@
     .nav-link.active { color: #0d6efd!important; border-bottom: 2px solid #0d6efd; }
     
     .hero-section {
-      padding: 80px 0;
+      padding: 60px 0;
       background: #fff;
       border-bottom: 1px solid #dee2e6;
       text-align: center;
     }
-    .hero-phrase {
-      font-size: 1.5rem;
+    .program-full-name {
+      font-size: 1.25rem;
+      color: #666;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+    .history-phrase {
+      font-size: 1.15rem;
       font-weight: 600;
       color: #0d6efd;
-      max-width: 800px;
-      margin: 20px auto;
-      line-height: 1.4;
+      margin-top: 25px;
+      font-style: italic;
     }
     
     .feature-card {
@@ -39,7 +46,7 @@
     
     footer { background: #0d6efd; color: #fff; padding: 15px 0; margin-top: auto; }
     .footer-logos img { height: 35px; background: #fff; padding: 3px; border-radius: 4px; }
-    .logo-label { font-size: .6rem; text-transform: uppercase; font-weight: 700; margin-bottom: 4px; display: block; color: rgba(255,255,255,0.9); }
+    .logo-label { font-size:.6rem; text-transform:uppercase; font-weight:700; margin-bottom:4px; display:block; color:rgba(255,255,255,0.9)}
     .social-icons a { color: #fff; font-size: 1.4rem; margin: 0 8px; transition: 0.3s; }
     .social-icons a:hover { color: #ffc107; transform: scale(1.2); display: inline-block; }
   </style>
@@ -68,13 +75,20 @@
 <main class="flex-grow-1">
   <section class="hero-section">
     <div class="container">
-      <h1 class="display-4 fw-bold mb-3">PRH 31.1 - UFC</h1>
-      <p class="hero-phrase">
+      <h1 class="display-3 fw-bold text-primary mb-3">PRH 31.1</h1>
+      
+      <div class="program-full-name">
+        <p class="mb-0">Programa Institucional da UFC para Formação de Recursos Humanos em Engenharia e</p>
+        <p>Ciências do Petróleo e Gás Natural</p>
+      </div>
+
+      <p class="history-phrase">
         Mais de 25 anos de atuação na formação de especialistas para o setor de petróleo, gás e energia.
       </p>
+
       <div class="mt-4">
-        <a href="cursos.html" class="btn btn-primary btn-lg px-4 me-md-2">Ver Cursos Atendidos</a>
-        <a href="documentos.html" class="btn btn-outline-primary btn-lg px-4">Documentação</a>
+        <a href="cursos.html" class="btn btn-primary btn-lg px-4 me-md-2">Conheça os Cursos</a>
+        <a href="editais.html" class="btn btn-outline-primary btn-lg px-4">Editais Abertos</a>
       </div>
     </div>
   </section>
@@ -84,22 +98,22 @@
       <div class="col-md-4">
         <div class="card h-100 p-4 feature-card">
           <i class="bi bi-mortarboard text-primary fs-1 mb-3"></i>
-          <h5 class="fw-bold">Formação Acadêmica</h5>
-          <p class="text-muted small">Apoio a graduações e pós-graduações de excelência na Universidade Federal do Ceará.</p>
+          <h5 class="fw-bold">Excelência Acadêmica</h5>
+          <p class="text-muted small">Suporte direto aos cursos de graduação e pós-graduação da UFC voltados ao setor energético.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card h-100 p-4 feature-card">
-          <i class="bi bi-graph-up-arrow text-primary fs-1 mb-3"></i>
-          <h5 class="fw-bold">Setor de Energia</h5>
-          <p class="text-muted small">Foco estratégico no desenvolvimento de competências para o mercado de Petróleo e Gás.</p>
+          <i class="bi bi-fuel-pump text-primary fs-1 mb-3"></i>
+          <h5 class="fw-bold">Setor Estratégico</h5>
+          <p class="text-muted small">Fomento à pesquisa e capacitação em Petróleo, Gás Natural e novas matrizes energéticas.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card h-100 p-4 feature-card">
-          <i class="bi bi-people text-primary fs-1 mb-3"></i>
-          <h5 class="fw-bold">Rede de Talentos</h5>
-          <p class="text-muted small">Conectando estudantes capacitados às grandes demandas da indústria nacional.</p>
+          <i class="bi bi-briefcase text-primary fs-1 mb-3"></i>
+          <h5 class="fw-bold">Inserção Profissional</h5>
+          <p class="text-muted small">Preparação de profissionais qualificados para atender às demandas da indústria nacional.</p>
         </div>
       </div>
     </div>
