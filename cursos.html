@@ -10,46 +10,46 @@
     body{font-family:'Inter',sans-serif;background:#f8f9fa}.navbar-brand img{height:45px}.nav-link{font-weight:600;color:#495057;border-bottom:2px solid transparent}.nav-link.active{color:#0d6efd!important;border-bottom:2px solid #0d6efd}
     
     /* Container do Infográfico */
-    .courses-container { position: relative; width: 100%; max-width: 900px; height: 650px; margin: 40px auto; display: flex; align-items: center; justify-content: center; }
+    .courses-container { position: relative; width: 100%; max-width: 900px; height: 600px; margin: 60px auto; display: flex; align-items: center; justify-content: center; }
     
     /* Círculo Central */
-    .center-circle { width: 160px; height: 160px; background: #000; color: #fff; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 10; font-weight: 800; border: 4px solid #fff; box-shadow: 0 0 20px rgba(0,0,0,0.2); }
+    .center-circle { width: 160px; height: 160px; background: #000; color: #fff; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 10; font-weight: 800; border: 4px solid #fff; box-shadow: 0 0 20px rgba(0,0,0,0.2); position: relative; }
     .center-circle h3 { font-size: 2rem; margin: 0; }
     .center-circle p { font-size: 1.5rem; margin: 0; }
 
-    /* Estilo Base dos Círculos de Cursos */
-    .course-node { position: absolute; width: 135px; height: 135px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-align: center; color: #000; font-weight: 700; font-size: 0.8rem; text-decoration: none; padding: 12px; transition: 0.3s ease; border: 2px solid #333; box-shadow: 0 5px 15px rgba(0,0,0,0.1); line-height: 1.2; z-index: 5; }
+    /* Estilo dos Círculos de Cursos */
+    .course-node { position: absolute; width: 130px; height: 130px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-align: center; color: #000; font-weight: 700; font-size: 0.8rem; text-decoration: none; padding: 12px; transition: 0.3s ease; border: 2px solid #333; box-shadow: 0 5px 15px rgba(0,0,0,0.1); line-height: 1.2; z-index: 5; }
     .course-node:hover { transform: scale(1.1); color: #000; box-shadow: 0 10px 25px rgba(0,0,0,0.2); z-index: 20; }
 
-    /* Linhas Conectoras */
-    .line { position: absolute; background: #333; height: 2px; z-index: 1; transform-origin: left center; pointer-events: none; }
+    /* Estilo das Linhas Conectoras */
+    .line { position: absolute; background: #333; height: 2px; z-index: 1; transform-origin: 0% 50%; pointer-events: none; }
 
-    /* Posicionamento e Cores dos Cursos */
-    .node-quimica { background: #00aeef; top: 5%; left: 15%; }
-    .node-metal { background: #92278f; top: 0%; left: 42%; color: #fff; }
-    .node-petroleo { background: #f7941d; top: 8%; right: 12%; }
-    .node-geologia { background: #0054ff; top: 40%; right: 2%; color: #fff; }
-    .node-producao { background: #00ff00; bottom: 5%; right: 20%; }
-    .node-eletrica { background: #ffff00; bottom: 5%; left: 25%; }
+    /* Posições dos Círculos (Proporcional ao gráfico enviado) */
+    .node-quimica { background: #00aeef; top: 0%; left: 10%; }
+    .node-metal { background: #92278f; top: -10%; left: 43%; color: #fff; }
+    .node-petroleo { background: #f7941d; top: 5%; right: 10%; }
+    .node-geologia { background: #0054ff; top: 40%; right: 0%; color: #fff; }
+    .node-producao { background: #00ff00; bottom: 0%; right: 15%; }
+    .node-eletrica { background: #ffff00; bottom: 0%; left: 15%; }
     .node-civil { background: #ff0000; top: 40%; left: 0%; color: #fff; }
 
-    /* Ajustes das Linhas (Pode ser necessário ajustar conforme o layout final) */
-    .line-quimica { width: 220px; transform: rotate(-140deg); left: 50%; top: 50%; }
+    /* Ajuste de cada linha para tocar os círculos */
+    /* Cada linha nasce no centro (50%, 50%) e gira em direção ao curso */
+    .line-quimica { width: 260px; transform: rotate(-145deg); left: 50%; top: 50%; }
     .line-metal { width: 230px; transform: rotate(-90deg); left: 50%; top: 50%; }
-    .line-petroleo { width: 220px; transform: rotate(-40deg); left: 50%; top: 50%; }
-    .line-geologia { width: 260px; transform: rotate(0deg); left: 50%; top: 50%; }
-    .line-producao { width: 220px; transform: rotate(45deg); left: 50%; top: 50%; }
-    .line-eletrica { width: 220px; transform: rotate(135deg); left: 50%; top: 50%; }
-    .line-civil { width: 260px; transform: rotate(180deg); left: 50%; top: 50%; }
+    .line-petroleo { width: 260px; transform: rotate(-35deg); left: 50%; top: 50%; }
+    .line-geologia { width: 320px; transform: rotate(0deg); left: 50%; top: 50%; }
+    .line-producao { width: 280px; transform: rotate(55deg); left: 50%; top: 50%; }
+    .line-eletrica { width: 280px; transform: rotate(125deg); left: 50%; top: 50%; }
+    .line-civil { width: 320px; transform: rotate(180deg); left: 50%; top: 50%; }
 
     footer{background:#0d6efd;color:#fff;padding:15px 0;margin-top:auto}.footer-logos img{height:35px;background:#fff;padding:3px;border-radius:4px}.logo-label{font-size:.6rem;text-transform:uppercase;font-weight:700;margin-bottom:4px;display:block;color:rgba(255,255,255,0.9)}
     .social-icons a{color:#fff;font-size:1.4rem;margin:0 8px;transition:0.3s}.social-icons a:hover{color:#ffc107;transform:scale(1.2);display:inline-block}
 
     @media (max-width: 768px) {
-      .courses-container { height: auto; flex-direction: column; gap: 15px; padding: 20px; }
+      .courses-container { height: auto; flex-direction: column; gap: 20px; padding: 20px; margin: 20px auto; }
       .course-node, .center-circle { position: static; width: 100%; height: auto; border-radius: 10px; padding: 15px; }
-      .center-circle { margin-bottom: 20px; }
-      .line { display: none; } /* Esconde as linhas no mobile para não bagunçar */
+      .line { display: none; }
     }
   </style>
 </head>
