@@ -8,47 +8,74 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
     body{font-family:'Inter',sans-serif;background:#f8f9fa}.navbar-brand img{height:45px}.nav-link{font-weight:600;color:#495057;border-bottom:2px solid transparent}.nav-link.active{color:#0d6efd!important;border-bottom:2px solid #0d6efd}
-    .course-link{text-decoration:none;color:#444;padding:12px 15px;border-radius:10px;background:#fff;margin-bottom:10px;border:1px solid #dee2e6;transition:0.3s;display:flex;align-items:center;font-weight:500}
-    .course-link:hover{background:#0d6efd;color:#fff!important;transform:translateX(8px);border-color:#0d6efd}
-    .course-link i{margin-right:10px;font-size:1.1rem}
-    .category-title{color:#0d6efd;font-weight:800;margin-bottom:25px;text-transform:uppercase;border-left:5px solid #0d6efd;padding-left:15px}
+    
+    /* Container do Infográfico */
+    .courses-container { position: relative; width: 100%; max-width: 850px; height: 650px; margin: 40px auto; display: flex; align-items: center; justify-content: center; }
+    
+    /* Círculo Central */
+    .center-circle { width: 160px; height: 160px; background: #000; color: #fff; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 10; font-weight: 800; border: 4px solid #fff; box-shadow: 0 0 20px rgba(0,0,0,0.2); }
+    .center-circle h3 { font-size: 2rem; margin: 0; }
+    .center-circle p { font-size: 1.5rem; margin: 0; }
+
+    /* Estilo Base dos Círculos de Cursos */
+    .course-node { position: absolute; width: 135px; height: 135px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-align: center; color: #000; font-weight: 700; font-size: 0.8rem; text-decoration: none; padding: 12px; transition: 0.3s ease; border: 2px solid #333; box-shadow: 0 5px 15px rgba(0,0,0,0.1); line-height: 1.2; }
+    .course-node:hover { transform: scale(1.1); color: #000; box-shadow: 0 10px 25px rgba(0,0,0,0.2); z-index: 20; }
+
+    /* Posicionamento dos 7 Cursos (Distribuição Circular) */
+    .node-quimica { background: #00aeef; top: 5%; left: 15%; }
+    .node-metal { background: #92278f; top: 0%; left: 42%; color: #fff; }
+    .node-petroleo { background: #f7941d; top: 8%; right: 12%; }
+    .node-geologia { background: #0054ff; top: 40%; right: 2%; color: #fff; }
+    .node-producao { background: #00ff00; bottom: 5%; right: 20%; }
+    .node-eletrica { background: #ffff00; bottom: 5%; left: 25%; }
+    .node-civil { background: #ff0000; top: 40%; left: 0%; color: #fff; }
+
     footer{background:#0d6efd;color:#fff;padding:15px 0;margin-top:auto}.footer-logos img{height:35px;background:#fff;padding:3px;border-radius:4px}.logo-label{font-size:.6rem;text-transform:uppercase;font-weight:700;margin-bottom:4px;display:block;color:rgba(255,255,255,0.9)}
     .social-icons a{color:#fff;font-size:1.4rem;margin:0 8px;transition:0.3s}.social-icons a:hover{color:#ffc107;transform:scale(1.2);display:inline-block}
+
+    @media (max-width: 768px) {
+      .courses-container { height: auto; flex-direction: column; gap: 15px; padding: 20px; }
+      .course-node, .center-circle { position: static; width: 100%; height: auto; border-radius: 10px; padding: 15px; }
+      .center-circle { margin-bottom: 20px; }
+    }
   </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
 <nav class="navbar navbar-expand-lg sticky-top shadow-sm bg-white"><div class="container">
-  <div class="navbar-brand d-flex align-items-center"><a href="index.html"><img src="img/logo.jpeg"></a><a href="https://www.ufc.br/" target="_blank"><img src="img/logo-ufc.jpeg" class="ms-2 border-start ps-2"></a></div>
+  <div class="navbar-brand d-flex align-items-center">
+    <a href="index.html"><img src="img/logo.jpeg"></a>
+    <a href="https://www.ufc.br/" target="_blank"><img src="img/logo-ufc.jpeg" class="ms-2 border-start ps-2"></a>
+  </div>
   <div class="collapse navbar-collapse"><ul class="navbar-nav ms-auto align-items-center">
     <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li><li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li><li class="nav-item"><a class="nav-link active" href="cursos.html">Cursos</a></li><li class="nav-item"><a class="nav-link" href="documentos.html">Documentos</a></li><li class="nav-item"><a class="nav-link" href="editais.html">Editais</a></li><li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
   </ul></div></div></nav>
-<main class="container py-5 flex-grow-1"><h2 class="text-center fw-bold text-primary mb-5 mt-4">CURSOS ATENDIDOS</h2><div class="row g-5">
-<div class="col-md-6"><h4 class="category-title">Graduação</h4><div class="d-grid">
-  <a href="https://www.ufc.br/ensino/guia-de-profissoes/555-engenharia-civil" target="_blank" class="course-link"><i class="bi bi-buildings"></i> Engenharia Civil</a>
-  <a href="https://www.ufc.br/ensino/guia-de-profissoes/549-engenharia-de-petroleo" target="_blank" class="course-link"><i class="bi bi-fuel-pump"></i> Engenharia de Petróleo</a>
-  <a href="https://producao.ufc.br/pt/sobre/" target="_blank" class="course-link"><i class="bi bi-gear"></i> Engenharia de Produção</a>
-  <a href="https://www.ufc.br/ensino/guia-de-profissoes/545-engenharia-eletrica" target="_blank" class="course-link"><i class="bi bi-lightning-charge"></i> Engenharia Elétrica</a>
-  <a href="https://www.ufc.br/ensino/guia-de-profissoes/543-engenharia-metalurgica" target="_blank" class="course-link"><i class="bi bi-boxes"></i> Engenharia Metalúrgica</a>
-  <a href="https://www.ufc.br/ensino/guia-de-profissoes/542-engenharia-quimica" target="_blank" class="course-link"><i class="bi bi-droplet-half"></i> Engenharia Química</a>
-  <a href="https://www.ufc.br/ensino/guia-de-profissoes/533-geologia" target="_blank" class="course-link"><i class="bi bi-geo-alt"></i> Geologia</a>
-</div></div>
-<div class="col-md-6"><h4 class="category-title">Pós-Graduação</h4><div class="d-grid">
-  <a href="http://posdeha.ufc.br" target="_blank" class="course-link"><i class="bi bi-award"></i> Eng. Civil: Recursos Hídricos</a>
-  <a href="https://www.pec.ufc.br/index.php/pt-br/" target="_blank" class="course-link"><i class="bi bi-award"></i> Eng. Civil: Estruturas</a>
-  <a href="https://det.ufc.br/petran" target="_blank" class="course-link"><i class="bi bi-award"></i> Engenharia de Transportes</a>
-  <a href="https://www.materiais.ufc.br" target="_blank" class="course-link"><i class="bi bi-award"></i> Ciência de Materiais</a>
-  <a href="https://ppgee.ufc.br/pt/pagina-de-introducao/" target="_blank" class="course-link"><i class="bi bi-award"></i> Engenharia Elétrica</a>
-  <a href="https://ppgeq.ufc.br" target="_blank" class="course-link"><i class="bi bi-award"></i> Engenharia Química</a>
-  <a href="https://www.fisica.ufc.br/portal/pos/" target="_blank" class="course-link"><i class="bi bi-award"></i> Física</a>
-  <a href="https://ppggeologia.ufc.br/pt/" target="_blank" class="course-link"><i class="bi bi-award"></i> Geologia</a>
-  <a href="https://pgquim.ufc.br/pt/" target="_blank" class="course-link"><i class="bi bi-award"></i> Química</a>
-</div></div></div></main>
+
+<main class="container py-5 flex-grow-1">
+  <h2 class="text-center fw-bold text-primary mb-2 mt-4">GRADUAÇÕES ATENDIDAS</h2>
+  <p class="text-center text-muted mb-5">Clique no curso para acessar mais informações</p>
+  
+  <div class="courses-container">
+    <div class="center-circle">
+      <h3>PRH</h3>
+      <p>31.1</p>
+    </div>
+
+    <a href="https://www.ufc.br/ensino/guia-de-profissoes/542-engenharia-quimica" target="_blank" class="course-node node-quimica">Engenharia Química</a>
+    <a href="https://www.ufc.br/ensino/guia-de-profissoes/543-engenharia-metalurgica" target="_blank" class="course-node node-metal">Engenharia Metalúrgica</a>
+    <a href="https://www.ufc.br/ensino/guia-de-profissoes/549-engenharia-de-petroleo" target="_blank" class="course-node node-petroleo">Engenharia de Petróleo</a>
+    <a href="https://www.ufc.br/ensino/guia-de-profissoes/533-geologia" target="_blank" class="course-node node-geologia">Geologia</a>
+    <a href="https://producao.ufc.br/pt/sobre/" target="_blank" class="course-node node-producao">Engenharia de Produção</a>
+    <a href="https://www.ufc.br/ensino/guia-de-profissoes/545-engenharia-eletrica" target="_blank" class="course-node node-eletrica">Engenharia Elétrica</a>
+    <a href="https://www.ufc.br/ensino/guia-de-profissoes/555-engenharia-civil" target="_blank" class="course-node node-civil">Engenharia Civil</a>
+  </div>
+</main>
+
 <footer class="text-center"><div class="container">
   <div class="social-icons mb-2"><a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank"><i class="bi bi-instagram"></i></a><a href="https://www.linkedin.com/in/prh31ufc/" target="_blank"><i class="bi bi-linkedin"></i></a></div>
   <p class="mb-2 small" style="font-size: 0.75rem;">© 2026 PRH 31 - UFC</p>
   <div class="row align-items-end"><div class="col-md-3 text-start mb-2 mb-md-0"><span class="logo-label" style="color:#ffc107">Clique Aqui!</span><a href="https://sage.fapesp.br/SAGe_WEB/processManagement.do" target="_blank"><img src="img/sage.jpeg" style="height:38px;border-radius:4px;background:#fff;padding:2px"></a></div>
   <div class="col-md-6"><div class="row justify-content-center g-3 footer-logos">
-    <div class="col-auto"><span class="logo-label">Programa</span><a href="https://www.gov.br/anp/pt-br/assuntos/pesquisa-dev-e-inovacao/formacao-de-recursos-humanos" target="_blank"><img src="img/logo-prh-anp.jpeg"></a></div>
+    <div class="col-auto"><span class="logo-label">Programa</span><a href="https://www.gov.br/anp/pt-br/assuntos/pesquisa-desenvolvimento-e-inovacao/formacao-de-recursos-humanos" target="_blank"><img src="img/logo-prh-anp.jpeg"></a></div>
     <div class="col-auto"><span class="logo-label">Fomento</span><a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg"></a></div>
     <div class="col-auto"><span class="logo-label">Gestão</span><a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg"></a></div>
   </div></div><div class="col-md-3 d-none d-md-block"></div></div></div></footer></body></html>
