@@ -8,14 +8,24 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
     body{font-family:'Inter',sans-serif;background:#f8f9fa}.navbar-brand img{height:45px}.nav-link{font-weight:600;color:#495057;border-bottom:2px solid transparent}.nav-link.active{color:#0d6efd!important;border-bottom:2px solid #0d6efd}
-    .bolsista-card{border:none;border-radius:15px;background:#fff;box-shadow:0 5px 15px rgba(0,0,0,0.05);transition:0.3s;padding:20px;text-align:center;height:100%}.bolsista-card:hover{transform:translateY(-5px)}
-    .status-badge{font-size:.7rem;font-weight:800;text-transform:uppercase;padding:5px 10px;border-radius:20px;margin-bottom:10px;display:inline-block}
-    .badge-atual{background:#e7f3ff;color:#0d6efd}.badge-egresso{background:#f8f9fa;color:#6c757d}
+    
+    .section-title { border-bottom: 3px solid #0d6efd; display: inline-block; padding-bottom: 5px; margin-bottom: 30px; font-weight: 800; }
+    .student-card { border: none; border-radius: 15px; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: 0.3s; margin-bottom: 15px; }
+    .student-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+    .student-name { font-size: 1rem; font-weight: 700; margin-bottom: 2px; color: #333; }
+    .student-course { font-size: 0.8rem; color: #666; margin-bottom: 12px; font-weight: 600; text-transform: uppercase; }
+    
+    .btn-social { font-size: 0.75rem; padding: 4px 10px; border-radius: 50px; font-weight: 600; flex: 1; margin: 0 3px; display: flex; align-items: center; justify-content: center; gap: 5px; }
+    
     footer{background:#0d6efd;color:#fff;padding:15px 0;margin-top:auto}.footer-logos img{height:35px;background:#fff;padding:3px;border-radius:4px}.logo-label{font-size:.6rem;text-transform:uppercase;font-weight:700;margin-bottom:4px;display:block;color:rgba(255,255,255,0.9)}
     .social-icons a{color:#fff;font-size:1.4rem;margin:0 8px;transition:0.3s}.social-icons a:hover{color:#ffc107;transform:scale(1.2);display:inline-block}
+    
+    .vertical-divider { border-right: 1px solid #dee2e6; }
+    @media (max-width: 768px) { .vertical-divider { border-right: none; border-bottom: 1px solid #dee2e6; margin-bottom: 40px; padding-bottom: 40px; } }
   </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
+
 <nav class="navbar navbar-expand-lg sticky-top shadow-sm bg-white"><div class="container">
   <div class="navbar-brand d-flex align-items-center"><a href="index.html"><img src="img/logo.jpeg"></a><a href="https://www.ufc.br/" target="_blank"><img src="img/logo-ufc.jpeg" class="ms-2 border-start ps-2"></a></div>
   <div class="collapse navbar-collapse"><ul class="navbar-nav ms-auto align-items-center">
@@ -27,23 +37,43 @@
     <li class="nav-item"><a class="nav-link" href="editais.html">Editais</a></li>
     <li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
   </ul></div></div></nav>
+
 <main class="container py-5 flex-grow-1">
-  <h2 class="text-center text-primary fw-bold mb-5 mt-4">BOLSISTAS</h2>
-  <div class="row g-4">
-    <div class="col-md-3"><div class="bolsista-card">
-      <span class="status-badge badge-atual">Bolsista Atual</span>
-      <h6 class="fw-bold mb-1">Nome do Bolsista</h6>
-      <p class="text-muted small mb-3">Engenharia de Petróleo</p>
-      <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">LinkedIn</a>
-    </div></div>
-    <div class="col-md-3"><div class="bolsista-card">
-      <span class="status-badge badge-egresso">Egresso</span>
-      <h6 class="fw-bold mb-1">Nome do Ex-Bolsista</h6>
-      <p class="text-muted small mb-3">Geologia</p>
-      <a href="#" class="btn btn-sm btn-outline-secondary rounded-pill">LinkedIn</a>
-    </div></div>
+  <div class="row">
+    <div class="col-md-6 vertical-divider">
+      <h3 class="section-title text-primary">BOLSISTAS ATUAIS</h3>
+      <div class="row g-3">
+        <div class="col-12">
+          <div class="student-card p-3">
+            <div class="student-name">Nome do Bolsista Exemplo</div>
+            <div class="student-course">Mestrado em Engenharia Química</div>
+            <div class="d-flex">
+              <a href="#" target="_blank" class="btn btn-outline-primary btn-social"><i class="bi bi-file-earmark-person"></i> Lattes</a>
+              <a href="#" target="_blank" class="btn btn-outline-primary btn-social"><i class="bi bi-linkedin"></i> LinkedIn</a>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 ps-md-5">
+      <h3 class="section-title text-secondary" style="border-color: #6c757d;">EGRESSOS</h3>
+      <div class="row g-3">
+        <div class="col-12">
+          <div class="student-card p-3">
+            <div class="student-name">Nome do Egresso Exemplo</div>
+            <div class="student-course">Doutorado em Engenharia de Teleinformática</div>
+            <div class="d-flex">
+              <a href="#" target="_blank" class="btn btn-outline-secondary btn-social"><i class="bi bi-file-earmark-person"></i> Lattes</a>
+              <a href="#" target="_blank" class="btn btn-outline-secondary btn-social"><i class="bi bi-linkedin"></i> LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </main>
+
 <footer class="text-center"><div class="container">
   <div class="social-icons mb-2"><a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank"><i class="bi bi-instagram"></i></a><a href="https://www.linkedin.com/in/prh31ufc/" target="_blank"><i class="bi bi-linkedin"></i></a></div>
   <p class="mb-2 small" style="font-size: 0.75rem;">© 2026 PRH 31 - UFC</p>
@@ -53,5 +83,6 @@
     <div class="col-auto"><span class="logo-label">Fomento</span><a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg"></a></div>
     <div class="col-auto"><span class="logo-label">Gestão</span><a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg"></a></div>
   </div></div><div class="col-md-3 d-none d-md-block"></div></div></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
