@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PRH 31 - UFC | Equipe</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+    body{font-family:'Inter',sans-serif;background:#f8f9fa}.navbar-brand img{height:45px}.nav-link{font-weight:600;color:#495057;border-bottom:2px solid transparent}.nav-link.active{color:#0d6efd!important;border-bottom:2px solid #0d6efd}
+    .team-card{border:none;border-radius:15px;background:#fff;box-shadow:0 5px 15px rgba(0,0,0,0.05);margin-top:45px;height:100%;transition:0.3s}.team-card:hover{transform:translateY(-5px)}
+    .member-img{width:100px;height:100px;object-fit:cover;border-radius:50%;border:4px solid #fff;margin-top:-50px;box-shadow:0 4px 8px rgba(0,0,0,0.1)}
+    .member-role{font-size:.65rem;font-weight:800;color:#0d6efd;text-transform:uppercase;margin-top:10px}.member-name{font-size:.95rem;font-weight:700;margin-bottom:15px}
+    footer{background:#0d6efd;color:#fff;padding:15px 0;margin-top:auto}.footer-logos img{height:35px;background:#fff;padding:3px;border-radius:4px}.logo-label{font-size:.6rem;text-transform:uppercase;font-weight:700;margin-bottom:4px;display:block;color:rgba(255,255,255,0.9)}
+    .social-icons a{color:#fff;font-size:1.4rem;margin:0 8px;transition:0.3s}.social-icons a:hover{color:#ffc107;transform:scale(1.2);display:inline-block}
+  </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm bg-white"><div class="container">
+  <div class="navbar-brand d-flex align-items-center">
+    <a href="index.html"><img src="img/logo.jpeg"></a>
+    <a href="https://www.ufc.br/" target="_blank"><img src="img/logo-ufc.jpeg" class="ms-2 border-start ps-2"></a>
+  </div>
+  <div class="collapse navbar-collapse"><ul class="navbar-nav ms-auto align-items-center">
+    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+    <li class="nav-item"><a class="nav-link active" href="equipe.html">Equipe</a></li>
+    <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
+    <li class="nav-item"><a class="nav-link" href="documentos.html">Documentos</a></li>
+    <li class="nav-item"><a class="nav-link" href="editais.html">Editais</a></li>
+    <li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
+  </ul></div></div></nav>
+
+<main class="container-fluid px-5 py-5 flex-grow-1 text-center">
+  <h2 class="fw-bold text-primary mb-5 mt-4">EQUIPE PRH 31</h2>
+  
+  <div class="row row-cols-1 row-cols-md-4 row-cols-lg-5 g-4 justify-content-center">
+    <div class="col"><div class="card team-card p-3"><img src="img/coo.jpeg" class="member-img mx-auto"><p class="member-role">Coordenador Geral</p><p class="member-name">Jorge Barbosa Soares</p><a href="https://lattes.cnpq.br/9212256013670303" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill">Lattes</a></div></div>
+    <div class="col"><div class="card team-card p-3"><img src="img/cg1.jpeg" class="member-img mx-auto"><p class="member-role">Membro do Comitê</p><p class="member-name">Cleiton Carvalho Silva</p><a href="https://lattes.cnpq.br/2862541276328123" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill">Lattes</a></div></div>
+    <div class="col"><div class="card team-card p-3"><img src="img/cg2.jpeg" class="member-img mx-auto"><p class="member-role">Membro do Comitê</p><p class="member-name">Francisco Murilo T. de Luna</p><a href="https://lattes.cnpq.br/9515868229218114" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill">Lattes</a></div></div>
+    <div class="col"><div class="card team-card p-3"><img src="img/cg3.jpeg" class="member-img mx-auto"><p class="member-role">Membro do Comitê</p><p class="member-name">Hélio Cordeiro de Miranda</p><a href="https://lattes.cnpq.br/6420338928006265" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill">Lattes</a></div></div>
+    <div class="col"><div class="card team-card p-3"><img src="img/cg4.jpeg" class="member-img mx-auto"><p class="member-role">Membro do Comitê</p><p class="member-name">Lucas F.A.L. Babadopulos</p><a href="https://lattes.cnpq.br/4032413277446483" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill">Lattes</a></div></div>
+    
+    <div class="col"><div class="card team-card p-3"><img src="img/pv.jpeg" class="member-img mx-auto"><p class="member-role">Pesquisador Visitante</p><p class="member-name">Jorge Luiz O. Lucas Júnior</p><button class="btn btn-sm btn-outline-secondary rounded-pill" disabled>Lattes</button></div></div>
+    <div class="col"><div class="card team-card p-3"><img src="img/at.jpeg" class="member-img mx-auto"><p class="member-role">Apoio Técnico</p><p class="member-name">Antônio Bandeira</p><button class="btn btn-sm btn-outline-secondary rounded-pill" disabled>Lattes</button></div></div>
+  </div>
+</main>
+
+<footer class="text-center"><div class="container">
+  <div class="social-icons mb-2"><a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank"><i class="bi bi-instagram"></i></a><a href="https://www.linkedin.com/in/prh31ufc/" target="_blank"><i class="bi bi-linkedin"></i></a></div>
+  <p class="mb-2 small" style="font-size: 0.75rem;">© 2026 PRH 31 - UFC</p>
+  <div class="row align-items-end"><div class="col-md-3 text-start mb-2 mb-md-0"><span class="logo-label" style="color:#ffc107">Clique Aqui!</span><a href="https://sage.fapesp.br/SAGe_WEB/processManagement.do" target="_blank"><img src="img/sage.jpeg" style="height:38px;border-radius:4px;background:#fff;padding:2px"></a></div>
+  <div class="col-md-6"><div class="row justify-content-center g-3 footer-logos">
+    <div class="col-auto"><span class="logo-label">Programa</span><a href="https://www.gov.br/anp/pt-br/assuntos/pesquisa-desenvolvimento-e-inovacao/formacao-de-recursos-humanos" target="_blank"><img src="img/logo-prh-anp.jpeg"></a></div>
+    <div class="col-auto"><span class="logo-label">Fomento</span><a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg"></a></div>
+    <div class="col-auto"><span class="logo-label">Gestão</span><a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg"></a></div>
+  </div></div><div class="col-md-3 d-none d-md-block"></div></div></div></footer></body></html>
