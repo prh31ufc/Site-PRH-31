@@ -7,48 +7,54 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-    body{font-family:'Inter',sans-serif;background:#f8f9fa}.navbar-brand img{height:45px}.nav-link{font-weight:600;color:#495057;border-bottom:2px solid transparent}.nav-link.active{color:#0d6efd!important;border-bottom:2px solid #0d6efd}
+    body{font-family:'Inter',sans-serif;background:#f8f9fa;overflow-x:hidden}.navbar-brand img{height:45px}.nav-link{font-weight:600;color:#495057;border-bottom:2px solid transparent}.nav-link.active{color:#0d6efd!important;border-bottom:2px solid #0d6efd}
     
-    /* Container do Infográfico */
-    .courses-container { position: relative; width: 100%; max-width: 800px; height: 500px; margin: 40px auto; display: flex; align-items: center; justify-content: center; }
+    /* Configuração dos Infográficos */
+    .courses-wrapper { position: relative; width: 100%; height: 500px; display: flex; align-items: center; justify-content: center; }
     
     /* Círculo Central */
-    .center-circle { width: 150px; height: 150px; background: #000; color: #fff; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 10; font-weight: 800; border: 4px solid #fff; box-shadow: 0 0 20px rgba(0,0,0,0.2); position: relative; }
-    .center-circle h3 { font-size: 1.8rem; margin: 0; }
-    .center-circle p { font-size: 1.3rem; margin: 0; }
+    .center-circle { width: 120px; height: 120px; background: #000; color: #fff; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 10; font-weight: 800; border: 3px solid #fff; box-shadow: 0 0 15px rgba(0,0,0,0.1); position: relative; }
+    .center-circle h3 { font-size: 1.4rem; margin: 0; }
+    .center-circle p { font-size: 1rem; margin: 0; }
 
-    /* Estilo dos Círculos de Cursos (Reduzi um pouco o tamanho para caber melhor na aproximação) */
-    .course-node { position: absolute; width: 120px; height: 120px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-align: center; color: #000; font-weight: 700; font-size: 0.75rem; text-decoration: none; padding: 10px; transition: 0.3s ease; border: 2px solid #333; box-shadow: 0 5px 15px rgba(0,0,0,0.1); line-height: 1.2; z-index: 5; }
-    .course-node:hover { transform: scale(1.1); color: #000; box-shadow: 0 10px 25px rgba(0,0,0,0.2); z-index: 20; }
+    /* Nós de Curso */
+    .course-node { position: absolute; width: 100px; height: 100px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-align: center; color: #000; font-weight: 700; font-size: 0.65rem; text-decoration: none; padding: 8px; transition: 0.3s ease; border: 1.5px solid #333; box-shadow: 0 4px 10px rgba(0,0,0,0.08); line-height: 1.1; z-index: 5; }
+    .course-node:hover { transform: scale(1.1); color: #000; box-shadow: 0 8px 20px rgba(0,0,0,0.15); z-index: 20; }
 
-    /* Estilo das Linhas Conectoras */
-    .line { position: absolute; background: #333; height: 2px; z-index: 1; transform-origin: 0% 50%; pointer-events: none; }
+    /* Linhas Conectoras */
+    .line { position: absolute; background: #ccc; height: 1px; z-index: 1; transform-origin: 0% 50%; pointer-events: none; }
 
-    /* Posições dos Círculos (Mais próximos do centro) */
-    .node-quimica { background: #00aeef; top: 10%; left: 18%; }
-    .node-metal { background: #92278f; top: 2%; left: 42.5%; color: #fff; }
-    .node-petroleo { background: #f7941d; top: 10%; right: 18%; }
-    .node-geologia { background: #0054ff; top: 38%; right: 8%; color: #fff; }
-    .node-producao { background: #00ff00; bottom: 8%; right: 22%; }
-    .node-eletrica { background: #ffff00; bottom: 8%; left: 22%; }
-    .node-civil { background: #ff0000; top: 38%; left: 8%; color: #fff; }
+    /* Divisor Vertical Elegante */
+    .vertical-divider { border-right: 1px solid #dee2e6; height: 80%; align-self: center; }
 
-    /* Ajuste de cada linha para conectar Origem (Centro) ao Destino (Curso) */
-    .line-quimica { width: 180px; transform: rotate(-140deg); left: 50%; top: 50%; }
-    .line-metal { width: 160px; transform: rotate(-90deg); left: 50%; top: 50%; }
-    .line-petroleo { width: 180px; transform: rotate(-40deg); left: 50%; top: 50%; }
-    .line-geologia { width: 220px; transform: rotate(0deg); left: 50%; top: 50%; }
-    .line-producao { width: 190px; transform: rotate(50deg); left: 50%; top: 50%; }
-    .line-eletrica { width: 190px; transform: rotate(130deg); left: 50%; top: 50%; }
-    .line-civil { width: 220px; transform: rotate(180deg); left: 50%; top: 50%; }
+    /* --- POSIÇÕES GRADUAÇÃO (ESQUERDA) --- */
+    .g-quimica { background: #00aeef; top: 10%; left: 15%; }
+    .g-metal { background: #92278f; top: 0%; left: 45%; color: #fff; }
+    .g-petroleo { background: #f7941d; top: 10%; right: 15%; }
+    .g-geologia { background: #0054ff; top: 40%; right: 5%; color: #fff; }
+    .g-producao { background: #00ff00; bottom: 5%; right: 20%; }
+    .g-eletrica { background: #ffff00; bottom: 5%; left: 20%; }
+    .g-civil { background: #ff0000; top: 40%; left: 5%; color: #fff; }
+
+    /* --- POSIÇÕES PÓS (DIREITA) --- */
+    /* 9 cursos distribuídos */
+    .p-recursos { background: #00aeef; top: 5%; left: 10%; }
+    .p-estruturas { background: #92278f; top: -5%; left: 40%; color: #fff; }
+    .p-transp { background: #f7941d; top: 5%; right: 10%; }
+    .p-materiais { background: #0054ff; top: 25%; right: 0%; color: #fff; }
+    .p-eletrica { background: #00ff00; bottom: 25%; right: 0%; }
+    .p-quimica_e { background: #ffff00; bottom: 5%; right: 20%; }
+    .p-fisica { background: #ff0000; bottom: -5%; left: 40%; color: #fff; }
+    .p-geologia { background: #555; bottom: 5%; left: 10%; color:#fff; }
+    .p-quimica { background: #ffa500; top: 25%; left: 0%; }
 
     footer{background:#0d6efd;color:#fff;padding:15px 0;margin-top:auto}.footer-logos img{height:35px;background:#fff;padding:3px;border-radius:4px}.logo-label{font-size:.6rem;text-transform:uppercase;font-weight:700;margin-bottom:4px;display:block;color:rgba(255,255,255,0.9)}
     .social-icons a{color:#fff;font-size:1.4rem;margin:0 8px;transition:0.3s}.social-icons a:hover{color:#ffc107;transform:scale(1.2);display:inline-block}
 
-    @media (max-width: 768px) {
-      .courses-container { height: auto; flex-direction: column; gap: 15px; padding: 20px; margin: 0; }
+    @media (max-width: 992px) {
+      .courses-wrapper { height: auto; flex-direction: column; gap: 20px; padding: 20px; margin: 0; }
       .course-node, .center-circle { position: static; width: 100%; height: auto; border-radius: 10px; padding: 15px; }
-      .line { display: none; }
+      .line, .vertical-divider { display: none; }
     }
   </style>
 </head>
@@ -62,31 +68,61 @@
     <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li><li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li><li class="nav-item"><a class="nav-link active" href="cursos.html">Cursos</a></li><li class="nav-item"><a class="nav-link" href="documentos.html">Documentos</a></li><li class="nav-item"><a class="nav-link" href="editais.html">Editais</a></li><li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
   </ul></div></div></nav>
 
-<main class="container py-5 flex-grow-1">
-  <h2 class="text-center fw-bold text-primary mb-2 mt-4">GRADUAÇÕES ATENDIDAS</h2>
-  <p class="text-center text-muted mb-5">Clique no curso para acessar mais informações</p>
-  
-  <div class="courses-container">
-    <div class="line line-quimica"></div>
-    <div class="line line-metal"></div>
-    <div class="line line-petroleo"></div>
-    <div class="line line-geologia"></div>
-    <div class="line line-producao"></div>
-    <div class="line line-eletrica"></div>
-    <div class="line line-civil"></div>
+<main class="container-fluid py-5 flex-grow-1">
+  <div class="row g-0">
+    
+    <div class="col-lg-6 px-4">
+      <h4 class="text-center fw-bold text-primary mb-5">GRADUAÇÃO</h4>
+      <div class="courses-wrapper">
+        <div class="line" style="width:160px; transform:rotate(-140deg); left:50%; top:50%;"></div>
+        <div class="line" style="width:130px; transform:rotate(-90deg); left:50%; top:50%;"></div>
+        <div class="line" style="width:160px; transform:rotate(-40deg); left:50%; top:50%;"></div>
+        <div class="line" style="width:180px; transform:rotate(0deg); left:50%; top:50%;"></div>
+        <div class="line" style="width:170px; transform:rotate(50deg); left:50%; top:50%;"></div>
+        <div class="line" style="width:170px; transform:rotate(130deg); left:50%; top:50%;"></div>
+        <div class="line" style="width:180px; transform:rotate(180deg); left:50%; top:50%;"></div>
 
-    <div class="center-circle">
-      <h3>PRH</h3>
-      <p>31.1</p>
+        <div class="center-circle"><h3>PRH</h3><p>31.1</p></div>
+
+        <a href="https://www.ufc.br/ensino/guia-de-profissoes/542-engenharia-quimica" target="_blank" class="course-node g-quimica">Engenharia Química</a>
+        <a href="https://www.ufc.br/ensino/guia-de-profissoes/543-engenharia-metalurgica" target="_blank" class="course-node g-metal">Engenharia Metalúrgica</a>
+        <a href="https://www.ufc.br/ensino/guia-de-profissoes/549-engenharia-de-petroleo" target="_blank" class="course-node g-petroleo">Engenharia de Petróleo</a>
+        <a href="https://www.ufc.br/ensino/guia-de-profissoes/533-geologia" target="_blank" class="course-node g-geologia">Geologia</a>
+        <a href="https://producao.ufc.br/pt/sobre/" target="_blank" class="course-node g-producao">Engenharia de Produção</a>
+        <a href="https://www.ufc.br/ensino/guia-de-profissoes/545-engenharia-eletrica" target="_blank" class="course-node g-eletrica">Engenharia Elétrica</a>
+        <a href="https://www.ufc.br/ensino/guia-de-profissoes/555-engenharia-civil" target="_blank" class="course-node g-civil">Engenharia Civil</a>
+      </div>
     </div>
 
-    <a href="https://www.ufc.br/ensino/guia-de-profissoes/542-engenharia-quimica" target="_blank" class="course-node node-quimica">Engenharia Química</a>
-    <a href="https://www.ufc.br/ensino/guia-de-profissoes/543-engenharia-metalurgica" target="_blank" class="course-node node-metal">Engenharia Metalúrgica</a>
-    <a href="https://www.ufc.br/ensino/guia-de-profissoes/549-engenharia-de-petroleo" target="_blank" class="course-node node-petroleo">Engenharia de Petróleo</a>
-    <a href="https://www.ufc.br/ensino/guia-de-profissoes/533-geologia" target="_blank" class="course-node node-geologia">Geologia</a>
-    <a href="https://producao.ufc.br/pt/sobre/" target="_blank" class="course-node node-producao">Engenharia de Produção</a>
-    <a href="https://www.ufc.br/ensino/guia-de-profissoes/545-engenharia-eletrica" target="_blank" class="course-node node-eletrica">Engenharia Elétrica</a>
-    <a href="https://www.ufc.br/ensino/guia-de-profissoes/555-engenharia-civil" target="_blank" class="course-node node-civil">Engenharia Civil</a>
+    <div class="vertical-divider d-none d-lg-block"></div>
+
+    <div class="col-lg-6 px-4">
+      <h4 class="text-center fw-bold text-primary mb-5">PÓS-GRADUAÇÃO</h4>
+      <div class="courses-wrapper">
+        <div class="line" style="width:170px; transform:rotate(-140deg); left:50%; top:50%;"></div>
+        <div class="line" style="width:130px; transform:rotate(-90deg); left:50%; top:50%;"></div>
+        <div class="line" style="width:170px; transform:rotate(-40deg); left:50%; top:50%;"></div>
+        <div class="line" style="width:180px; transform:rotate(0deg); left:50%; top:50%;"></div>
+        <div class="line" style="width:180px; transform:rotate(40deg); left:50%; top:50%;"></div>
+        <div class="line" style="width:170px; transform:rotate(80deg); left:50%; top:50%;"></div>
+        <div class="line" style="width:130px; transform:rotate(120deg); left:50%; top:50%;"></div>
+        <div class="line" style="width:170px; transform:rotate(160deg); left:50%; top:50%;"></div>
+        <div class="line" style="width:180px; transform:rotate(190deg); left:50%; top:50%;"></div>
+
+        <div class="center-circle"><h3>PRH</h3><p>31.1</p></div>
+
+        <a href="http://posdeha.ufc.br" target="_blank" class="course-node p-recursos">E. Civil: Rec. Hídricos</a>
+        <a href="https://www.pec.ufc.br/index.php/pt-br/" target="_blank" class="course-node p-estruturas">E. Civil: Estruturas</a>
+        <a href="https://det.ufc.br/petran" target="_blank" class="course-node p-transp">Eng. Transportes</a>
+        <a href="https://www.materiais.ufc.br" target="_blank" class="course-node p-materiais">Ciência Materiais</a>
+        <a href="https://ppgee.ufc.br/pt/pagina-de-introducao/" target="_blank" class="course-node p-eletrica">Eng. Elétrica</a>
+        <a href="https://ppgeq.ufc.br" target="_blank" class="course-node p-quimica_e">Eng. Química</a>
+        <a href="https://www.fisica.ufc.br/portal/pos/" target="_blank" class="course-node p-fisica">Física</a>
+        <a href="https://ppggeologia.ufc.br/pt/" target="_blank" class="course-node p-geologia">Geologia</a>
+        <a href="https://pgquim.ufc.br/pt/" target="_blank" class="course-node p-quimica">Química</a>
+      </div>
+    </div>
+
   </div>
 </main>
 
