@@ -2,155 +2,69 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PRH 31 - UFC | Cursos</title>
+  <title>PRH 31.1 - UFC | Cursos</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-    
-    body {
-      font-family: 'Inter', sans-serif;
-      /* Ajustado para o nome do seu arquivo: refi.jpeg */
-      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
-                  url('img/refi.jpeg') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-      min-height: 100vh;
-    }
-
+    body { font-family: 'Inter', sans-serif; background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('img/refi.jpeg') no-repeat center center fixed; background-size: cover; color: #fff; }
     .navbar-brand img { height: 45px; }
     .nav-link { font-weight: 600; color: #495057; border-bottom: 2px solid transparent; }
     .nav-link.active { color: #0d6efd!important; border-bottom: 2px solid #0d6efd; }
-    
-    /* Cards com efeito de vidro (Glassmorphism) */
-    .course-link {
-      text-decoration: none;
-      color: #fff !important;
-      padding: 14px 18px;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.1); 
-      margin-bottom: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      font-weight: 500;
-      backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
-    }
-    
-    .course-link:hover {
-      background: rgba(13, 110, 253, 0.8);
-      transform: translateX(10px);
-      border-color: #0d6efd;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
-    
+    .course-link { text-decoration: none; color: #fff !important; padding: 14px 18px; border-radius: 12px; background: rgba(255, 255, 255, 0.1); margin-bottom: 12px; border: 1px solid rgba(255, 255, 255, 0.2); transition: 0.3s; display: flex; align-items: center; font-weight: 500; backdrop-filter: blur(10px); }
+    .course-link:hover { background: rgba(13, 110, 253, 0.8); transform: translateX(10px); }
     .course-link i { margin-right: 12px; font-size: 1.2rem; color: #ffc107; }
-    .course-link:hover i { color: #fff; }
-
-    .category-title {
-      color: #ffc107;
-      font-weight: 800;
-      margin-bottom: 30px;
-      text-transform: uppercase;
-      border-left: 5px solid #ffc107;
-      padding-left: 15px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    }
-
-    .main-title {
-      font-weight: 800;
-      text-shadow: 0 4px 15px rgba(0,0,0,1);
-      letter-spacing: 1px;
-    }
-
-    footer { background: #0d6efd; color: #fff; padding: 15px 0; margin-top: auto; border-top: 1px solid rgba(255,255,255,0.1); }
+    .category-title { color: #ffc107; font-weight: 800; margin-bottom: 25px; text-transform: uppercase; border-left: 5px solid #ffc107; padding-left: 15px; }
+    footer { background: #0d6efd; color: #fff; padding: 15px 0; margin-top: auto; }
     .footer-logos img { height: 35px; background: #fff; padding: 3px; border-radius: 4px; }
-    .logo-label { font-size: .6rem; text-transform: uppercase; font-weight: 700; margin-bottom: 4px; display: block; color: rgba(255,255,255,0.9); }
-    .social-icons a { color: #fff; font-size: 1.4rem; margin: 0 8px; transition: 0.3s; }
-    .social-icons a:hover { color: #ffc107; transform: scale(1.2); display: inline-block; }
+    .logo-label { font-size:.6rem; text-transform:uppercase; font-weight:700; margin-bottom:4px; display:block; color:rgba(255,255,255,0.9)}
   </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
-
-<nav class="navbar navbar-expand-lg sticky-top shadow-sm bg-white">
-  <div class="container">
-    <div class="navbar-brand d-flex align-items-center">
-      <a href="index.html"><img src="img/logo.jpeg"></a>
-      <a href="https://www.ufc.br/" target="_blank"><img src="img/logo-ufc.jpeg" class="ms-2 border-start ps-2"></a>
-    </div>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto align-items-center">
-        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-        <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
-        <li class="nav-item"><a class="nav-link active" href="cursos.html">Cursos</a></li>
-        <li class="nav-item"><a class="nav-link" href="documentos.html">Documentos</a></li>
-        <li class="nav-item"><a class="nav-link" href="editais.html">Editais</a></li>
-        <li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm bg-white"><div class="container">
+  <div class="navbar-brand d-flex align-items-center"><a href="index.html"><img src="img/logo.jpeg"></a><a href="https://www.ufc.br/" target="_blank"><img src="img/logo-ufc.jpeg" class="ms-2 border-start ps-2"></a></div>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="navbarNav"><ul class="navbar-nav ms-auto align-items-center">
+    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+    <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
+    <li class="nav-item"><a class="nav-link active" href="cursos.html">Cursos</a></li>
+    <li class="nav-item"><a class="nav-link" href="bolsistas.html">Bolsistas</a></li>
+    <li class="nav-item"><a class="nav-link" href="documentos.html">Documentos</a></li>
+    <li class="nav-item"><a class="nav-link" href="editais.html">Editais</a></li>
+    <li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
+  </ul></div></div></nav>
 <main class="container py-5 flex-grow-1">
-  <h2 class="text-center main-title mb-5 mt-4">CURSOS ATENDIDOS</h2>
-  
+  <h2 class="text-center fw-bold text-white mb-5 mt-4" style="text-shadow: 2px 2px 10px rgba(0,0,0,1);">CURSOS ATENDIDOS</h2>
   <div class="row g-5">
-    <div class="col-md-6">
-      <h4 class="category-title">Graduação</h4>
-      <div class="d-grid">
-        <a href="https://www.ufc.br/ensino/guia-de-profissoes/555-engenharia-civil" target="_blank" class="course-link"><i class="bi bi-buildings"></i> Engenharia Civil</a>
-        <a href="https://www.ufc.br/ensino/guia-de-profissoes/549-engenharia-de-petroleo" target="_blank" class="course-link"><i class="bi bi-fuel-pump"></i> Engenharia de Petróleo</a>
-        <a href="https://producao.ufc.br/pt/sobre/" target="_blank" class="course-link"><i class="bi bi-gear"></i> Engenharia de Produção</a>
-        <a href="https://www.ufc.br/ensino/guia-de-profissoes/545-engenharia-eletrica" target="_blank" class="course-link"><i class="bi bi-lightning-charge"></i> Engenharia Elétrica</a>
-        <a href="https://www.ufc.br/ensino/guia-de-profissoes/543-engenharia-metalurgica" target="_blank" class="course-link"><i class="bi bi-boxes"></i> Engenharia Metalúrgica</a>
-        <a href="https://www.ufc.br/ensino/guia-de-profissoes/542-engenharia-quimica" target="_blank" class="course-link"><i class="bi bi-droplet-half"></i> Engenharia Química</a>
-        <a href="https://www.ufc.br/ensino/guia-de-profissoes/533-geologia" target="_blank" class="course-link"><i class="bi bi-geo-alt"></i> Geologia</a>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <h4 class="category-title" style="color: #00e5ff; border-color: #00e5ff;">Pós-Graduação</h4>
-      <div class="d-grid">
-        <a href="http://posdeha.ufc.br" target="_blank" class="course-link"><i class="bi bi-award"></i> Eng. Civil: Recursos Hídricos, Saneamento Ambiental e Geotecnia</a>
-        <a href="https://www.pec.ufc.br/index.php/pt-br/" target="_blank" class="course-link"><i class="bi bi-award"></i> Eng. Civil: Estruturas e Construção Civil</a>
-        <a href="https://det.ufc.br/petran" target="_blank" class="course-link"><i class="bi bi-award"></i> Engenharia de Transportes</a>
-        <a href="https://www.materiais.ufc.br" target="_blank" class="course-link"><i class="bi bi-award"></i> Ciência de Materiais</a>
-        <a href="https://ppgee.ufc.br/pt/pagina-de-introducao/" target="_blank" class="course-link"><i class="bi bi-award"></i> Engenharia Elétrica</a>
-        <a href="https://ppgeq.ufc.br" target="_blank" class="course-link"><i class="bi bi-award"></i> Engenharia Química</a>
-        <a href="https://www.fisica.ufc.br/portal/pos/" target="_blank" class="course-link"><i class="bi bi-award"></i> Física</a>
-        <a href="https://ppggeologia.ufc.br/pt/" target="_blank" class="course-link"><i class="bi bi-award"></i> Geologia</a>
-        <a href="https://pgquim.ufc.br/pt/" target="_blank" class="course-link"><i class="bi bi-award"></i> Química</a>
-      </div>
-    </div>
+    <div class="col-md-6"><h4 class="category-title">Graduação</h4><div class="d-grid">
+      <a href="#" class="course-link"><i class="bi bi-buildings"></i> Engenharia Civil</a>
+      <a href="#" class="course-link"><i class="bi bi-fuel-pump"></i> Engenharia de Petróleo</a>
+      <a href="#" class="course-link"><i class="bi bi-gear"></i> Engenharia de Produção</a>
+      <a href="#" class="course-link"><i class="bi bi-lightning-charge"></i> Engenharia Elétrica</a>
+      <a href="#" class="course-link"><i class="bi bi-boxes"></i> Engenharia Metalúrgica</a>
+      <a href="#" class="course-link"><i class="bi bi-droplet-half"></i> Engenharia Química</a>
+      <a href="#" class="course-link"><i class="bi bi-geo-alt"></i> Geologia</a>
+    </div></div>
+    <div class="col-md-6"><h4 class="category-title" style="color:#00e5ff; border-color:#00e5ff;">Pós-Graduação</h4><div class="d-grid">
+      <a href="#" class="course-link"><i class="bi bi-award"></i> Eng. Civil: Recursos Hídricos</a>
+      <a href="#" class="course-link"><i class="bi bi-award"></i> Eng. Civil: Estruturas</a>
+      <a href="#" class="course-link"><i class="bi bi-award"></i> Engenharia de Transportes</a>
+      <a href="#" class="course-link"><i class="bi bi-award"></i> Ciência de Materiais</a>
+      <a href="#" class="course-link"><i class="bi bi-award"></i> Engenharia Elétrica</a>
+      <a href="#" class="course-link"><i class="bi bi-award"></i> Engenharia Química</a>
+      <a href="#" class="course-link"><i class="bi bi-award"></i> Física</a>
+      <a href="#" class="course-link"><i class="bi bi-award"></i> Geologia</a>
+      <a href="#" class="course-link"><i class="bi bi-award"></i> Química</a>
+    </div></div>
   </div>
 </main>
-
-<footer class="text-center">
-  <div class="container">
-    <div class="social-icons mb-2">
-      <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank"><i class="bi bi-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/prh31ufc/" target="_blank"><i class="bi bi-linkedin"></i></a>
-    </div>
-    <p class="mb-2 small" style="font-size: 0.75rem;">© 2026 PRH 31 - UFC</p>
-    <div class="row align-items-end">
-      <div class="col-md-3 text-start mb-2 mb-md-0">
-        <span class="logo-label" style="color:#ffc107">Clique Aqui!</span>
-        <a href="https://sage.fapesp.br/SAGe_WEB/processManagement.do" target="_blank">
-          <img src="img/sage.jpeg" style="height:38px;border-radius:4px;background:#fff;padding:2px">
-        </a>
-      </div>
-      <div class="col-md-6">
-        <div class="row justify-content-center g-3 footer-logos">
-          <div class="col-auto"><span class="logo-label">Programa</span><a href="https://www.gov.br/anp/pt-br/assuntos/pesquisa-dev-e-inovacao/formacao-de-recursos-humanos" target="_blank"><img src="img/logo-prh-anp.jpeg"></a></div>
-          <div class="col-auto"><span class="logo-label">Fomento</span><a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg"></a></div>
-          <div class="col-auto"><span class="logo-label">Gestão</span><a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg"></a></div>
-        </div>
-      </div>
-      <div class="col-md-3 d-none d-md-block"></div>
-    </div>
-  </div>
-</footer>
-
+<footer class="text-center"><div class="container">
+  <p class="mb-2 small">© 2026 PRH 31 - UFC</p>
+  <div class="row align-items-end justify-content-center g-3 footer-logos">
+    <div class="col-auto"><img src="img/logo-prh-anp.jpeg"></div>
+    <div class="col-auto"><img src="img/logo-anp.jpeg"></div>
+    <div class="col-auto"><img src="img/logo-fapesp.jpeg"></div>
+  </div></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
