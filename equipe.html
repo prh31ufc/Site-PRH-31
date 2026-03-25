@@ -8,7 +8,6 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
     
-    /* MODIFICAÇÃO: Inserção da imagem fundo.jpeg com overlay para contraste */
     body {
       font-family: 'Inter', sans-serif;
       background: linear-gradient(rgba(248, 249, 250, 0.85), rgba(248, 249, 250, 0.85)), url('img/fundo.jpeg') no-repeat center center fixed;
@@ -19,7 +18,14 @@
     .team-card{border:none;border-radius:15px;background:#fff;box-shadow:0 5px 15px rgba(0,0,0,0.05);margin-top:45px;height:100%;transition:0.3s}.team-card:hover{transform:translateY(-5px)}
     .member-img{width:100px;height:100px;object-fit:cover;border-radius:50%;border:4px solid #fff;margin-top:-50px;box-shadow:0 4px 8px rgba(0,0,0,0.1)}
     .member-role{font-size:.65rem;font-weight:800;color:#0d6efd;text-transform:uppercase;margin-top:10px}.member-name{font-size:.95rem;font-weight:700;margin-bottom:15px}
+    
     footer{background:#0d6efd;color:#fff;padding:15px 0;margin-top:auto}.footer-logos img{height:35px;background:#fff;padding:3px;border-radius:4px}.logo-label{font-size:.6rem;text-transform:uppercase;font-weight:700;margin-bottom:4px;display:block;color:rgba(255,255,255,0.9)}
+    
+    /* Estilos para o contato no rodapé */
+    .contact-label { font-size:.6rem; text-transform:uppercase; font-weight:700; margin-bottom:4px; display:block; color:#000; }
+    .footer-email { font-size: 0.75rem; font-weight: 600; color: #fff; text-decoration: none; background: #004fb1; padding: 4px 8px; border-radius: 4px; display: inline-block; }
+    .footer-email:hover { background: #fff; color: #0d6efd; }
+
     .social-icons a{color:#fff;font-size:1.4rem;margin:0 8px;transition:0.3s}.social-icons a:hover{color:#ffc107;transform:scale(1.2);display:inline-block}
   </style>
 </head>
@@ -64,9 +70,27 @@
 <footer class="text-center"><div class="container">
   <div class="social-icons mb-2"><a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank"><i class="bi bi-instagram"></i></a><a href="https://www.linkedin.com/in/prh31ufc/" target="_blank"><i class="bi bi-linkedin"></i></a></div>
   <p class="mb-2 small" style="font-size: 0.75rem;">© 2026 PRH 31 - UFC</p>
-  <div class="row align-items-end"><div class="col-md-3 text-start mb-2 mb-md-0"><span class="logo-label" style="color:#ffc107">Clique Aqui!</span><a href="https://sage.fapesp.br/SAGe_WEB/processManagement.do" target="_blank"><img src="img/sage.jpeg" style="height:38px;border-radius:4px;background:#fff;padding:2px"></a></div>
-  <div class="col-md-6"><div class="row justify-content-center g-3 footer-logos">
-    <div class="col-auto"><span class="logo-label">Programa</span><a href="https://www.gov.br/anp/pt-br/assuntos/pesquisa-desenvolvimento-e-inovacao/formacao-de-recursos-humanos" target="_blank"><img src="img/logo-prh-anp.jpeg"></a></div>
-    <div class="col-auto"><span class="logo-label">Fomento</span><a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg"></a></div>
-    <div class="col-auto"><span class="logo-label">Gestão</span><a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg"></a></div>
-  </div></div><div class="col-md-3 d-none d-md-block"></div></div></div></footer></body></html>
+  <div class="row align-items-end">
+    <div class="col-md-3 text-start mb-2 mb-md-0">
+      <span class="logo-label" style="color:#ffc107">Clique Aqui!</span>
+      <a href="https://sage.fapesp.br/SAGe_WEB/processManagement.do" target="_blank">
+        <img src="img/sage.jpeg" style="height:38px;border-radius:4px;background:#fff;padding:2px">
+      </a>
+    </div>
+    
+    <div class="col-md-6">
+      <div class="row justify-content-center g-3 footer-logos">
+        <div class="col-auto"><span class="logo-label">Programa</span><a href="https://www.gov.br/anp/pt-br/assuntos/pesquisa-desenvolvimento-e-inovacao/formacao-de-recursos-humanos" target="_blank"><img src="img/logo-prh-anp.jpeg"></a></div>
+        <div class="col-auto"><span class="logo-label">Fomento</span><a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg"></a></div>
+        <div class="col-auto"><span class="logo-label">Gestão</span><a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg"></a></div>
+      </div>
+    </div>
+    
+    <div class="col-md-3 text-end mb-2 mb-md-0">
+      <span class="contact-label"><i class="bi bi-envelope-fill"></i> CONTATO</span>
+      <a href="mailto:prh31@ufc.br" class="footer-email">prh31@ufc.br</a>
+    </div>
+  </div>
+</div></footer>
+</body>
+</html>
