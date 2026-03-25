@@ -77,6 +77,11 @@
       color: rgba(255,255,255,0.9); 
     }
 
+    /* Estilos para o contato no rodapé */
+    .contact-label { font-size:.6rem; text-transform:uppercase; font-weight:700; margin-bottom:4px; display:block; color:#000; }
+    .footer-email { font-size: 0.75rem; font-weight: 600; color: #fff; text-decoration: none; background: #004fb1; padding: 4px 8px; border-radius: 4px; display: inline-block; }
+    .footer-email:hover { background: #fff; color: #0d6efd; }
+
     .social-icons a { color: #fff; font-size: 1.4rem; margin: 0 8px; transition: 0.3s; }
     .social-icons a:hover { color: #ffc107; transform: scale(1.2); display: inline-block; }
   </style>
@@ -163,7 +168,11 @@
           <div class="col-auto"><span class="logo-label">Gestão</span><a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg"></a></div>
         </div>
       </div>
-      <div class="col-md-3 d-none d-md-block"></div>
+      
+      <div class="col-md-3 text-end mb-2 mb-md-0">
+        <span class="contact-label"><i class="bi bi-envelope-fill"></i> CONTATO</span>
+        <a href="mailto:prh31@ufc.br" class="footer-email">prh31@ufc.br</a>
+      </div>
     </div>
   </div>
 </footer>
