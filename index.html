@@ -1,75 +1,120 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PRH 31 - UFC | Início</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PRH 31 - UFC | Bolsistas</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-    body { font-family: 'Inter', sans-serif; background: #f8f9fa; color: #333; }
-    .navbar-brand img { height: 45px; }
-    .nav-link { font-weight: 600; color: #495057; border-bottom: 2px solid transparent; }
-    .nav-link.active { color: #0d6efd!important; border-bottom: 2px solid #0d6efd; }
+    body{font-family:'Inter',sans-serif;background:#f8f9fa}.navbar-brand img{height:45px}.nav-link{font-weight:600;color:#495057;border-bottom:2px solid transparent}.nav-link.active{color:#0d6efd!important;border-bottom:2px solid #0d6efd}
+    .section-title { border-bottom: 3px solid #0d6efd; display: block; padding-bottom: 5px; margin-bottom: 25px; font-weight: 800; font-size: 1.4rem; text-align: center; }
+    .subsection-label { font-size: 0.75rem; font-weight: 800; color: #666; text-transform: uppercase; letter-spacing: 1px; margin: 20px 0 10px 0; display: flex; align-items: center; }
+    .subsection-label::after { content: ""; flex: 1; height: 1px; background: #eee; margin-left: 10px; }
+    .student-card { border: none; border-radius: 12px; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: 0.3s; height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+    .student-card:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    .student-img { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; margin-bottom: 8px; border: 2px solid #eee; }
+    .student-name { font-size: 0.85rem; font-weight: 700; margin-bottom: 2px; color: #333; line-height: 1.2; }
+    .student-course { font-size: 0.65rem; color: #0d6efd; margin-bottom: 5px; font-weight: 600; text-transform: uppercase; }
+    .student-dates { font-size: 0.6rem; color: #666; margin-bottom: 10px; line-height: 1.4; }
+    .btn-social { font-size: 0.6rem; padding: 3px 2px; border-radius: 4px; font-weight: 600; flex: 1; margin: 0 2px; display: flex; align-items: center; justify-content: center; gap: 3px; }
     
-    /* Hero Section com o nome correto: plat.jpeg */
-    .hero-section { 
-      padding: 100px 0; 
-      background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), 
-                  url('img/plat.jpeg') no-repeat center center;
-      background-size: cover;
-      border-bottom: 1px solid #dee2e6; 
-      text-align: center; 
-    }
-    
-    .program-full-name { font-size: 1.25rem; color: #444; max-width: 900px; margin: 0 auto; line-height: 1.5; font-weight: 400; }
-    .history-phrase { font-size: 1.15rem; font-weight: 600; color: #0d6efd; margin-top: 25px; font-style: italic; }
-    .feature-card { border: none; border-radius: 15px; transition: 0.3s; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-    .feature-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+    /* Estilos do Rodapé Completo */
     footer { background: #0d6efd; color: #fff; padding: 15px 0; margin-top: auto; }
     .footer-logos img { height: 35px; background: #fff; padding: 3px; border-radius: 4px; }
     .logo-label { font-size:.6rem; text-transform:uppercase; font-weight:700; margin-bottom:4px; display:block; color:rgba(255,255,255,0.9)}
     .social-icons a { color: #fff; font-size: 1.4rem; margin: 0 8px; transition: 0.3s; }
     .social-icons a:hover { color: #ffc107; transform: scale(1.2); display: inline-block; }
+
+    .vertical-divider { border-right: 1px solid #dee2e6; }
+    @media (max-width: 992px) { .vertical-divider { border-right: none; border-bottom: 1px solid #dee2e6; margin-bottom: 30px; padding-bottom: 30px; } }
   </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
-<nav class="navbar navbar-expand-lg sticky-top shadow-sm bg-white">
-  <div class="container">
-    <div class="navbar-brand d-flex align-items-center"><a href="index.html"><img src="img/logo.jpeg"></a><a href="https://www.ufc.br/" target="_blank"><img src="img/logo-ufc.jpeg" class="ms-2 border-start ps-2"></a></div>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto align-items-center">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
-        <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
-        <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
-        <li class="nav-item"><a class="nav-link" href="bolsistas.html">Bolsistas</a></li>
-        <li class="nav-item"><a class="nav-link" href="documentos.html">Documentos</a></li>
-        <li class="nav-item"><a class="nav-link" href="editais.html">Editais</a></li>
-        <li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
-      </ul>
+
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm bg-white"><div class="container">
+  <div class="navbar-brand d-flex align-items-center"><a href="index.html"><img src="img/logo.jpeg"></a><a href="https://www.ufc.br/" target="_blank"><img src="img/logo-ufc.jpeg" class="ms-2 border-start ps-2"></a></div>
+  <div class="collapse navbar-collapse"><ul class="navbar-nav ms-auto align-items-center">
+    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+    <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
+    <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
+    <li class="nav-item"><a class="nav-link active" href="bolsistas.html">Bolsistas</a></li>
+    <li class="nav-item"><a class="nav-link" href="documentos.html">Documentos</a></li>
+    <li class="nav-item"><a class="nav-link" href="editais.html">Editais</a></li>
+    <li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
+  </ul></div></div></nav>
+
+<main class="container-fluid px-4 py-5 flex-grow-1">
+  <div class="row">
+    <div class="col-lg-6 vertical-divider px-lg-4">
+      <h3 class="section-title text-primary">BOLSISTAS ATUAIS</h3>
+
+      <div class="subsection-label">Graduação</div>
+      <div class="row row-cols-2 g-2 mb-4">
+        <div class="col"><div class="student-card p-2 border"><div><img src="./img/bol/en.jpeg" class="student-img"><div class="student-name">Eric do Nascimento de Andrade</div><div class="student-course">Engenharia de Petróleo</div><div class="student-dates">Início: 01/2025<br>Término: 12/2026</div></div><div class="d-flex"><a href="https://lattes.cnpq.br/5840905874982276" target="_blank" class="btn btn-outline-primary btn-social">Lattes</a><a href="https://www.linkedin.com/in/eric-nascimento-andrade-072b0b196" target="_blank" class="btn btn-outline-primary btn-social">LinkedIn</a></div></div></div>
+        <div class="col"><div class="student-card p-2 border"><div><img src="./img/bol/fjapb.jpeg" class="student-img"><div class="student-name">Filandro Jullef</div><div class="student-course">Engenharia de Petróleo</div><div class="student-dates">Início: 01/2025<br>Término: 12/2026</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/9767215817941236" target="_blank" class="btn btn-outline-primary btn-social">Lattes</a><a href="https://www.linkedin.com/in/filandro-jullef-2615582b3" target="_blank" class="btn btn-outline-primary btn-social">LinkedIn</a></div></div></div>
+        <div class="col"><div class="student-card p-2 border"><div><img src="./img/bol/mefp.jpeg" class="student-img"><div class="student-name">Marcio Eduardo Fonseca Paulino</div><div class="student-course">Engenharia de Petróleo</div><div class="student-dates">Início: 01/2025<br>Término: 12/2026</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/0096967013491553" target="_blank" class="btn btn-outline-primary btn-social">Lattes</a><a href="https://www.linkedin.com/in/marcioeduardofonseca" target="_blank" class="btn btn-outline-primary btn-social">LinkedIn</a></div></div></div>
+        <div class="col"><div class="student-card p-2 border"><div><img src="./img/bol/mcg.jpeg" class="student-img"><div class="student-name">Maryana Correia Guimarães</div><div class="student-course">Engenharia de Petróleo</div><div class="student-dates">Início: 01/2025<br>Término: 12/2026</div></div><div class="d-flex"><a href="https://lattes.cnpq.br/2224159398133622" target="_blank" class="btn btn-outline-primary btn-social">Lattes</a><a href="https://www.linkedin.com/in/maryanaguimarães" target="_blank" class="btn btn-outline-primary btn-social">LinkedIn</a></div></div></div>
+        <div class="col"><div class="student-card p-2 border"><div><img src="./img/bol/frml.jpeg" class="student-img"><div class="student-name">Rikelvem Mateus</div><div class="student-course">Engenharia Química</div><div class="student-dates">Início: 01/2025<br>Término: 12/2026</div></div><div class="d-flex"><a href="https://lattes.cnpq.br/2003414649538694" target="_blank" class="btn btn-outline-primary btn-social">Lattes</a><a href="https://www.linkedin.com/in/rikelvem-mateus-53965a203" target="_blank" class="btn btn-outline-primary btn-social">LinkedIn</a></div></div></div>
+        <div class="col"><div class="student-card p-2 border"><div><img src="./img/bol/vo.jpeg" class="student-img"><div class="student-name">Vinicius de Oliveira Souza</div><div class="student-course">Engenharia Química</div><div class="student-dates">Início: 01/2025<br>Término: 12/2026</div></div><div class="d-flex"><a href="https://lattes.cnpq.br/7487153381908930" target="_blank" class="btn btn-outline-primary btn-social">Lattes</a><a href="http://www.linkedin.com/in/vinicius-oliveira-360b1b3aa" target="_blank" class="btn btn-outline-primary btn-social">LinkedIn</a></div></div></div>
+        <div class="col"><div class="student-card p-2 border"><div><img src="./img/bol/vps.jpeg" class="student-img"><div class="student-name">Vitor Paiva da Silva</div><div class="student-course">Engenharia de Petróleo</div><div class="student-dates">Início: 01/2025<br>Término: 12/2026</div></div><div class="d-flex"><a href="https://lattes.cnpq.br/0234906244524294" target="_blank" class="btn btn-outline-primary btn-social">Lattes</a><a href="https://www.linkedin.com/in/vitor-paiva-b391a9212" target="_blank" class="btn btn-outline-primary btn-social">LinkedIn</a></div></div></div>
+      </div>
+
+      <div class="subsection-label">Mestrado</div>
+      <div class="row row-cols-2 g-2 mb-4">
+        <div class="col"><div class="student-card p-2 border"><div><img src="./img/bol/gf.jpeg" class="student-img"><div class="student-name">Gabriel Facundo Simão</div><div class="student-course">Mestrado em Engenharia Química</div><div class="student-dates">Início: 01/2025<br>Término: 12/2026</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/3047920951175737" target="_blank" class="btn btn-outline-primary btn-social">Lattes</a><a href="https://www.linkedin.com/in/gabriel-simao" target="_blank" class="btn btn-outline-primary btn-social">LinkedIn</a></div></div></div>
+      </div>
+
+      <div class="subsection-label">Doutorado</div>
+      <div class="row row-cols-2 g-2 mb-4">
+        <div class="col"><div class="student-card p-2 border"><div><img src="./img/bol/mflc.jpeg" class="student-img"><div class="student-name">Moacir Frutuoso Leal da Costa</div><div class="student-course">Doutorado em Engenharia Química</div><div class="student-dates">Início: 01/2025<br>Término: 12/2028</div></div><div class="d-flex"><a href="https://lattes.cnpq.br/5147738945256583" target="_blank" class="btn btn-outline-primary btn-social">Lattes</a><a href="https://www.linkedin.com/in/moacir-cost-0ba094133" target="_blank" class="btn btn-outline-primary btn-social">LinkedIn</a></div></div></div>
+        <div class="col"><div class="student-card p-2 border"><div><img src="./img/bol/np.jpeg" class="student-img"><div class="student-name">Natalia Porto Alexandre</div><div class="student-course">Doutorado em Química Inorgânica</div><div class="student-dates">Início: 07/2024<br>Término: 09/2026</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/6562079455551921" target="_blank" class="btn btn-outline-primary btn-social">Lattes</a><a href="https://www.linkedin.com/in/nataliapalexandre170894" target="_blank" class="btn btn-outline-primary btn-social">LinkedIn</a></div></div></div>
+        <div class="col"><div class="student-card p-2 border"><div><img src="./img/bol/vnso.jpeg" class="student-img"><div class="student-name">Vitória Natasha Silva Oliveira</div><div class="student-course">Doutorado em Engenharia Química</div><div class="student-dates">Início: 01/2025<br>Término: 12/2028</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/5023577209472434" target="_blank" class="btn btn-outline-primary btn-social">Lattes</a><a href="https://www.linkedin.com/in/vitoria26430/" target="_blank" class="btn btn-outline-primary btn-social">LinkedIn</a></div></div></div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 px-lg-4">
+      <h3 class="section-title text-secondary" style="border-color: #6c757d;">EGRESSOS</h3>
+      <div class="subsection-label">Graduação</div>
+      <div class="row row-cols-2 g-2 mb-4"></div>
+      <div class="subsection-label">Mestrado</div>
+      <div class="row row-cols-2 g-2 mb-4"></div>
+      <div class="subsection-label">Doutorado</div>
+      <div class="row row-cols-2 g-2 mb-4"></div>
+      <div class="subsection-label">Pós-Doutorado</div>
+      <div class="row row-cols-2 g-2"></div>
     </div>
   </div>
-</nav>
-<main class="flex-grow-1">
-  <section class="hero-section"><div class="container">
-    <h1 class="display-3 fw-bold text-dark mb-3">PRH 31</h1>
-    <div class="program-full-name"><p class="mb-0">Programa Institucional da UFC para Formação de Recursos Humanos em Engenharia e</p><p>Ciências do Petróleo e Gás Natural</p></div>
-    <p class="history-phrase">Mais de 25 anos de atuação na formação de especialistas para o setor de petróleo, gás e energia.</p>
-  </div></section>
-  <section class="container py-5"><div class="row g-4 text-center">
-    <div class="col-md-4"><div class="card h-100 p-4 feature-card"><i class="bi bi-mortarboard text-primary fs-1 mb-3"></i><h5 class="fw-bold">Excelência Acadêmica</h5><p class="text-muted small">Suporte direto aos cursos de graduação e pós-graduação da UFC voltados ao setor energético.</p></div></div>
-    <div class="col-md-4"><div class="card h-100 p-4 feature-card"><i class="bi bi-fuel-pump text-primary fs-1 mb-3"></i><h5 class="fw-bold">Setor Estratégico</h5><p class="text-muted small">Fomento à pesquisa e capacitação em Petróleo, Gás Natural e novas matrizes energéticas.</p></div></div>
-    <div class="col-md-4"><div class="card h-100 p-4 feature-card"><i class="bi bi-briefcase text-primary fs-1 mb-3"></i><h5 class="fw-bold">Inserção Profissional</h5><p class="text-muted small">Preparação de profissionais qualificados para atender às demandas da indústria nacional.</p></div></div>
-  </div></section>
 </main>
-<footer class="text-center"><div class="container">
-  <div class="social-icons mb-2"><a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank"><i class="bi bi-instagram"></i></a><a href="https://www.linkedin.com/in/prh31ufc/" target="_blank"><i class="bi bi-linkedin"></i></a></div>
-  <p class="mb-2 small" style="font-size: 0.75rem;">© 2026 PRH 31 - UFC</p>
-  <div class="row align-items-end"><div class="col-md-3 text-start mb-2 mb-md-0"><span class="logo-label" style="color:#ffc107">Clique Aqui!</span><a href="https://sage.fapesp.br/SAGe_WEB/processManagement.do" target="_blank"><img src="img/sage.jpeg" style="height:38px;border-radius:4px;background:#fff;padding:2px"></a></div>
-  <div class="col-md-6"><div class="row justify-content-center g-3 footer-logos">
-    <div class="col-auto"><span class="logo-label">Programa</span><a href="https://www.gov.br/anp/pt-br/assuntos/pesquisa-dev-e-inovacao/formacao-de-recursos-humanos" target="_blank"><img src="img/logo-prh-anp.jpeg"></a></div>
-    <div class="col-auto"><span class="logo-label">Fomento</span><a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg"></a></div>
-    <div class="col-auto"><span class="logo-label">Gestão</span><a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg"></a></div>
-  </div></div><div class="col-md-3 d-none d-md-block"></div></div></div></footer>
+
+<footer class="text-center">
+  <div class="container">
+    <div class="social-icons mb-2">
+      <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/prh31ufc/" target="_blank"><i class="bi bi-linkedin"></i></a>
+    </div>
+    <p class="mb-2 small" style="font-size: 0.75rem;">© 2026 PRH 31 - UFC</p>
+    
+    <div class="row align-items-end">
+      <div class="col-md-3 text-start mb-2 mb-md-0">
+        <span class="logo-label" style="color:#ffc107">Clique Aqui!</span>
+        <a href="https://sage.fapesp.br/SAGe_WEB/processManagement.do" target="_blank">
+          <img src="img/sage.jpeg" style="height:38px;border-radius:4px;background:#fff;padding:2px">
+        </a>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="row justify-content-center g-3 footer-logos">
+          <div class="col-auto"><span class="logo-label">Programa</span><a href="https://www.gov.br/anp/pt-br/assuntos/pesquisa-dev-e-inovacao/formacao-de-recursos-humanos" target="_blank"><img src="img/logo-prh-anp.jpeg"></a></div>
+          <div class="col-auto"><span class="logo-label">Fomento</span><a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg"></a></div>
+          <div class="col-auto"><span class="logo-label">Gestão</span><a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg"></a></div>
+        </div>
+      </div>
+      <div class="col-md-3 d-none d-md-block"></div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
