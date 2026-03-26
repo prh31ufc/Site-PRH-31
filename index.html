@@ -23,6 +23,7 @@
     
     .program-full-name { font-size: 1.25rem; color: #444; max-width: 900px; margin: 0 auto; line-height: 1.5; font-weight: 400; }
     
+    /* Estilo da Tag do Edital com Link */
     .edital-badge {
       display: inline-block;
       background-color: #e7f1ff;
@@ -34,6 +35,14 @@
       margin-top: 15px;
       border: 1px solid #0d6efd;
       text-transform: uppercase;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .edital-badge:hover {
+      background-color: #0d6efd;
+      color: #fff;
+      transform: translateY(-2px);
     }
 
     .btn-saiba-mais {
@@ -87,15 +96,17 @@
 <main class="flex-grow-1">
   <section class="hero-section">
     <div class="container text-center">
-      <h1 class="display-3 fw-bold text-dark mb-3">PRH 31.1</h1>
+      <h1 class="display-3 fw-bold text-dark mb-3">PRH 31</h1>
       <div class="program-full-name">
         <p class="mb-0">Programa Institucional da UFC para Formação de Recursos Humanos em Engenharia e</p>
         <p>Ciências do Petróleo e Gás Natural</p>
       </div>
       
-      <div class="edital-badge">
-        <i class="bi bi-file-earmark-check-fill me-1"></i> Selecionado via Edital de Chamada Pública nº 01/PRH-ANP/2025
-      </div>
+      <a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos/eixo-academico/edital-de-chamada-publica" target="_blank" style="text-decoration: none;">
+        <div class="edital-badge">
+          <i class="bi bi-file-earmark-check-fill me-1"></i> Selecionado via Edital de Chamada Pública nº 01/PRH-ANP/2025
+        </div>
+      </a>
 
       <br>
       
