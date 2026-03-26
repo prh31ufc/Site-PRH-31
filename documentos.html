@@ -35,6 +35,10 @@
     
     .card-title-text { color:#444; font-weight:700; font-size: 1.1rem; margin-top: 10px; text-align: center; }
     
+    /* Ajuste para os botões dentro do card */
+    .btn-group-custom { display: flex; gap: 10px; margin-top: 15px; width: 100%; justify-content: center; }
+    .btn-doc { font-size: 0.8rem; font-weight: 700; padding: 6px 12px; border-radius: 50px; }
+
     footer{background:#0d6efd;color:#fff;padding:15px 0;margin-top:auto}.footer-logos img{height:35px;background:#fff;padding:3px;border-radius:4px}.logo-label{font-size:.6rem;text-transform:uppercase;font-weight:700;margin-bottom:4px;display:block;color:rgba(255,255,255,0.9)}
     
     .contact-block { display: flex; flex-direction: column; align-items: flex-end; justify-content: center; }
@@ -75,14 +79,23 @@
     </div>
 
     <div class="col-md-4 col-sm-6">
-      <a href="Manual do Usuario PRH ANP 2025.pdf" target="_blank" class="doc-link-card">
+      <div class="doc-link-card">
         <div class="card-icon-bi"><i class="bi bi-file-earmark-pdf"></i></div>
         <div class="card-title-text">Manual do Usuário PRH ANP 2025</div>
-        <span class="badge bg-danger mt-2">Versão 01/2025</span>
-      </a>
+        <span class="badge bg-danger mt-2 mb-3">Versão 01/2025</span>
+        
+        <div class="btn-group-custom">
+          <a href="Manual do Usuario PRH ANP 2025.pdf" target="_blank" class="btn btn-outline-primary btn-doc">
+            <i class="bi bi-eye"></i> Visualizar
+          </a>
+          <a href="Manual do Usuario PRH ANP 2025.pdf" download="Manual_PRH_ANP_2025.pdf" class="btn btn-primary btn-doc">
+            <i class="bi bi-download"></i> Baixar
+          </a>
+        </div>
+      </div>
     </div>
 
-    </div>
+  </div>
 </main>
 
 <footer class="text-center"><div class="container">
