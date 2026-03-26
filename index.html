@@ -10,10 +10,46 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
     
     body { font-family: 'Inter', sans-serif; background: #f8f9fa; color: #333; }
-    .navbar-brand img { height: 45px; }
-    .nav-link { font-weight: 600; color: #495057; border-bottom: 2px solid transparent; }
-    .nav-link.active { color: #0d6efd!important; border-bottom: 2px solid #0d6efd; }
+
+    /* NAVBAR COM O PADRÃO REFINADO DO RODAPÉ */
+    .navbar {
+      background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%);
+      border-bottom: 3px solid #ffc107; /* Linha dourada de acabamento */
+      padding: 12px 0;
+    }
+
+    .navbar-brand img { 
+      height: 45px; 
+      background: #fff; /* Fundo branco para as logos se destacarem no azul */
+      padding: 3px;
+      border-radius: 5px;
+    }
+
+    /* Cores das letras da Navbar (Branco) */
+    .nav-link { 
+      font-weight: 600; 
+      color: rgba(255, 255, 255, 0.9) !important; 
+      border-bottom: 2px solid transparent;
+      transition: 0.3s;
+      margin: 0 8px;
+    }
+
+    /* Efeito de destaque ao passar o mouse */
+    .nav-link:hover { 
+      color: #ffc107 !important; 
+    }
+
+    /* Item ativo com linha amarela embaixo */
+    .nav-link.active { 
+      color: #fff !important; 
+      border-bottom: 2px solid #ffc107 !important;
+    }
+
+    /* Ícone do menu responsivo (hambúrguer) em branco */
+    .navbar-toggler { border-color: rgba(255,255,255,0.3); }
+    .navbar-toggler-icon { filter: invert(1); }
     
+    /* SEÇÃO HERO */
     .hero-section { 
       padding: 80px 0; 
       background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
@@ -35,6 +71,7 @@
       font-weight: 500;
     }
 
+    /* CAIXINHA OBJETIVO COM DEGRADÊ LARANJA/AMARELO */
     .purpose-box {
       display: inline-flex;
       align-items: center;
@@ -81,24 +118,20 @@
       text-decoration: none;
     }
 
-    .edital-badge:hover {
-      background-color: #0d6efd;
-      color: #fff;
-      transform: translateY(-2px);
-    }
+    .edital-badge:hover { background-color: #0d6efd; color: #fff; transform: translateY(-2px); }
 
     .history-phrase { font-size: 1.1rem; font-weight: 600; color: #0d6efd; margin-top: 30px; font-style: italic; }
     
     .feature-card { border: none; border-radius: 15px; transition: 0.3s; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     .feature-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
     
-    /* RODAPÉ REFINADO COM DEGRADÊ DE 3 TONS */
+    /* RODAPÉ REFINADO (Mesmo degradê da Navbar) */
     footer { 
       background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%); 
       color: #fff; 
       padding: 25px 0; 
       margin-top: auto;
-      border-top: 3px solid #ffc107; /* Detalhe em dourado para elegância */
+      border-top: 3px solid #ffc107;
     }
     
     .footer-logos img { height: 35px; background: #fff; padding: 3px; border-radius: 4px; }
@@ -115,18 +148,24 @@
     @media (max-width: 992px) { 
       .contact-block { align-items: center; margin-top: 15px; } 
       .program-title { font-size: 3rem; } 
+      .navbar-brand img { height: 38px; }
     }
   </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
 
-<nav class="navbar navbar-expand-lg sticky-top shadow-sm bg-white">
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm">
   <div class="container">
     <div class="navbar-brand d-flex align-items-center">
-        <a href="index.html"><img src="img/logo.jpeg"></a>
-        <a href="https://www.ufc.br/" target="_blank"><img src="img/logo-ufc.jpeg" class="ms-2 border-start ps-2"></a>
+        <a href="index.html"><img src="img/logo.jpeg" alt="Logo PRH"></a>
+        <a href="https://www.ufc.br/" target="_blank"><img src="img/logo-ufc.jpeg" class="ms-2 border-start ps-2" alt="Logo UFC"></a>
     </div>
-    <div class="collapse navbar-collapse">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto align-items-center">
         <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
         <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
@@ -223,5 +262,6 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
