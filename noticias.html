@@ -66,10 +66,25 @@
       border-left: 5px solid #ffc107;
     }
 
-    .news-placeholder i {
+    .news-placeholder i.bi-newspaper {
       color: #0d47a1;
       font-size: 3.5rem;
       margin-bottom: 20px;
+      display: block;
+    }
+
+    /* Estilo específico para ícones sociais no card */
+    .news-social-links a {
+      color: #0d47a1;
+      font-size: 2rem;
+      margin: 0 15px;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+    .news-social-links a:hover {
+      color: #ffc107;
+      transform: scale(1.1);
+      display: inline-block;
     }
 
     /* RODAPÉ PADRONIZADO (DEGRADÊ AZUL) */
@@ -140,7 +155,12 @@
     <h4 class="fw-bold text-dark">Novidades em breve!</h4>
     <p class="text-muted fs-5">Estamos preparando este espaço para compartilhar as últimas atualizações, eventos e conquistas do PRH 31 - UFC.</p>
     <hr class="my-4 mx-auto w-25" style="border-top: 2px solid #ffc107; opacity: 1;">
-    <p class="small text-uppercase fw-bold text-primary">Acompanhe também nossas redes sociais</p>
+    <p class="small text-uppercase fw-bold text-primary mb-3">Acompanhe também nossas redes sociais</p>
+    
+    <div class="news-social-links">
+      <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/prh31ufc/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+    </div>
   </div>
 </main>
 
