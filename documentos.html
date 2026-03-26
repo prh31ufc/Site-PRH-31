@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PRH 31 - UFC | Notícias</title>
+  <title>PRH 31 - UFC | Documentos</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <style>
@@ -11,13 +11,12 @@
     
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #f8f9fa;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      background: linear-gradient(rgba(248, 249, 250, 0.9), rgba(248, 249, 250, 0.9)), 
+                  url('img/fundo.jpeg') no-repeat center center fixed;
+      background-size: cover;
     }
 
-    /* NAVBAR PADRONIZADA (DEGRADÊ AZUL) */
+    /* NAVBAR PADRONIZADA */
     .navbar {
       background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%);
       border-bottom: 3px solid #ffc107;
@@ -49,37 +48,42 @@
     .navbar-toggler { border-color: rgba(255,255,255,0.3); }
     .navbar-toggler-icon { filter: invert(1); }
 
-    /* CONTEÚDO PRINCIPAL */
-    .main-title { 
-      color: #0a192f; 
-      font-weight: 800; 
-      letter-spacing: 1px;
-    }
+    /* ESTILO PARA OS CARDS DE DOCUMENTOS */
+    .section-title { color: #0a192f; font-weight: 800; margin-bottom: 50px; text-align: center; }
 
-    .news-card {
-      background: #fff;
+    .doc-link-card {
+      height: 100%;
+      padding: 35px 25px;
       border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 50px 40px;
-      border-left: 5px solid #ffc107;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(0,0,0,0.08);
+      transition: 0.3s;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      backdrop-filter: blur(5px);
     }
 
-    .news-card i.bi-file-earmark-pdf {
-      color: #dc3545;
-      font-size: 3.5rem;
-      margin-bottom: 20px;
-      display: block;
+    .doc-link-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+      border-color: #ffc107;
     }
-
-    /* BOTÕES PADRONIZADOS */
-    .btn-group-custom { display: flex; gap: 15px; margin-top: 25px; justify-content: center; }
+    
+    .card-icon-img { height: 80px; width: auto; margin-bottom: 15px; }
+    .card-icon-bi { font-size: 80px; color: #dc3545; line-height: 1; margin-bottom: 15px; }
+    
+    .card-title-text { color:#333; font-weight:700; font-size: 1.1rem; margin-top: 10px; text-align: center; }
+    
+    .btn-group-custom { display: flex; gap: 10px; margin-top: 20px; width: 100%; justify-content: center; }
     
     .btn-doc-outline { 
-      font-size: 0.9rem; 
+      font-size: 0.8rem; 
       font-weight: 700; 
-      padding: 10px 20px; 
+      padding: 8px 16px; 
       border-radius: 50px; 
       border: 2px solid #0d47a1;
       color: #0d47a1;
@@ -89,9 +93,9 @@
     .btn-doc-outline:hover { background: #0d47a1; color: #fff; }
 
     .btn-doc-fill { 
-      font-size: 0.9rem; 
+      font-size: 0.8rem; 
       font-weight: 700; 
-      padding: 10px 20px; 
+      padding: 8px 16px; 
       border-radius: 50px; 
       background: #0d47a1;
       color: #fff;
@@ -101,20 +105,7 @@
     }
     .btn-doc-fill:hover { background: #0a192f; border-color: #0a192f; color: #fff; }
 
-    .news-social-links a {
-      color: #0d47a1;
-      font-size: 2rem;
-      margin: 0 15px;
-      transition: 0.3s;
-      text-decoration: none;
-    }
-    .news-social-links a:hover {
-      color: #ffc107;
-      transform: scale(1.1);
-      display: inline-block;
-    }
-
-    /* RODAPÉ PADRONIZADO (DEGRADÊ AZUL) */
+    /* RODAPÉ PADRONIZADO */
     footer { 
       background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%); 
       color: #fff; 
@@ -124,14 +115,7 @@
     }
 
     .footer-logos img { height: 35px; background: #fff; padding: 3px; border-radius: 4px; }
-    .logo-label { 
-      font-size: .6rem; 
-      text-transform: uppercase; 
-      font-weight: 700; 
-      margin-bottom: 4px; 
-      display: block; 
-      color: rgba(255,255,255,0.8); 
-    }
+    .logo-label { font-size:.6rem; text-transform:uppercase; font-weight:700; margin-bottom:4px; display:block; color:rgba(255,255,255,0.8)}
     
     .contact-block { display: flex; flex-direction: column; align-items: flex-end; justify-content: center; }
     .contact-label { font-size: 0.8rem; text-transform: uppercase; font-weight: 800; margin-bottom: 2px; color: #ffc107; display: flex; align-items: center; gap: 6px; }
@@ -142,7 +126,7 @@
     .social-icons a:hover { color: #ffc107; transform: scale(1.2); display: inline-block; }
 
     @media (max-width: 992px) { 
-        .contact-block { align-items: center; margin-top: 20px; } 
+        .contact-block { align-items: center; margin-top: 15px; } 
         .navbar-brand img { height: 38px; }
     }
   </style>
@@ -166,38 +150,75 @@
         <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
         <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
         <li class="nav-item"><a class="nav-link" href="bolsistas.html">Bolsistas</a></li>
-        <li class="nav-item"><a class="nav-link" href="documentos.html">Documentos</a></li>
+        <li class="nav-item"><a class="nav-link active" href="documentos.html">Documentos</a></li>
         <li class="nav-item"><a class="nav-link" href="editais.html">Editais</a></li>
-        <li class="nav-item"><a class="nav-link active" href="noticias.html">Notícias</a></li>
+        <li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<main class="container py-5 flex-grow-1 text-center">
-  <h2 class="main-title mb-5 mt-4">NOTÍCIAS</h2>
-  
-  <div class="news-card">
-    <i class="bi bi-file-earmark-pdf"></i>
-    <h4 class="fw-bold text-dark">Instruções para anexar o Plano de trabalho no SAGE-FAPESP</h4>
-    <p class="text-muted mt-2">Confira o passo a passo completo para realizar o envio do seu plano de trabalho corretamente no sistema.</p>
+<main class="container py-5 flex-grow-1">
+  <h2 class="section-title">DOCUMENTOS</h2>
+
+  <div class="row g-4 justify-content-center">
     
-    <div class="btn-group-custom">
-      <a href="Instruções para anexar o Plano de trabalho no SAGE-FAPESP.pdf" target="_blank" class="btn-doc-outline">
-        <i class="bi bi-eye"></i> Visualizar PDF
-      </a>
-      <a href="Instruções para anexar o Plano de trabalho no SAGE-FAPESP.pdf" download class="btn-doc-fill">
-        <i class="bi bi-download"></i> Baixar Arquivo
+    <div class="col-md-4 col-sm-6">
+      <a href="https://drive.google.com/drive/u/1/folders/1Adsp1AuhG-0qn7DkWhsiy7_5KLdinODc" target="_blank" class="doc-link-card">
+        <img src="img/drive.jpeg" class="card-icon-img" alt="Google Drive">
+        <div class="card-title-text">Pasta no Google Drive</div>
+        <span class="badge bg-primary mt-2 px-3 rounded-pill">Repositório Oficial</span>
       </a>
     </div>
 
-    <hr class="my-5 mx-auto w-25" style="border-top: 2px solid #ffc107; opacity: 1;">
-    <p class="small text-uppercase fw-bold text-primary mb-3">Acompanhe também nossas redes sociais</p>
-    
-    <div class="news-social-links">
-      <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/prh31ufc/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+    <div class="col-md-4 col-sm-6">
+      <div class="doc-link-card">
+        <div class="card-icon-bi"><i class="bi bi-file-earmark-pdf"></i></div>
+        <div class="card-title-text">Manual do Usuário PRH ANP 2025</div>
+        <span class="badge bg-danger mt-2 mb-2 px-3 rounded-pill">Versão 01/2025</span>
+        
+        <div class="btn-group-custom">
+          <a href="Manual do Usuario PRH ANP 2025.pdf" target="_blank" class="btn-doc-outline">
+            <i class="bi bi-eye"></i> Visualizar
+          </a>
+          <a href="Manual do Usuario PRH ANP 2025.pdf" download="Manual_PRH_ANP_2025.pdf" class="btn-doc-fill">
+            <i class="bi bi-download"></i> Baixar
+          </a>
+        </div>
+      </div>
     </div>
+
+    <div class="col-md-4 col-sm-6">
+      <div class="doc-link-card">
+        <div class="card-icon-bi"><i class="bi bi-bank"></i></div>
+        <div class="card-title-text">Decreto publicado pelo governo federal altera valores de diárias</div>
+        <span class="badge bg-success mt-2 mb-2 px-3 rounded-pill">Informativo</span>
+        
+        <div class="btn-group-custom">
+          <a href="https://www.in.gov.br/en/web/dou/-/decreto-n-11.872-de-29-de-dezembro-de-2023-535311812" target="_blank" class="btn-doc-fill">
+            <i class="bi bi-link-45deg"></i> Acessar Documento
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6">
+      <div class="doc-link-card">
+        <div class="card-icon-bi"><i class="bi bi-file-earmark-pdf"></i></div>
+        <div class="card-title-text">Instruções para anexar o Plano de trabalho no SAGE-FAPESP</div>
+        <span class="badge bg-warning text-dark mt-2 mb-2 px-3 rounded-pill">Tutorial</span>
+        
+        <div class="btn-group-custom">
+          <a href="Instruções para anexar o Plano de trabalho no SAGE-FAPESP.pdf" target="_blank" class="btn-doc-outline">
+            <i class="bi bi-eye"></i> Visualizar
+          </a>
+          <a href="Instruções para anexar o Plano de trabalho no SAGE-FAPESP.pdf" download class="btn-doc-fill">
+            <i class="bi bi-download"></i> Baixar
+          </a>
+        </div>
+      </div>
+    </div>
+
   </div>
 </main>
 
