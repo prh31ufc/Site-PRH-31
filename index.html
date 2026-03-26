@@ -24,7 +24,6 @@
     .program-title { font-size: 4rem; font-weight: 800; color: #000; margin-bottom: 10px; }
     .program-full-name { font-size: 1.2rem; color: #444; max-width: 900px; margin: 0 auto; line-height: 1.4; font-weight: 600; }
     
-    /* Estilização da "Caixinha" de Objetivo */
     .program-purpose { 
       font-size: 0.95rem; 
       color: #777; 
@@ -33,29 +32,34 @@
       line-height: 1.6; 
     }
 
+    /* Estilização da "Caixinha" de Objetivo com Degradê Laranja e Amarelo */
     .purpose-box {
       display: inline-flex;
       align-items: center;
-      background: #ffffff;
-      padding: 5px 15px;
+      justify-content: center; /* Centraliza o conteúdo horizontalmente */
+      /* Degradê de laranja escuro (#ff6600) para amarelo (#ffcc00) */
+      background: linear-gradient(135deg, #ff6600 0%, #ffcc00 100%);
+      padding: 8px 20px;
       border-radius: 12px;
-      border: 1px solid #e0e0e0;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+      border: 1px solid rgba(0,0,0,0.1); /* Borda sutil */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra um pouco mais forte para destaque */
       margin-bottom: 10px;
+      width: auto; /* Mantém a largura baseada no conteúdo, mas pode ser ajustada se necessário */
     }
 
     .purpose-label { 
       font-weight: 800; 
       text-transform: uppercase; 
       letter-spacing: 1px; 
-      color: #555; /* Cinza mais escuro para o texto OBJETIVO */
+      color: #ffffff; /* Texto branco para contraste no degradê */
       font-size: 0.85rem; 
+      text-align: center; /* Garante que o texto esteja centralizado se quebrar linha */
     }
 
     .purpose-icon {
       font-size: 1.2rem;
       margin-right: 10px;
-      color: #dc3545; /* Cor vermelha para o alvo/flecha */
+      color: #ffffff; /* Ícone branco para contraste */
       display: flex;
       align-items: center;
     }
@@ -133,7 +137,7 @@
           <span class="purpose-label">Objetivo</span>
         </div>
         <br>
-        O PRH 31 tem por finalidade formar recursos humanos altamente qualificados, atendendo às expectativas do setor de petróleo e gás natural, como forma de aumentar a competitividade da região Nordeste e melhorar a qualidade de vida da população.
+        O PRH 31 tem por finalidade formar recursos humanos altamente qualificados, atendendo às expectativas do setor de petróleo e gás natural, como forma de aumentar a competitiveness da região Nordeste e melhorar a qualidade de vida da população.
       </div>
       
       <a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos/eixo-academico/edital-de-chamada-publica" target="_blank" style="text-decoration: none;">
