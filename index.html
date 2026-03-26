@@ -13,7 +13,7 @@
     .nav-link.active { color: #0d6efd!important; border-bottom: 2px solid #0d6efd; }
     
     .hero-section { 
-      padding: 100px 0; 
+      padding: 80px 0; 
       background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
                   url('img/plat.jpeg') no-repeat center center;
       background-size: cover;
@@ -21,20 +21,30 @@
       text-align: center; 
     }
     
-    .program-full-name { font-size: 1.25rem; color: #444; max-width: 900px; margin: 0 auto; line-height: 1.5; font-weight: 400; }
+    /* Título em Preto */
+    .program-title { font-size: 4rem; font-weight: 800; color: #000; margin-bottom: 10px; }
     
-    /* Novo estilo para a finalidade */
-    .program-purpose { font-size: 1.1rem; color: #555; max-width: 800px; margin: 25px auto; line-height: 1.6; }
+    .program-full-name { font-size: 1.2rem; color: #444; max-width: 900px; margin: 0 auto; line-height: 1.4; font-weight: 600; }
+    
+    /* Objetivo em Cinza e letra menor */
+    .program-purpose { 
+      font-size: 0.95rem; 
+      color: #777; 
+      max-width: 750px; 
+      margin: 20px auto; 
+      line-height: 1.6; 
+    }
+    .purpose-label { font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: #666; display: block; margin-bottom: 5px; font-size: 0.85rem; }
 
     .edital-badge {
       display: inline-block;
       background-color: #e7f1ff;
       color: #0d6efd;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 700;
       padding: 6px 16px;
       border-radius: 50px;
-      margin-top: 5px;
+      margin-top: 10px;
       border: 1px solid #0d6efd;
       text-transform: uppercase;
       transition: 0.3s;
@@ -47,30 +57,28 @@
       transform: translateY(-2px);
     }
 
-    .history-phrase { font-size: 1.15rem; font-weight: 600; color: #0d6efd; margin-top: 25px; font-style: italic; }
+    .history-phrase { font-size: 1.1rem; font-weight: 600; color: #0d6efd; margin-top: 30px; font-style: italic; }
     .feature-card { border: none; border-radius: 15px; transition: 0.3s; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     .feature-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
     
     footer { background: #0d6efd; color: #fff; padding: 15px 0; margin-top: auto; }
     .footer-logos img { height: 35px; background: #fff; padding: 3px; border-radius: 4px; }
     .logo-label { font-size:.6rem; text-transform:uppercase; font-weight:700; margin-bottom:4px; display:block; color:rgba(255,255,255,0.9)}
-    
     .contact-block { display: flex; flex-direction: column; align-items: flex-end; justify-content: center; }
     .contact-label { font-size: 0.8rem; text-transform: uppercase; font-weight: 800; margin-bottom: 2px; color: #fff; display: flex; align-items: center; gap: 6px; }
-    .contact-label i { font-size: 1rem; }
     .footer-email { font-size: 0.85rem; font-weight: 600; color: #fff; text-decoration: none; transition: 0.3s; }
-    .footer-email:hover { color: #ffc107; }
-
     .social-icons a { color: #fff; font-size: 1.4rem; margin: 0 8px; transition: 0.3s; }
-    .social-icons a:hover { color: #ffc107; transform: scale(1.2); display: inline-block; }
-
-    @media (max-width: 992px) { .contact-block { align-items: center; margin-top: 15px; } }
+    @media (max-width: 992px) { .contact-block { align-items: center; margin-top: 15px; } .program-title { font-size: 3rem; } }
   </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
+
 <nav class="navbar navbar-expand-lg sticky-top shadow-sm bg-white">
   <div class="container">
-    <div class="navbar-brand d-flex align-items-center"><a href="index.html"><img src="img/logo.jpeg"></a><a href="https://www.ufc.br/" target="_blank"><img src="img/logo-ufc.jpeg" class="ms-2 border-start ps-2"></a></div>
+    <div class="navbar-brand d-flex align-items-center">
+        <a href="index.html"><img src="img/logo.jpeg"></a>
+        <a href="https://www.ufc.br/" target="_blank"><img src="img/logo-ufc.jpeg" class="ms-2 border-start ps-2"></a>
+    </div>
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav ms-auto align-items-center">
         <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
@@ -88,15 +96,17 @@
 <main class="flex-grow-1">
   <section class="hero-section">
     <div class="container text-center">
-      <h1 class="display-3 fw-bold text-dark mb-3">PRH 31</h1>
+      <h1 class="program-title">PRH 31</h1>
+      
       <div class="program-full-name">
         <p class="mb-0">Programa Institucional da UFC para Formação de Recursos Humanos em Engenharia e</p>
         <p>Ciências do Petróleo e Gás Natural</p>
       </div>
 
-      <p class="program-purpose">
-        O <strong>PRH 31</strong> tem por finalidade formar recursos humanos altamente qualificados, atendendo às expectativas do setor de petróleo e gás natural, como forma de aumentar a competitividade da região Nordeste e melhorar a qualidade de vida da população.
-      </p>
+      <div class="program-purpose">
+        <span class="purpose-label">Objetivo</span>
+        O PRH 31 tem por finalidade formar recursos humanos altamente qualificados, atendendo às expectativas do setor de petróleo e gás natural, como forma de aumentar a competitividade da região Nordeste e melhorar a qualidade de vida da população.
+      </div>
       
       <a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos/eixo-academico/edital-de-chamada-publica" target="_blank" style="text-decoration: none;">
         <div class="edital-badge">
