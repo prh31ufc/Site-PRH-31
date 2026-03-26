@@ -1,21 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PRH 31 - UFC | Documentos</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-    body{font-family:'Inter',sans-serif;background:#f8f9fa}.navbar-brand img{height:45px}.nav-link{font-weight:600;color:#495057;border-bottom:2px solid transparent}.nav-link.active{color:#0d6efd!important;border-bottom:2px solid #0d6efd}
     
-    /* Estilo para os Cards de Documentos */
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(rgba(248, 249, 250, 0.9), rgba(248, 249, 250, 0.9)), 
+                  url('img/fundo.jpeg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    /* NAVBAR PADRONIZADA */
+    .navbar {
+      background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%);
+      border-bottom: 3px solid #ffc107;
+      padding: 12px 0;
+    }
+
+    .navbar-brand img { 
+      height: 45px; 
+      background: #fff; 
+      padding: 3px; 
+      border-radius: 5px; 
+    }
+
+    .nav-link { 
+      font-weight: 600; 
+      color: rgba(255, 255, 255, 0.9) !important; 
+      border-bottom: 2px solid transparent; 
+      transition: 0.3s; 
+      margin: 0 8px;
+    }
+
+    .nav-link:hover { color: #ffc107 !important; }
+
+    .nav-link.active { 
+      color: #fff !important; 
+      border-bottom: 2px solid #ffc107 !important; 
+    }
+
+    .navbar-toggler { border-color: rgba(255,255,255,0.3); }
+    .navbar-toggler-icon { filter: invert(1); }
+
+    /* ESTILO PARA OS CARDS DE DOCUMENTOS */
+    .section-title { color: #0a192f; font-weight: 800; margin-bottom: 50px; text-align: center; }
+
     .doc-link-card {
       height: 100%;
-      padding: 30px 20px;
+      padding: 35px 25px;
       border-radius: 20px;
-      background: #fff;
-      border: 1px solid #eee;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(0,0,0,0.08);
       transition: 0.3s;
       text-decoration: none;
       display: flex;
@@ -23,50 +64,102 @@
       align-items: center;
       justify-content: center;
       box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      backdrop-filter: blur(5px);
     }
+
     .doc-link-card:hover {
       transform: translateY(-10px);
       box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-      border-color: #0d6efd;
+      border-color: #ffc107;
     }
     
     .card-icon-img { height: 80px; width: auto; margin-bottom: 15px; }
     .card-icon-bi { font-size: 80px; color: #dc3545; line-height: 1; margin-bottom: 15px; }
     
-    .card-title-text { color:#444; font-weight:700; font-size: 1.1rem; margin-top: 10px; text-align: center; }
+    .card-title-text { color:#333; font-weight:700; font-size: 1.1rem; margin-top: 10px; text-align: center; }
     
-    /* Ajuste para os botões dentro do card */
-    .btn-group-custom { display: flex; gap: 10px; margin-top: 15px; width: 100%; justify-content: center; }
-    .btn-doc { font-size: 0.8rem; font-weight: 700; padding: 6px 12px; border-radius: 50px; }
+    .btn-group-custom { display: flex; gap: 10px; margin-top: 20px; width: 100%; justify-content: center; }
+    
+    .btn-doc-outline { 
+      font-size: 0.8rem; 
+      font-weight: 700; 
+      padding: 8px 16px; 
+      border-radius: 50px; 
+      border: 2px solid #0d47a1;
+      color: #0d47a1;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+    .btn-doc-outline:hover { background: #0d47a1; color: #fff; }
 
-    footer{background:#0d6efd;color:#fff;padding:15px 0;margin-top:auto}.footer-logos img{height:35px;background:#fff;padding:3px;border-radius:4px}.logo-label{font-size:.6rem;text-transform:uppercase;font-weight:700;margin-bottom:4px;display:block;color:rgba(255,255,255,0.9)}
+    .btn-doc-fill { 
+      font-size: 0.8rem; 
+      font-weight: 700; 
+      padding: 8px 16px; 
+      border-radius: 50px; 
+      background: #0d47a1;
+      color: #fff;
+      transition: 0.3s;
+      text-decoration: none;
+      border: 2px solid #0d47a1;
+    }
+    .btn-doc-fill:hover { background: #0a192f; border-color: #0a192f; color: #fff; }
+
+    /* RODAPÉ PADRONIZADO */
+    footer { 
+      background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%); 
+      color: #fff; 
+      padding: 25px 0; 
+      margin-top: auto; 
+      border-top: 3px solid #ffc107; 
+    }
+
+    .footer-logos img { height: 35px; background: #fff; padding: 3px; border-radius: 4px; }
+    .logo-label { font-size:.6rem; text-transform:uppercase; font-weight:700; margin-bottom:4px; display:block; color:rgba(255,255,255,0.8)}
     
     .contact-block { display: flex; flex-direction: column; align-items: flex-end; justify-content: center; }
-    .contact-label { font-size: 0.8rem; text-transform: uppercase; font-weight: 800; margin-bottom: 2px; color: #fff; display: flex; align-items: center; gap: 6px; }
-    .contact-label i { font-size: 1rem; }
+    .contact-label { font-size: 0.8rem; text-transform: uppercase; font-weight: 800; margin-bottom: 2px; color: #ffc107; display: flex; align-items: center; gap: 6px; }
     .footer-email { font-size: 0.85rem; font-weight: 600; color: #fff; text-decoration: none; transition: 0.3s; }
     .footer-email:hover { color: #ffc107; }
-    
-    .social-icons a{color:#fff;font-size:1.4rem;margin:0 8px;transition:0.3s}.social-icons a:hover{color:#ffc107;transform:scale(1.2);display:inline-block}
 
-    @media (max-width: 992px) { .contact-block { align-items: center; margin-top: 15px; } }
+    .social-icons a { color: #fff; font-size: 1.4rem; margin: 0 8px; transition: 0.3s; }
+    .social-icons a:hover { color: #ffc107; transform: scale(1.2); display: inline-block; }
+
+    @media (max-width: 992px) { 
+        .contact-block { align-items: center; margin-top: 15px; } 
+        .navbar-brand img { height: 38px; }
+    }
   </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
-<nav class="navbar navbar-expand-lg sticky-top shadow-sm bg-white"><div class="container">
-  <div class="navbar-brand d-flex align-items-center"><a href="index.html"><img src="img/logo.jpeg"></a><a href="https://www.ufc.br/" target="_blank"><img src="img/logo-ufc.jpeg" class="ms-2 border-start ps-2"></a></div>
-  <div class="collapse navbar-collapse"><ul class="navbar-nav ms-auto align-items-center">
-    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-    <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
-    <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
-    <li class="nav-item"><a class="nav-link" href="bolsistas.html">Bolsistas</a></li>
-    <li class="nav-item"><a class="nav-link active" href="documentos.html">Documentos</a></li>
-    <li class="nav-item"><a class="nav-link" href="editais.html">Editais</a></li>
-    <li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
-  </ul></div></div></nav>
+
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+  <div class="container">
+    <div class="navbar-brand d-flex align-items-center">
+      <a href="index.html"><img src="img/logo.jpeg" alt="Logo PRH"></a>
+      <a href="https://www.ufc.br/" target="_blank"><img src="img/logo-ufc.jpeg" class="ms-2 border-start ps-2" alt="Logo UFC"></a>
+    </div>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
+        <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
+        <li class="nav-item"><a class="nav-link" href="bolsistas.html">Bolsistas</a></li>
+        <li class="nav-item"><a class="nav-link active" href="documentos.html">Documentos</a></li>
+        <li class="nav-item"><a class="nav-link" href="editais.html">Editais</a></li>
+        <li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <main class="container py-5 flex-grow-1">
-  <h2 class="text-primary fw-bold mb-5 mt-4 text-center">DOCUMENTOS</h2>
+  <h2 class="section-title">DOCUMENTOS</h2>
 
   <div class="row g-4 justify-content-center">
     
@@ -74,7 +167,7 @@
       <a href="https://drive.google.com/drive/u/1/folders/1Adsp1AuhG-0qn7DkWhsiy7_5KLdinODc" target="_blank" class="doc-link-card">
         <img src="img/drive.jpeg" class="card-icon-img" alt="Google Drive">
         <div class="card-title-text">Pasta no Google Drive</div>
-        <span class="badge bg-primary mt-2">Repositório Oficial</span>
+        <span class="badge bg-primary mt-2 px-3 rounded-pill">Repositório Oficial</span>
       </a>
     </div>
 
@@ -82,13 +175,13 @@
       <div class="doc-link-card">
         <div class="card-icon-bi"><i class="bi bi-file-earmark-pdf"></i></div>
         <div class="card-title-text">Manual do Usuário PRH ANP 2025</div>
-        <span class="badge bg-danger mt-2 mb-3">Versão 01/2025</span>
+        <span class="badge bg-danger mt-2 mb-2 px-3 rounded-pill">Versão 01/2025</span>
         
         <div class="btn-group-custom">
-          <a href="Manual do Usuario PRH ANP 2025.pdf" target="_blank" class="btn btn-outline-primary btn-doc">
+          <a href="Manual do Usuario PRH ANP 2025.pdf" target="_blank" class="btn-doc-outline">
             <i class="bi bi-eye"></i> Visualizar
           </a>
-          <a href="Manual do Usuario PRH ANP 2025.pdf" download="Manual_PRH_ANP_2025.pdf" class="btn btn-primary btn-doc">
+          <a href="Manual do Usuario PRH ANP 2025.pdf" download="Manual_PRH_ANP_2025.pdf" class="btn-doc-fill">
             <i class="bi bi-download"></i> Baixar
           </a>
         </div>
@@ -98,28 +191,38 @@
   </div>
 </main>
 
-<footer class="text-center"><div class="container">
-  <div class="social-icons mb-2"><a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank"><i class="bi bi-instagram"></i></a><a href="https://www.linkedin.com/in/prh31ufc/" target="_blank"><i class="bi bi-linkedin"></i></a></div>
-  <p class="mb-2 small" style="font-size: 0.75rem;">© 2026 PRH 31 - UFC</p>
-  <div class="row align-items-end">
-    <div class="col-md-3 text-start mb-2 mb-md-0">
-      <span class="logo-label" style="color:#ffc107">Clique Aqui!</span>
-      <a href="https://sage.fapesp.br/SAGe_WEB/processManagement.do" target="_blank">
-        <img src="img/sage.jpeg" style="height:38px;border-radius:4px;background:#fff;padding:2px">
-      </a>
+<footer class="text-center">
+  <div class="container">
+    <div class="social-icons mb-2">
+      <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/prh31ufc/" target="_blank"><i class="bi bi-linkedin"></i></a>
     </div>
-    <div class="col-md-6">
-      <div class="row justify-content-center g-3 footer-logos">
-        <div class="col-auto"><span class="logo-label">Programa</span><a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos" target="_blank"><img src="img/logo-prh-anp.jpeg"></a></div>
-        <div class="col-auto"><span class="logo-label">Fomento</span><a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg"></a></div>
-        <div class="col-auto"><span class="logo-label">Gestão</span><a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg"></a></div>
+    <p class="mb-3 small" style="font-size: 0.75rem; opacity: 0.8;">© 2026 PRH 31 - UFC | Todos os direitos reservados</p>
+    
+    <div class="row align-items-end">
+      <div class="col-md-3 text-start mb-3 mb-md-0">
+        <span class="logo-label" style="color:#ffc107">Acesso Rápido</span>
+        <a href="https://sage.fapesp.br/SAGe_WEB/processManagement.do" target="_blank">
+          <img src="img/sage.jpeg" style="height:38px;border-radius:4px;background:#fff;padding:2px">
+        </a>
+      </div>
+
+      <div class="col-md-6">
+        <div class="row justify-content-center g-3 footer-logos">
+          <div class="col-auto"><span class="logo-label">Programa</span><a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos" target="_blank"><img src="img/logo-prh-anp.jpeg"></a></div>
+          <div class="col-auto"><span class="logo-label">Fomento</span><a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg"></a></div>
+          <div class="col-auto"><span class="logo-label">Gestão</span><a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg"></a></div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-2 mb-md-0 contact-block">
+        <span class="contact-label"><i class="bi bi-envelope-at"></i> CONTATO</span>
+        <a href="mailto:prh31@ufc.br" class="footer-email">prh31@ufc.br</a>
       </div>
     </div>
-    <div class="col-md-3 mb-2 mb-md-0 contact-block">
-      <span class="contact-label"><i class="bi bi-envelope-at"></i> CONTATO</span>
-      <a href="mailto:prh31@ufc.br" class="footer-email">prh31@ufc.br</a>
-    </div>
   </div>
-</div></footer>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
