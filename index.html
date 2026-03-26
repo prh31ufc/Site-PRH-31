@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PRH 31 - UFC | Início</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+    
     body { font-family: 'Inter', sans-serif; background: #f8f9fa; color: #333; }
     .navbar-brand img { height: 45px; }
     .nav-link { font-weight: 600; color: #495057; border-bottom: 2px solid transparent; }
@@ -21,47 +23,51 @@
       text-align: center; 
     }
     
+    /* Título do Programa em Preto */
     .program-title { font-size: 4rem; font-weight: 800; color: #000; margin-bottom: 10px; }
     .program-full-name { font-size: 1.2rem; color: #444; max-width: 900px; margin: 0 auto; line-height: 1.4; font-weight: 600; }
     
+    /* Área do Objetivo */
     .program-purpose { 
       font-size: 0.95rem; 
-      color: #777; 
+      color: #cc5200; /* Cor laranja escuro harmónica */
       max-width: 750px; 
       margin: 25px auto; 
       line-height: 1.6; 
+      font-weight: 500;
     }
 
-    /* Estilização da "Caixinha" de Objetivo com Degradê Laranja e Amarelo */
+    /* Caixinha Objetivo com Degradê */
     .purpose-box {
       display: inline-flex;
       align-items: center;
-      justify-content: center; /* Centraliza o conteúdo horizontalmente */
-      /* Degradê de laranja escuro (#ff6600) para amarelo (#ffcc00) */
+      justify-content: center;
       background: linear-gradient(135deg, #ff6600 0%, #ffcc00 100%);
-      padding: 8px 20px;
+      padding: 8px 25px;
       border-radius: 12px;
-      border: 1px solid rgba(0,0,0,0.1); /* Borda sutil */
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra um pouco mais forte para destaque */
+      border: 1px solid rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       margin-bottom: 10px;
-      width: auto; /* Mantém a largura baseada no conteúdo, mas pode ser ajustada se necessário */
     }
 
     .purpose-label { 
       font-weight: 800; 
       text-transform: uppercase; 
-      letter-spacing: 1px; 
-      color: #ffffff; /* Texto branco para contraste no degradê */
-      font-size: 0.85rem; 
-      text-align: center; /* Garante que o texto esteja centralizado se quebrar linha */
+      letter-spacing: 2px; 
+      color: #ffffff; 
+      font-size: 0.9rem; 
+      /* Efeito de contorno preto nas letras */
+      text-shadow: 1px 1px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000;
     }
 
     .purpose-icon {
-      font-size: 1.2rem;
-      margin-right: 10px;
-      color: #ffffff; /* Ícone branco para contraste */
+      font-size: 1.3rem;
+      margin-right: 12px;
+      color: #ffffff;
       display: flex;
       align-items: center;
+      /* Efeito de contorno no ícone */
+      filter: drop-shadow(1px 1px 0px #000);
     }
 
     .edital-badge {
@@ -77,6 +83,7 @@
       text-transform: uppercase;
       transition: 0.3s;
       cursor: pointer;
+      text-decoration: none;
     }
 
     .edital-badge:hover {
@@ -86,17 +93,26 @@
     }
 
     .history-phrase { font-size: 1.1rem; font-weight: 600; color: #0d6efd; margin-top: 30px; font-style: italic; }
+    
     .feature-card { border: none; border-radius: 15px; transition: 0.3s; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     .feature-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
     
     footer { background: #0d6efd; color: #fff; padding: 15px 0; margin-top: auto; }
     .footer-logos img { height: 35px; background: #fff; padding: 3px; border-radius: 4px; }
     .logo-label { font-size:.6rem; text-transform:uppercase; font-weight:700; margin-bottom:4px; display:block; color:rgba(255,255,255,0.9)}
+    
     .contact-block { display: flex; flex-direction: column; align-items: flex-end; justify-content: center; }
     .contact-label { font-size: 0.8rem; text-transform: uppercase; font-weight: 800; margin-bottom: 2px; color: #fff; display: flex; align-items: center; gap: 6px; }
     .footer-email { font-size: 0.85rem; font-weight: 600; color: #fff; text-decoration: none; transition: 0.3s; }
+    .footer-email:hover { color: #ffc107; }
+
     .social-icons a { color: #fff; font-size: 1.4rem; margin: 0 8px; transition: 0.3s; }
-    @media (max-width: 992px) { .contact-block { align-items: center; margin-top: 15px; } .program-title { font-size: 3rem; } }
+    .social-icons a:hover { color: #ffc107; transform: scale(1.2); display: inline-block; }
+
+    @media (max-width: 992px) { 
+      .contact-block { align-items: center; margin-top: 15px; } 
+      .program-title { font-size: 3rem; } 
+    }
   </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -137,13 +153,11 @@
           <span class="purpose-label">Objetivo</span>
         </div>
         <br>
-        O PRH 31 tem por finalidade formar recursos humanos altamente qualificados, atendendo às expectativas do setor de petróleo e gás natural, como forma de aumentar a competitiveness da região Nordeste e melhorar a qualidade de vida da população.
+        O PRH 31 tem por finalidade formar recursos humanos altamente qualificados, atendendo às expectativas do setor de petróleo e gás natural, como forma de aumentar a competitividade da região Nordeste e melhorar a qualidade de vida da população.
       </div>
       
-      <a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos/eixo-academico/edital-de-chamada-publica" target="_blank" style="text-decoration: none;">
-        <div class="edital-badge">
+      <a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos/eixo-academico/edital-de-chamada-publica" target="_blank" class="edital-badge">
           <i class="bi bi-file-earmark-check-fill me-1"></i> Selecionado via Edital de Chamada Pública nº 01/PRH-ANP/2025
-        </div>
       </a>
 
       <p class="history-phrase">Mais de 25 anos de atuação na formação de especialistas para o setor de petróleo, gás e energia.</p>
@@ -177,7 +191,12 @@
 
       <div class="col-md-6">
         <div class="row justify-content-center g-3 footer-logos">
-          <div class="col-auto"><span class="logo-label">Programa</span><a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos" target="_blank"><img src="img/logo-prh-anp.jpeg"></a></div>
+          <div class="col-auto">
+            <span class="logo-label">Programa</span>
+            <a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos" target="_blank">
+              <img src="img/logo-prh-anp.jpeg">
+            </a>
+          </div>
           <div class="col-auto"><span class="logo-label">Fomento</span><a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg"></a></div>
           <div class="col-auto"><span class="logo-label">Gestão</span><a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg"></a></div>
         </div>
@@ -190,5 +209,6 @@
     </div>
   </div>
 </footer>
+
 </body>
 </html>
