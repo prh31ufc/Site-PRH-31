@@ -21,20 +21,44 @@
       text-align: center; 
     }
     
-    /* Título em Preto */
     .program-title { font-size: 4rem; font-weight: 800; color: #000; margin-bottom: 10px; }
-    
     .program-full-name { font-size: 1.2rem; color: #444; max-width: 900px; margin: 0 auto; line-height: 1.4; font-weight: 600; }
     
-    /* Objetivo em Cinza e letra menor */
+    /* Estilização da "Caixinha" de Objetivo */
     .program-purpose { 
       font-size: 0.95rem; 
       color: #777; 
       max-width: 750px; 
-      margin: 20px auto; 
+      margin: 25px auto; 
       line-height: 1.6; 
     }
-    .purpose-label { font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: #666; display: block; margin-bottom: 5px; font-size: 0.85rem; }
+
+    .purpose-box {
+      display: inline-flex;
+      align-items: center;
+      background: #ffffff;
+      padding: 5px 15px;
+      border-radius: 12px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+      margin-bottom: 10px;
+    }
+
+    .purpose-label { 
+      font-weight: 800; 
+      text-transform: uppercase; 
+      letter-spacing: 1px; 
+      color: #555; /* Cinza mais escuro para o texto OBJETIVO */
+      font-size: 0.85rem; 
+    }
+
+    .purpose-icon {
+      font-size: 1.2rem;
+      margin-right: 10px;
+      color: #dc3545; /* Cor vermelha para o alvo/flecha */
+      display: flex;
+      align-items: center;
+    }
 
     .edital-badge {
       display: inline-block;
@@ -104,7 +128,11 @@
       </div>
 
       <div class="program-purpose">
-        <span class="purpose-label">Objetivo</span>
+        <div class="purpose-box">
+          <span class="purpose-icon"><i class="bi bi-target"></i></span>
+          <span class="purpose-label">Objetivo</span>
+        </div>
+        <br>
         O PRH 31 tem por finalidade formar recursos humanos altamente qualificados, atendendo às expectativas do setor de petróleo e gás natural, como forma de aumentar a competitividade da região Nordeste e melhorar a qualidade de vida da população.
       </div>
       
