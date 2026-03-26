@@ -10,13 +10,30 @@
     body{font-family:'Inter',sans-serif;background:#f8f9fa}.navbar-brand img{height:45px}.nav-link{font-weight:600;color:#495057;border-bottom:2px solid transparent}.nav-link.active{color:#0d6efd!important;border-bottom:2px solid #0d6efd}
     
     /* Estilo para os Cards de Documentos */
-    .drive-card, .pdf-card {max-width:400px;margin:0 auto 30px auto;padding:30px 40px 40px 40px;border-radius:20px;background:#fff;border:1px solid #eee;transition:0.3s;text-decoration:none;display:block;box-shadow:0 10px 30px rgba(0,0,0,0.05)}
-    .drive-card:hover, .pdf-card:hover {transform:translateY(-10px);box-shadow:0 15px 40px rgba(0,0,0,0.1);border-color:#0d6efd}
+    .doc-link-card {
+      height: 100%;
+      padding: 30px 20px;
+      border-radius: 20px;
+      background: #fff;
+      border: 1px solid #eee;
+      transition: 0.3s;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+    .doc-link-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+      border-color: #0d6efd;
+    }
     
-    .drive-img, .pdf-icon {height:80px;width:auto;margin-bottom:10px}
-    .pdf-icon {font-size: 80px; color: #dc3545; line-height: 1;}
+    .card-icon-img { height: 80px; width: auto; margin-bottom: 15px; }
+    .card-icon-bi { font-size: 80px; color: #dc3545; line-height: 1; margin-bottom: 15px; }
     
-    .drive-text, .pdf-text {color:#444;font-weight:700;margin-top:10px;font-size:1.2rem}
+    .card-title-text { color:#444; font-weight:700; font-size: 1.1rem; margin-top: 10px; text-align: center; }
     
     footer{background:#0d6efd;color:#fff;padding:15px 0;margin-top:auto}.footer-logos img{height:35px;background:#fff;padding:3px;border-radius:4px}.logo-label{font-size:.6rem;text-transform:uppercase;font-weight:700;margin-bottom:4px;display:block;color:rgba(255,255,255,0.9)}
     
@@ -44,20 +61,28 @@
     <li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
   </ul></div></div></nav>
 
-<main class="container py-5 flex-grow-1 text-center">
-  <h2 class="text-primary fw-bold mb-5 mt-4">DOCUMENTOS</h2>
+<main class="container py-5 flex-grow-1">
+  <h2 class="text-primary fw-bold mb-5 mt-4 text-center">DOCUMENTOS</h2>
 
-  <a href="Manual do Usuario PRH ANP 2025.pdf" target="_blank" class="pdf-card">
-    <div class="pdf-icon"><i class="bi bi-file-earmark-pdf"></i></div>
-    <div class="pdf-text">Manual do Usuário PRH ANP 2025</div>
-    <span class="badge bg-danger mt-2">Versão 01/2025</span>
-  </a>
+  <div class="row g-4 justify-content-center">
+    
+    <div class="col-md-4 col-sm-6">
+      <a href="https://drive.google.com/drive/u/1/folders/1Adsp1AuhG-0qn7DkWhsiy7_5KLdinODc" target="_blank" class="doc-link-card">
+        <img src="img/drive.jpeg" class="card-icon-img" alt="Google Drive">
+        <div class="card-title-text">Pasta no Google Drive</div>
+        <span class="badge bg-primary mt-2">Repositório Oficial</span>
+      </a>
+    </div>
 
-  <a href="https://drive.google.com/drive/u/1/folders/1Adsp1AuhG-0qn7DkWhsiy7_5KLdinODc" target="_blank" class="drive-card">
-    <img src="img/drive.jpeg" class="drive-img" alt="Google Drive">
-    <div class="drive-text">Pasta no Google Drive</div>
-    <span class="badge bg-primary mt-2">Repositório Oficial</span>
-  </a>
+    <div class="col-md-4 col-sm-6">
+      <a href="Manual do Usuario PRH ANP 2025.pdf" target="_blank" class="doc-link-card">
+        <div class="card-icon-bi"><i class="bi bi-file-earmark-pdf"></i></div>
+        <div class="card-title-text">Manual do Usuário PRH ANP 2025</div>
+        <span class="badge bg-danger mt-2">Versão 01/2025</span>
+      </a>
+    </div>
+
+    </div>
 </main>
 
 <footer class="text-center"><div class="container">
