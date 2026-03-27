@@ -46,7 +46,7 @@
     .navbar-toggler-icon { filter: invert(1); }
     
     .hero-section { 
-      padding: 100px 0; /* Aumentado para mais respiro */
+      padding: 100px 0;
       background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
                   url('img/plat.jpeg') no-repeat center center;
       background-size: cover;
@@ -61,17 +61,23 @@
       color: #444; 
       max-width: 900px; 
       margin: 0 auto; 
-      line-height: 1.6; /* Tipografia: Melhor leitura */
+      line-height: 1.6;
       font-weight: 600; 
     }
     
+    /* ESTILIZAÇÃO DO TEXTO DO OBJETIVO COM GRADIENTE */
     .program-purpose { 
-      font-size: 1.05rem; 
-      color: #333; 
-      max-width: 800px; 
+      font-size: 1.15rem; /* Aumentado levemente para destacar o gradiente */
+      max-width: 850px; 
       margin: 40px auto; 
-      line-height: 1.8; /* Tipografia: Espaçamento confortável */
-      font-weight: 400;
+      line-height: 1.8;
+      font-weight: 700; /* Negrito para o gradiente ficar mais visível */
+      
+      /* Efeito de Gradiente no Texto */
+      background: linear-gradient(135deg, #ff6600 0%, #ff9900 50%, #ffcc00 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .purpose-box {
@@ -92,7 +98,7 @@
       letter-spacing: 2px; 
       color: #ffffff; 
       font-size: 0.9rem; 
-      text-shadow: 1px 1px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000;
+      text-shadow: 1px 1px 0px rgba(0,0,0,0.3);
     }
 
     .purpose-icon {
@@ -101,7 +107,6 @@
       color: #ffffff;
       display: flex;
       align-items: center;
-      filter: drop-shadow(1px 1px 0px #000);
     }
 
     .edital-badge {
@@ -137,7 +142,7 @@
       transition: 0.3s; 
       background: #fff; 
       box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
-      padding: 3rem 2rem !important; /* Mais respiro interno */
+      padding: 3rem 2rem !important;
     }
     .feature-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
     .feature-card p { line-height: 1.6; }
@@ -205,13 +210,14 @@
         <p>Ciências do Petróleo e Gás Natural</p>
       </div>
 
-      <div class="program-purpose">
+      <div>
         <div class="purpose-box">
           <span class="purpose-icon"><i class="bi bi-target"></i></span>
           <span class="purpose-label">Objetivo</span>
         </div>
-        <br>
-        O PRH 31 tem por finalidade formar recursos humanos altamente qualificados, atendendo às expectativas do setor de petróleo e gás natural, como forma de aumentar a competitividade da região Nordeste e melhorar a qualidade de vida da população.
+        <p class="program-purpose">
+          O PRH 31 tem por finalidade formar recursos humanos altamente qualificados, atendendo às expectativas do setor de petróleo e gás natural, como forma de aumentar a competitividade da região Nordeste e melhorar a qualidade de vida da população.
+        </p>
       </div>
       
       <a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos/eixo-academico/edital-de-chamada-publica" target="_blank" class="edital-badge">
