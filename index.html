@@ -25,6 +25,7 @@
     .nav-link:hover { color: #ffc107 !important; }
     .nav-link.active { color: #fff !important; border-bottom: 2px solid #ffc107 !important; }
 
+    /* HERO SECTION */
     .hero-section { 
       padding: 80px 0;
       background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
@@ -33,29 +34,24 @@
       text-align: center; 
     }
     
-    /* BLOCO TÍTULO: Mais juntos */
     .program-title { font-size: 3.5rem; font-weight: 800; color: #000; margin-bottom: 5px; }
     .program-full-name { 
       font-size: 1.15rem; 
       color: #444; 
       max-width: 800px; 
       margin: 0 auto; 
-      line-height: 1.3; /* Texto mais junto */
+      line-height: 1.3;
       font-weight: 600; 
     }
     
-    /* ESPAÇAMENTO ENTRE BLOCOS */
     .objective-container { margin-top: 50px; }
 
-    /* BLOCO OBJETIVO: Mais juntos e letra menor */
     .program-purpose { 
-      font-size: 1rem; /* Letra menor conforme pedido */
+      font-size: 1rem;
       max-width: 750px; 
-      margin: 10px auto 0 auto; /* Mais junto da caixinha */
+      margin: 10px auto 0 auto;
       line-height: 1.5;
-      font-weight: 400; /* Letra normal, sem negrito */
-      
-      /* Gradiente no texto */
+      font-weight: 400;
       background: linear-gradient(135deg, #e65100 0%, #ff8f00 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -77,7 +73,6 @@
       letter-spacing: 1px; 
       color: #ffffff; 
       font-size: 0.8rem; 
-      text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
     }
 
     .purpose-icon { font-size: 1.1rem; margin-right: 8px; color: #ffffff; display: flex; align-items: center; }
@@ -109,8 +104,16 @@
     .feature-card { border: none; border-radius: 15px; transition: 0.3s; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); padding: 2.5rem 1.5rem !important; }
     .feature-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
     
+    /* FAQ SECTION */
+    .faq-section { background-color: #f1f3f5; border-top: 1px solid #dee2e6; }
+    .accordion-item { border: none; margin-bottom: 10px; border-radius: 10px !important; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.03); }
+    .accordion-button { font-size: 0.95rem; color: #0a192f; }
+    .accordion-button:not(.collapsed) { background-color: #fff; color: #0d47a1; box-shadow: none; border-bottom: 1px solid #eee; }
+    .accordion-button:focus { box-shadow: none; }
+    .accordion-body { font-size: 0.9rem; line-height: 1.6; background-color: #fff; }
+
     /* FOOTER */
-    footer { background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%); color: #fff; padding: 25px 0; margin-top: auto; border-top: 3px solid #ffc107; }
+    footer { background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%); color: #fff; padding: 25px 0; border-top: 3px solid #ffc107; }
     .footer-logos img { height: 35px; background: #fff; padding: 3px; border-radius: 4px; }
     .logo-label { font-size:.6rem; text-transform:uppercase; font-weight:700; margin-bottom:4px; display:block; color:rgba(255,255,255,0.8)}
     .contact-label { font-size: 0.8rem; text-transform: uppercase; font-weight: 800; margin-bottom: 2px; color: #ffc107; display: flex; align-items: center; gap: 6px; }
@@ -147,7 +150,7 @@
 
 <main class="flex-grow-1">
   <section class="hero-section">
-    <div class="container">
+    <div class="container text-center">
       <h1 class="program-title">PRH 31</h1>
       <div class="program-full-name">
         <p class="mb-0">Programa Institucional da UFC para Formação de Recursos Humanos em Engenharia e Ciências do Petróleo e Gás Natural</p>
@@ -159,7 +162,7 @@
           <span class="purpose-label">Objetivo</span>
         </div>
         <p class="program-purpose">
-          O PRH 31 tem por finalidade formar recursos humanos altamente qualificados, atendendo às expectativas do setor de petróleo e gás natural, como forma de aumentar a competitividade da região Nordeste e melhorar a qualidade de vida da população.
+          O PRH 31 tem por finalidade formar recursos humanos altamente qualificados, atendendo às expectativas do setor de petróleo e gás natural, conforme os objetivos estratégicos da ANP (Item 2).
         </p>
       </div>
       
@@ -174,8 +177,105 @@
   <section class="container py-5">
     <div class="row g-4 text-center">
       <div class="col-md-4"><div class="card h-100 feature-card"><i class="bi bi-mortarboard text-primary fs-1 mb-3"></i><h5 class="fw-bold">Excelência Acadêmica</h5><p class="text-muted small">Suporte direto aos cursos de graduação e pós-graduação da UFC voltados ao setor energético.</p></div></div>
-      <div class="col-md-4"><div class="card h-100 feature-card"><i class="bi bi-fuel-pump text-primary fs-1 mb-3"></i><h5 class="fw-bold">Setor Estratégico</h5><p class="text-muted small">Fomento à pesquisa e capacitação em Petróleo, Gás Natural e novas matrizes energéticas.</p></div></div>
-      <div class="col-md-4"><div class="card h-100 feature-card"><i class="bi bi-briefcase text-primary fs-1 mb-3"></i><h5 class="fw-bold">Inserção Profissional</h5><p class="text-muted small">Preparação de profissionais qualificados para atender às demandas da indústria nacional.</p></div></div>
+      <div class="col-md-4"><div class="card h-100 feature-card"><i class="bi bi-fuel-pump text-primary fs-1 mb-3"></i><h5 class="fw-bold">Setor Estratégico</h5><p class="text-muted small">Fomento à pesquisa em Petróleo, Gás Natural, Biocombustíveis e Transição Energética (Item 2).</p></div></div>
+      <div class="col-md-4"><div class="card h-100 feature-card"><i class="bi bi-briefcase text-primary fs-1 mb-3"></i><h5 class="fw-bold">Inserção Profissional</h5><p class="text-muted small">Preparação de talentos para atender às demandas reais do mercado de trabalho (Item 9).</p></div></div>
+    </div>
+  </section>
+
+  <section class="faq-section py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold" style="color: #0a192f;">Perguntas Frequentes</h2>
+            <p class="text-muted">Esclareça suas dúvidas com base no Manual do Usuário PRH-ANP 2025</p>
+          </div>
+
+          <div class="accordion accordion-flush" id="faqPRH">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  Quem pode se candidatar às bolsas do PRH 31?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqPRH">
+                <div class="accordion-body text-muted">
+                  Podem se candidatar brasileiros ou estrangeiros com visto permanente (Item 6.1.1.1.g), regularmente matriculados e com bom desempenho acadêmico (Item 6.1.1.1.e). A pesquisa deve ser em tema relacionado às áreas estratégicas do setor energético definidas pela ANP (Item 2).
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  Quais são as modalidades de bolsa e valores?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqPRH">
+                <div class="accordion-body text-muted">
+                  Conforme a <strong>Tabela 1 (Item 6.1)</strong>, as bolsas incluem: Graduação (R$ 1.080), Mestrado (R$ 3.120), Doutorado (R$ 5.520) e Pós-Doutorado (R$ 12.000). Alunos de pós-graduação também podem receber auxílio via Taxa de Bancada (Item 6.6).
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  Posso ter vínculo empregatício enquanto sou bolsista?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqPRH">
+                <div class="accordion-body text-muted">
+                  Não. O bolsista não pode manter qualquer outra atividade remunerada durante a vigência da bolsa (Item 6.1.1.1.j). Exceções são permitidas apenas para estágios em empresas do setor ou pesquisas vinculadas à cláusula de PD&I da ANP (Item 6.1.1.1.j e 6.1.8).
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  O que pode ser pago com a Taxa de Bancada?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqPRH">
+                <div class="accordion-body text-muted">
+                  O recurso (até 30% do valor das bolsas) destina-se a despesas como taxas de inscrição em eventos (6.8.1), diárias (6.8.2), passagens (6.8.3), serviços de terceiros (6.8.4) e bens de consumo ou capital (6.8.5 e 6.8.6), visando a manutenção das atividades do projeto (Item 6.6).
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                  Quais situações levam ao cancelamento da bolsa?
+                </button>
+              </h2>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqPRH">
+                <div class="accordion-body text-muted">
+                  O cancelamento ocorre por abandono, mau desempenho ou descumprimento das regras do Manual ou Termo de Outorga, obrigando a devolução dos recursos (Item 6.5). Casos de saúde documentados ou obtenção de emprego no setor são exceções para a devolução (Item 6.5.c).
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                  Como devo creditar o apoio em minhas publicações?
+                </button>
+              </h2>
+              <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqPRH">
+                <div class="accordion-body text-muted">
+                  É obrigatório citar o PRH-ANP e a FAPESP em todos os trabalhos e comunicações científicas (Item 13). Além disso, deve-se aplicar a identidade visual do programa em espaços e EPIs destinados aos bolsistas (Item 4.f e Item 14).
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-4">
+            <p class="small text-muted">Dúvidas adicionais? Consulte o <a href="documentos.html" class="fw-bold text-decoration-none" style="color:#0d47a1">Manual completo</a> ou contate-nos.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </main>
@@ -186,7 +286,7 @@
       <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank"><i class="bi bi-instagram"></i></a>
       <a href="https://www.linkedin.com/in/prh31ufc/" target="_blank"><i class="bi bi-linkedin"></i></a>
     </div>
-    <p class="mb-3 small" style="font-size: 0.75rem; opacity: 0.8;">© 2026 PRH 31 - UFC | Todos os direitos reservados</p>
+    <p class="mb-3 small" style="font-size: 0.75rem; opacity: 0.8;">© 2026 PRH 31 - UFC | Baseado no Manual ANP 01/2025</p>
     
     <div class="row align-items-end">
       <div class="col-md-3 text-start mb-3 mb-md-0">
