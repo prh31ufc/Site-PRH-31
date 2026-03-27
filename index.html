@@ -14,18 +14,17 @@
     /* NAVBAR COM O PADRÃO REFINADO DO RODAPÉ */
     .navbar {
       background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%);
-      border-bottom: 3px solid #ffc107; /* Linha dourada de acabamento */
+      border-bottom: 3px solid #ffc107; 
       padding: 12px 0;
     }
 
     .navbar-brand img { 
       height: 45px; 
-      background: #fff; /* Fundo branco para as logos se destacarem no azul */
+      background: #fff; 
       padding: 3px;
       border-radius: 5px;
     }
 
-    /* Cores das letras da Navbar (Branco) */
     .nav-link { 
       font-weight: 600; 
       color: rgba(255, 255, 255, 0.9) !important; 
@@ -34,24 +33,19 @@
       margin: 0 8px;
     }
 
-    /* Efeito de destaque ao passar o mouse */
-    .nav-link:hover { 
-      color: #ffc107 !important; 
-    }
+    .nav-link:hover { color: #ffc107 !important; }
 
-    /* Item ativo com linha amarela embaixo */
     .nav-link.active { 
       color: #fff !important; 
       border-bottom: 2px solid #ffc107 !important;
     }
 
-    /* Ícone do menu responsivo (hambúrguer) em branco */
     .navbar-toggler { border-color: rgba(255,255,255,0.3); }
     .navbar-toggler-icon { filter: invert(1); }
     
     /* SEÇÃO HERO */
     .hero-section { 
-      padding: 80px 0; 
+      padding: 100px 0; /* Aumentado de 80px para 100px para mais respiro */
       background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
                   url('img/plat.jpeg') no-repeat center center;
       background-size: cover;
@@ -59,29 +53,38 @@
       text-align: center; 
     }
     
-    .program-title { font-size: 4rem; font-weight: 800; color: #000; margin-bottom: 10px; }
-    .program-full-name { font-size: 1.2rem; color: #444; max-width: 900px; margin: 0 auto; line-height: 1.4; font-weight: 600; }
+    .program-title { font-size: 4rem; font-weight: 800; color: #000; margin-bottom: 20px; }
     
+    /* AJUSTE: Aumento de line-height e margin */
+    .program-full-name { 
+      font-size: 1.2rem; 
+      color: #444; 
+      max-width: 900px; 
+      margin: 0 auto; 
+      line-height: 1.6; /* Aumentado para 1.6 */
+      font-weight: 600; 
+    }
+    
+    /* AJUSTE: Aumento de line-height e padding */
     .program-purpose { 
-      font-size: 0.95rem; 
-      color: #cc5200; 
-      max-width: 750px; 
-      margin: 25px auto; 
-      line-height: 1.6; 
-      font-weight: 500;
+      font-size: 1.05rem; 
+      color: #333; 
+      max-width: 800px; 
+      margin: 40px auto; /* Aumentado para afastar dos outros elementos */
+      line-height: 1.8; /* Aumentado para leitura mais fluida */
+      font-weight: 400;
     }
 
-    /* CAIXINHA OBJETIVO COM DEGRADÊ LARANJA/AMARELO */
     .purpose-box {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       background: linear-gradient(135deg, #ff6600 0%, #ffcc00 100%);
-      padding: 8px 25px;
+      padding: 10px 30px; /* Leve aumento no padding interno */
       border-radius: 12px;
       border: 1px solid rgba(0,0,0,0.1);
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     .purpose-label { 
@@ -106,11 +109,11 @@
       display: inline-block;
       background-color: #e7f1ff;
       color: #0d6efd;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       font-weight: 700;
-      padding: 6px 16px;
+      padding: 8px 20px;
       border-radius: 50px;
-      margin-top: 10px;
+      margin-top: 15px;
       border: 1px solid #0d6efd;
       text-transform: uppercase;
       transition: 0.3s;
@@ -120,12 +123,28 @@
 
     .edital-badge:hover { background-color: #0d6efd; color: #fff; transform: translateY(-2px); }
 
-    .history-phrase { font-size: 1.1rem; font-weight: 600; color: #0d6efd; margin-top: 30px; font-style: italic; }
+    .history-phrase { 
+      font-size: 1.15rem; 
+      font-weight: 600; 
+      color: #0d47a1; 
+      margin-top: 40px; 
+      font-style: italic; 
+      line-height: 1.6;
+    }
     
-    .feature-card { border: none; border-radius: 15px; transition: 0.3s; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    /* AJUSTE: Padding interno dos cards aumentado */
+    .feature-card { 
+      border: none; 
+      border-radius: 15px; 
+      transition: 0.3s; 
+      background: #fff; 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+      padding: 3rem 2rem !important; /* Aumento de padding para respiro interno */
+    }
     .feature-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+    .feature-card p { line-height: 1.6; }
     
-    /* RODAPÉ REFINADO (Mesmo degradê da Navbar) */
+    /* RODAPÉ REFINADO */
     footer { 
       background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%); 
       color: #fff; 
@@ -208,9 +227,9 @@
   
   <section class="container py-5">
     <div class="row g-4 text-center">
-      <div class="col-md-4"><div class="card h-100 p-4 feature-card"><i class="bi bi-mortarboard text-primary fs-1 mb-3"></i><h5 class="fw-bold">Excelência Acadêmica</h5><p class="text-muted small">Suporte direto aos cursos de graduação e pós-graduação da UFC voltados ao setor energético.</p></div></div>
-      <div class="col-md-4"><div class="card h-100 p-4 feature-card"><i class="bi bi-fuel-pump text-primary fs-1 mb-3"></i><h5 class="fw-bold">Setor Estratégico</h5><p class="text-muted small">Fomento à pesquisa e capacitação em Petróleo, Gás Natural e novas matrizes energéticas.</p></div></div>
-      <div class="col-md-4"><div class="card h-100 p-4 feature-card"><i class="bi bi-briefcase text-primary fs-1 mb-3"></i><h5 class="fw-bold">Inserção Profissional</h5><p class="text-muted small">Preparação de profissionais qualificados para atender às demandas da indústria nacional.</p></div></div>
+      <div class="col-md-4"><div class="card h-100 feature-card"><i class="bi bi-mortarboard text-primary fs-1 mb-3"></i><h5 class="fw-bold">Excelência Acadêmica</h5><p class="text-muted small">Suporte direto aos cursos de graduação e pós-graduação da UFC voltados ao setor energético.</p></div></div>
+      <div class="col-md-4"><div class="card h-100 feature-card"><i class="bi bi-fuel-pump text-primary fs-1 mb-3"></i><h5 class="fw-bold">Setor Estratégico</h5><p class="text-muted small">Fomento à pesquisa e capacitação em Petróleo, Gás Natural e novas matrizes energéticas.</p></div></div>
+      <div class="col-md-4"><div class="card h-100 feature-card"><i class="bi bi-briefcase text-primary fs-1 mb-3"></i><h5 class="fw-bold">Inserção Profissional</h5><p class="text-muted small">Preparação de profissionais qualificados para atender às demandas da indústria nacional.</p></div></div>
     </div>
   </section>
 </main>
