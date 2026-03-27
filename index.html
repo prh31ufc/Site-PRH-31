@@ -114,17 +114,11 @@
 
     /* FOOTER */
     footer { background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%); color: #fff; padding: 25px 0; border-top: 3px solid #ffc107; }
-    .footer-logos img { height: 35px; background: #fff; padding: 3px; border-radius: 4px; transition: 0.3s; }
-    /* Efeito de brilho/laranja nas logos do rodapé ao passar o mouse */
-    .footer-logos a:hover img, .footer-sage a:hover img { transform: scale(1.05); box-shadow: 0 0 10px #ffc107; }
-
+    .footer-logos img { height: 35px; background: #fff; padding: 3px; border-radius: 4px; }
     .logo-label { font-size:.6rem; text-transform:uppercase; font-weight:700; margin-bottom:4px; display:block; color:rgba(255,255,255,0.8)}
     .contact-label { font-size: 0.8rem; text-transform: uppercase; font-weight: 800; margin-bottom: 2px; color: #ffc107; display: flex; align-items: center; gap: 6px; }
-    .footer-email { font-size: 0.85rem; font-weight: 600; color: #fff; text-decoration: none; transition: 0.3s; }
-    .footer-email:hover { color: #ffc107; }
-
-    .social-icons a { color: #fff; font-size: 1.4rem; margin: 0 8px; transition: 0.3s; display: inline-block; }
-    .social-icons a:hover { color: #ffc107 !important; transform: scale(1.2); }
+    .footer-email { font-size: 0.85rem; font-weight: 600; color: #fff; text-decoration: none; }
+    .social-icons a { color: #fff; font-size: 1.4rem; margin: 0 8px; transition: 0.3s; }
 
     @media (max-width: 992px) { .program-title { font-size: 2.8rem; } }
   </style>
@@ -161,45 +155,129 @@
       <div class="program-full-name">
         <p class="mb-0">Programa Institucional da UFC para Formação de Recursos Humanos em Engenharia e Ciências do Petróleo e Gás Natural</p>
       </div>
+
       <div class="objective-container">
         <div class="purpose-box">
           <span class="purpose-icon"><i class="bi bi-target"></i></span>
           <span class="purpose-label">Objetivo</span>
         </div>
         <p class="program-purpose">
-          O PRH 31 tem por finalidade formar recursos humanos altamente qualificados, atendendo às expectativas do setor de petróleo e gás natural.
+          O PRH 31 tem por finalidade formar recursos humanos altamente qualificados, atendendo às expectativas do setor de petróleo e gás natural, como forma de aumentar a competitividade da região Nordeste e melhorar a qualidade de vida da população.
         </p>
       </div>
+      
       <a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos/eixo-academico/edital-de-chamada-publica" target="_blank" class="edital-badge">
           <i class="bi bi-file-earmark-check-fill me-1"></i> Selecionado via Edital de Chamada Pública nº 01/PRH-ANP/2025
       </a>
+
       <p class="history-phrase">Mais de 25 anos de atuação na formação de especialistas para o setor de petróleo, gás e energia.</p>
     </div>
   </section>
   
   <section class="container py-5">
     <div class="row g-4 text-center">
-      <div class="col-md-4"><div class="card h-100 feature-card"><i class="bi bi-mortarboard text-primary fs-1 mb-3"></i><h5 class="fw-bold">Excelência Acadêmica</h5><p class="text-muted small">Suporte direto aos cursos da UFC.</p></div></div>
-      <div class="col-md-4"><div class="card h-100 feature-card"><i class="bi bi-fuel-pump text-primary fs-1 mb-3"></i><h5 class="fw-bold">Setor Estratégico</h5><p class="text-muted small">Fomento à pesquisa em Energia.</p></div></div>
-      <div class="col-md-4"><div class="card h-100 feature-card"><i class="bi bi-briefcase text-primary fs-1 mb-3"></i><h5 class="fw-bold">Inserção Profissional</h5><p class="text-muted small">Preparação para o mercado.</p></div></div>
+      <div class="col-md-4"><div class="card h-100 feature-card"><i class="bi bi-mortarboard text-primary fs-1 mb-3"></i><h5 class="fw-bold">Excelência Acadêmica</h5><p class="text-muted small">Suporte direto aos cursos de graduação e pós-graduação da UFC voltados ao setor energético.</p></div></div>
+      <div class="col-md-4"><div class="card h-100 feature-card"><i class="bi bi-fuel-pump text-primary fs-1 mb-3"></i><h5 class="fw-bold">Setor Estratégico</h5><p class="text-muted small">Fomento à pesquisa em Petróleo, Gás Natural, Biocombustíveis e Transição Energética.</p></div></div>
+      <div class="col-md-4"><div class="card h-100 feature-card"><i class="bi bi-briefcase text-primary fs-1 mb-3"></i><h5 class="fw-bold">Inserção Profissional</h5><p class="text-muted small">Preparação de talentos para atender às demandas reais do mercado de trabalho.</p></div></div>
     </div>
   </section>
 
   <section class="faq-section py-5">
-    <div class="container text-center">
-        <h2 class="fw-bold mb-5" style="color: #0a192f;">Perguntas Frequentes</h2>
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="accordion accordion-flush" id="faqPRH">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">Como devo creditar o apoio?</button></h2>
-                        <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqPRH">
-                            <div class="accordion-body text-muted small">Process No. 2025/03400-7.</div>
-                        </div>
-                    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold" style="color: #0a192f;">Perguntas Frequentes</h2>
+            <p class="text-muted">Esclareça suas dúvidas com base no Manual do Usuário PRH-ANP 2025</p>
+          </div>
+
+          <div class="accordion accordion-flush" id="faqPRH">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  Quem pode se candidatar às bolsas do PRH 31?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqPRH">
+                <div class="accordion-body text-muted">
+                  Os candidatos devem estar obrigatoriamente matriculados na <strong>Universidade Federal do Ceará (UFC)</strong> e fazerem parte de um dos cursos vinculados ao programa. Além disso, devem ser brasileiros ou estrangeiros com visto permanente (Item 6.1.1.1.g) e possuir tema de estudo alinhado ao setor de Petróleo e Gás (Item 2).
                 </div>
+              </div>
             </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  Quais são as modalidades de bolsa e valores?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqPRH">
+                <div class="accordion-body text-muted">
+                  Conforme a <strong>Tabela 1 (Item 6.1)</strong>, as bolsas incluem: Graduação (R$ 1.080), Mestrado (R$ 3.120), Doutorado (R$ 5.520) e Pós-Doutorado (R$ 12.000).
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  Posso ter vínculo empregatício enquanto sou bolsista?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqPRH">
+                <div class="accordion-body text-muted">
+                  Não. O bolsista não pode manter qualquer outra atividade remunerada durante a vigência da bolsa (Item 6.1.1.1.j). Exceções são permitidas apenas para estágios em empresas do setor ou pesquisas vinculadas à cláusula de PD&I da ANP (Item 6.1.1.1.j e 6.1.8).
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  O que pode ser pago com a Taxa de Bancada?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqPRH">
+                <div class="accordion-body text-muted">
+                  O recurso (até 30% do valor das bolsas) destina-se a despesas como taxas de inscrição em eventos (6.8.1), diárias (6.8.2), passagens (6.8.3), serviços de terceiros (6.8.4) e bens de consumo ou capital (6.8.5 e 6.8.6), visando a manutenção das atividades do projeto (Item 6.6).
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                  Quais situações levam ao cancelamento da bolsa?
+                </button>
+              </h2>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqPRH">
+                <div class="accordion-body text-muted">
+                  O cancelamento ocorre por abandono, mau desempenho ou descumprimento das regras do Manual ou Termo de Outorga, obrigando a devolução dos recursos (Item 6.5). Casos de saúde documentados ou obtenção de emprego no setor são exceções para a devolução (Item 6.5.c).
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                  Como devo creditar o apoio em minhas publicações?
+                </button>
+              </h2>
+              <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqPRH">
+                <div class="accordion-body text-muted">
+                  É obrigatório citar o PRH-ANP e a FAPESP em todos os trabalhos e comunicações científicas (Item 13).<br>
+                  <span class="mt-2 d-block"><strong>Sugestão de agradecimento:</strong></span>
+                  <em class="small d-block mt-1">The authors acknowledge financial support from the Human Resources Training Program of the Brazilian National Agency for Petroleum, Natural Gas and Biofuels (PRH-ANP), under the management of the São Paulo Research Foundation (FAPESP), Brazil, Process No. 2025/03400-7.</em>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-4">
+            <p class="small text-muted">Dúvidas adicionais? Consulte o <a href="documentos.html" class="fw-bold text-decoration-none" style="color:#0d47a1">Manual completo</a> ou contate-nos.</p>
+          </div>
         </div>
+      </div>
     </div>
   </section>
 </main>
@@ -213,7 +291,7 @@
     <p class="mb-3 small" style="font-size: 0.75rem; opacity: 0.8;">© 2026 PRH 31 - UFC | Todos os direitos reservados</p>
     
     <div class="row align-items-end">
-      <div class="col-md-3 text-start mb-3 mb-md-0 footer-sage">
+      <div class="col-md-3 text-start mb-3 mb-md-0">
         <span class="logo-label" style="color:#ffc107">Acesso Rápido</span>
         <a href="https://sage.fapesp.br/SAGe_WEB/processManagement.do" target="_blank">
           <img src="img/sage.jpeg" style="height:38px;border-radius:4px;background:#fff;padding:2px">
@@ -221,18 +299,9 @@
       </div>
       <div class="col-md-6">
         <div class="row justify-content-center g-3 footer-logos">
-          <div class="col-auto">
-            <span class="logo-label">Programa</span>
-            <a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos" target="_blank"><img src="img/logo-prh-anp.jpeg"></a>
-          </div>
-          <div class="col-auto">
-            <span class="logo-label">Fomento</span>
-            <a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg"></a>
-          </div>
-          <div class="col-auto">
-            <span class="logo-label">Gestão</span>
-            <a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg"></a>
-          </div>
+          <div class="col-auto"><span class="logo-label">Programa</span><img src="img/logo-prh-anp.jpeg"></div>
+          <div class="col-auto"><span class="logo-label">Fomento</span><img src="img/logo-anp.jpeg"></div>
+          <div class="col-auto"><span class="logo-label">Gestão</span><img src="img/logo-fapesp.jpeg"></div>
         </div>
       </div>
       <div class="col-md-3 mb-2 mb-md-0 contact-block" style="display: flex; flex-direction: column; align-items: flex-end;">
