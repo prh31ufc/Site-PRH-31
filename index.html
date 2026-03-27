@@ -14,67 +14,49 @@
     
     body { font-family: 'Inter', sans-serif; background: #f8f9fa; color: #333; }
 
+    /* NAVBAR */
     .navbar {
       background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%);
       border-bottom: 3px solid #ffc107; 
       padding: 12px 0;
     }
-
-    .navbar-brand img { 
-      height: 45px; 
-      background: #fff; 
-      padding: 3px;
-      border-radius: 5px;
-    }
-
-    .nav-link { 
-      font-weight: 600; 
-      color: rgba(255, 255, 255, 0.9) !important; 
-      border-bottom: 2px solid transparent;
-      transition: 0.3s;
-      margin: 0 8px;
-    }
-
+    .navbar-brand img { height: 45px; background: #fff; padding: 3px; border-radius: 5px; }
+    .nav-link { font-weight: 600; color: rgba(255, 255, 255, 0.9) !important; transition: 0.3s; margin: 0 8px; }
     .nav-link:hover { color: #ffc107 !important; }
+    .nav-link.active { color: #fff !important; border-bottom: 2px solid #ffc107 !important; }
 
-    .nav-link.active { 
-      color: #fff !important; 
-      border-bottom: 2px solid #ffc107 !important;
-    }
-
-    .navbar-toggler { border-color: rgba(255,255,255,0.3); }
-    .navbar-toggler-icon { filter: invert(1); }
-    
     .hero-section { 
-      padding: 100px 0;
-      background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
+      padding: 80px 0;
+      background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
                   url('img/plat.jpeg') no-repeat center center;
       background-size: cover;
-      border-bottom: 1px solid #dee2e6; 
       text-align: center; 
     }
     
-    .program-title { font-size: 4rem; font-weight: 800; color: #000; margin-bottom: 20px; }
-    
+    /* BLOCO TÍTULO: Mais juntos */
+    .program-title { font-size: 3.5rem; font-weight: 800; color: #000; margin-bottom: 5px; }
     .program-full-name { 
-      font-size: 1.2rem; 
+      font-size: 1.15rem; 
       color: #444; 
-      max-width: 900px; 
+      max-width: 800px; 
       margin: 0 auto; 
-      line-height: 1.6;
+      line-height: 1.3; /* Texto mais junto */
       font-weight: 600; 
     }
     
-    /* ESTILIZAÇÃO DO TEXTO DO OBJETIVO COM GRADIENTE */
+    /* ESPAÇAMENTO ENTRE BLOCOS */
+    .objective-container { margin-top: 50px; }
+
+    /* BLOCO OBJETIVO: Mais juntos e letra menor */
     .program-purpose { 
-      font-size: 1.15rem; /* Aumentado levemente para destacar o gradiente */
-      max-width: 850px; 
-      margin: 40px auto; 
-      line-height: 1.8;
-      font-weight: 700; /* Negrito para o gradiente ficar mais visível */
+      font-size: 1rem; /* Letra menor conforme pedido */
+      max-width: 750px; 
+      margin: 10px auto 0 auto; /* Mais junto da caixinha */
+      line-height: 1.5;
+      font-weight: 400; /* Letra normal, sem negrito */
       
-      /* Efeito de Gradiente no Texto */
-      background: linear-gradient(135deg, #ff6600 0%, #ff9900 50%, #ffcc00 100%);
+      /* Gradiente no texto */
+      background: linear-gradient(135deg, #e65100 0%, #ff8f00 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -83,94 +65,59 @@
     .purpose-box {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
       background: linear-gradient(135deg, #ff6600 0%, #ffcc00 100%);
-      padding: 10px 30px; 
-      border-radius: 12px;
-      border: 1px solid rgba(0,0,0,0.1);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-bottom: 15px;
+      padding: 6px 20px; 
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     .purpose-label { 
       font-weight: 800; 
       text-transform: uppercase; 
-      letter-spacing: 2px; 
+      letter-spacing: 1px; 
       color: #ffffff; 
-      font-size: 0.9rem; 
-      text-shadow: 1px 1px 0px rgba(0,0,0,0.3);
+      font-size: 0.8rem; 
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
     }
 
-    .purpose-icon {
-      font-size: 1.3rem;
-      margin-right: 12px;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-    }
+    .purpose-icon { font-size: 1.1rem; margin-right: 8px; color: #ffffff; display: flex; align-items: center; }
 
     .edital-badge {
       display: inline-block;
       background-color: #e7f1ff;
       color: #0d6efd;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 700;
-      padding: 8px 20px;
+      padding: 6px 18px;
       border-radius: 50px;
-      margin-top: 15px;
+      margin-top: 30px;
       border: 1px solid #0d6efd;
-      text-transform: uppercase;
-      transition: 0.3s;
-      cursor: pointer;
       text-decoration: none;
+      transition: 0.3s;
     }
-
-    .edital-badge:hover { background-color: #0d6efd; color: #fff; transform: translateY(-2px); }
+    .edital-badge:hover { background-color: #0d6efd; color: #fff; }
 
     .history-phrase { 
-      font-size: 1.15rem; 
+      font-size: 1.05rem; 
       font-weight: 600; 
       color: #0d47a1; 
-      margin-top: 40px; 
+      margin-top: 35px; 
       font-style: italic; 
-      line-height: 1.6;
     }
     
-    .feature-card { 
-      border: none; 
-      border-radius: 15px; 
-      transition: 0.3s; 
-      background: #fff; 
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
-      padding: 3rem 2rem !important;
-    }
+    /* CARDS */
+    .feature-card { border: none; border-radius: 15px; transition: 0.3s; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); padding: 2.5rem 1.5rem !important; }
     .feature-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
-    .feature-card p { line-height: 1.6; }
     
-    footer { 
-      background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%); 
-      color: #fff; 
-      padding: 25px 0; 
-      margin-top: auto;
-      border-top: 3px solid #ffc107;
-    }
-    
+    /* FOOTER */
+    footer { background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%); color: #fff; padding: 25px 0; margin-top: auto; border-top: 3px solid #ffc107; }
     .footer-logos img { height: 35px; background: #fff; padding: 3px; border-radius: 4px; }
     .logo-label { font-size:.6rem; text-transform:uppercase; font-weight:700; margin-bottom:4px; display:block; color:rgba(255,255,255,0.8)}
-    
-    .contact-block { display: flex; flex-direction: column; align-items: flex-end; justify-content: center; }
     .contact-label { font-size: 0.8rem; text-transform: uppercase; font-weight: 800; margin-bottom: 2px; color: #ffc107; display: flex; align-items: center; gap: 6px; }
-    .footer-email { font-size: 0.85rem; font-weight: 600; color: #fff; text-decoration: none; transition: 0.3s; }
-    .footer-email:hover { color: #ffc107; }
-
+    .footer-email { font-size: 0.85rem; font-weight: 600; color: #fff; text-decoration: none; }
     .social-icons a { color: #fff; font-size: 1.4rem; margin: 0 8px; transition: 0.3s; }
-    .social-icons a:hover { color: #ffc107; transform: scale(1.2); display: inline-block; }
 
-    @media (max-width: 992px) { 
-      .contact-block { align-items: center; margin-top: 15px; } 
-      .program-title { font-size: 3rem; } 
-      .navbar-brand img { height: 38px; }
-    }
+    @media (max-width: 992px) { .program-title { font-size: 2.8rem; } }
   </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -181,11 +128,9 @@
         <a href="index.html"><img src="img/logo.jpeg" alt="Logo PRH"></a>
         <a href="https://www.ufc.br/" target="_blank"><img src="img/logo-ufc.jpeg" class="ms-2 border-start ps-2" alt="Logo UFC"></a>
     </div>
-    
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto align-items-center">
         <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
@@ -202,15 +147,13 @@
 
 <main class="flex-grow-1">
   <section class="hero-section">
-    <div class="container text-center">
+    <div class="container">
       <h1 class="program-title">PRH 31</h1>
-      
       <div class="program-full-name">
-        <p class="mb-0">Programa Institucional da UFC para Formação de Recursos Humanos em Engenharia e</p>
-        <p>Ciências do Petróleo e Gás Natural</p>
+        <p class="mb-0">Programa Institucional da UFC para Formação de Recursos Humanos em Engenharia e Ciências do Petróleo e Gás Natural</p>
       </div>
 
-      <div>
+      <div class="objective-container">
         <div class="purpose-box">
           <span class="purpose-icon"><i class="bi bi-target"></i></span>
           <span class="purpose-label">Objetivo</span>
@@ -252,31 +195,14 @@
           <img src="img/sage.jpeg" style="height:38px;border-radius:4px;background:#fff;padding:2px">
         </a>
       </div>
-
       <div class="col-md-6">
         <div class="row justify-content-center g-3 footer-logos">
-          <div class="col-auto">
-            <span class="logo-label">Programa</span>
-            <a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos" target="_blank">
-              <img src="img/logo-prh-anp.jpeg">
-            </a>
-          </div>
-          <div class="col-auto">
-            <span class="logo-label">Fomento</span>
-            <a href="https://www.gov.br/anp/pt-br" target="_blank">
-              <img src="img/logo-anp.jpeg">
-            </a>
-          </div>
-          <div class="col-auto">
-            <span class="logo-label">Gestão</span>
-            <a href="https://fapesp.br/" target="_blank">
-              <img src="img/logo-fapesp.jpeg">
-            </a>
-          </div>
+          <div class="col-auto"><span class="logo-label">Programa</span><img src="img/logo-prh-anp.jpeg"></div>
+          <div class="col-auto"><span class="logo-label">Fomento</span><img src="img/logo-anp.jpeg"></div>
+          <div class="col-auto"><span class="logo-label">Gestão</span><img src="img/logo-fapesp.jpeg"></div>
         </div>
       </div>
-
-      <div class="col-md-3 mb-2 mb-md-0 contact-block">
+      <div class="col-md-3 mb-2 mb-md-0 contact-block" style="display: flex; flex-direction: column; align-items: flex-end;">
         <span class="contact-label"><i class="bi bi-envelope-at"></i> CONTATO</span>
         <a href="mailto:prh31@ufc.br" class="footer-email">prh31@ufc.br</a>
       </div>
