@@ -15,7 +15,7 @@
       background-size: cover;
     }
 
-    /* NAVBAR PADRONIZADA (Mesmo degradê do rodapé) */
+    /* NAVBAR PADRONIZADA */
     .navbar {
       background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%);
       border-bottom: 3px solid #ffc107;
@@ -47,7 +47,6 @@
     .navbar-toggler { border-color: rgba(255,255,255,0.3); }
     .navbar-toggler-icon { filter: invert(1); }
 
-    /* TÍTULO DA PÁGINA */
     .section-title { color: #0a192f; font-weight: 800; margin-bottom: 50px; }
 
     /* CARDS DA EQUIPE */
@@ -59,30 +58,35 @@
       margin-top: 45px;
       height: 100%;
       transition: 0.3s;
+      display: flex;
+      flex-direction: column;
     }
     .team-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
     
+    /* AJUSTE DE PADRONIZAÇÃO DAS IMAGENS */
     .member-img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 50%;
+      width: 120px; /* Aumentei levemente para melhor visualização */
+      height: 120px;
+      aspect-ratio: 1 / 1; /* Força a proporção quadrada */
+      object-fit: cover; /* Corta a imagem para preencher o quadrado sem distorcer */
+      object-position: center; /* Garante que o rosto fique centralizado no corte */
+      border-radius: 50%; /* Torna o quadrado um círculo perfeito */
       border: 4px solid #fff;
-      margin-top: -50px;
+      margin-top: -60px; /* Metade da altura para o efeito flutuante */
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      background-color: #eee; /* Fundo cinza caso a imagem demore a carregar */
     }
 
     .member-role {
       font-size: .65rem;
       font-weight: 800;
-      color: #0d47a1; /* Azul escuro combinando com a nav */
+      color: #0d47a1;
       text-transform: uppercase;
-      margin-top: 10px;
+      margin-top: 15px;
     }
 
-    .member-name { font-size: .95rem; font-weight: 700; margin-bottom: 15px; color: #333; }
+    .member-name { font-size: .95rem; font-weight: 700; margin-bottom: 15px; color: #333; flex-grow: 1; }
     
-    /* Botão Lattes Customizado */
     .btn-lattes {
       border: 1px solid #0d47a1;
       color: #0d47a1;
@@ -90,13 +94,13 @@
       font-size: 0.75rem;
       border-radius: 50px;
       transition: 0.3s;
+      margin-top: auto; /* Garante que o botão fique sempre no final do card */
     }
     .btn-lattes:hover {
       background-color: #0d47a1;
       color: #fff;
     }
 
-    /* RODAPÉ PADRONIZADO */
     footer { 
       background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%); 
       color: #fff; 
@@ -152,7 +156,7 @@
 <main class="container-fluid px-5 py-5 flex-grow-1 text-center">
   <h2 class="section-title">EQUIPE PRH 31</h2>
   
-  <div class="row row-cols-1 row-cols-md-4 row-cols-lg-5 g-4 justify-content-center">
+  <div class="row row-cols-1 row-cols-md-4 row-cols-lg-5 g-5 justify-content-center">
     <div class="col"><div class="card team-card p-3"><img src="img/coo.jpeg" class="member-img mx-auto"><p class="member-role">Coordenador Geral</p><p class="member-name">Jorge Barbosa Soares</p><a href="https://lattes.cnpq.br/9212256013670303" target="_blank" class="btn btn-sm btn-lattes">Lattes</a></div></div>
     
     <div class="col"><div class="card team-card p-3"><img src="img/cg1.jpeg" class="member-img mx-auto"><p class="member-role">Membro do Comitê</p><p class="member-name">Cleiton Carvalho Silva</p><a href="https://lattes.cnpq.br/2862541276328123" target="_blank" class="btn btn-sm btn-lattes">Lattes</a></div></div>
