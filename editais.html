@@ -29,7 +29,11 @@
       background: #fff; 
       padding: 3px; 
       border-radius: 5px; 
+      transition: 0.3s ease;
     }
+
+    /* Efeito nas logos superiores */
+    .navbar-brand a:hover img { transform: scale(1.05); box-shadow: 0 0 10px #ffc107; }
 
     .nav-link { 
       font-weight: 600; 
@@ -83,7 +87,17 @@
       border-top: 3px solid #ffc107; 
     }
 
-    .footer-logos img { height: 35px; background: #fff; padding: 3px; border-radius: 4px; }
+    .footer-logos img, .footer-sage img { 
+      height: 35px; 
+      background: #fff; 
+      padding: 3px; 
+      border-radius: 4px; 
+      transition: 0.3s ease;
+    }
+
+    /* Efeito de brilho nas logos do rodapé ao passar o mouse */
+    .footer-logos a:hover img, .footer-sage a:hover img { transform: scale(1.05); box-shadow: 0 0 10px #ffc107; }
+
     .logo-label { 
       font-size: .6rem; 
       text-transform: uppercase; 
@@ -98,8 +112,8 @@
     .footer-email { font-size: 0.85rem; font-weight: 600; color: #fff; text-decoration: none; transition: 0.3s; }
     .footer-email:hover { color: #ffc107; }
 
-    .social-icons a { color: #fff; font-size: 1.4rem; margin: 0 8px; transition: 0.3s; }
-    .social-icons a:hover { color: #ffc107; transform: scale(1.2); display: inline-block; }
+    .social-icons a { color: #fff; font-size: 1.4rem; margin: 0 8px; transition: 0.3s; display: inline-block; }
+    .social-icons a:hover { color: #ffc107 !important; transform: scale(1.2); }
 
     @media (max-width: 992px) { 
         .contact-block { align-items: center; margin-top: 20px; } 
@@ -153,18 +167,27 @@
     <p class="mb-3 small" style="font-size: 0.75rem; opacity: 0.8;">© 2026 PRH 31 - UFC | Todos os direitos reservados</p>
     
     <div class="row align-items-end">
-      <div class="col-md-3 text-start mb-3 mb-md-0">
+      <div class="col-md-3 text-start mb-3 mb-md-0 footer-sage">
         <span class="logo-label" style="color:#ffc107">Acesso Rápido</span>
         <a href="https://sage.fapesp.br/SAGe_WEB/processManagement.do" target="_blank">
-          <img src="img/sage.jpeg" style="height:38px;border-radius:4px;background:#fff;padding:2px">
+          <img src="img/sage.jpeg" alt="SAGE" style="height:38px;border-radius:4px;background:#fff;padding:2px">
         </a>
       </div>
 
       <div class="col-md-6">
         <div class="row justify-content-center g-3 footer-logos">
-          <div class="col-auto"><span class="logo-label">Programa</span><a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos" target="_blank"><img src="img/logo-prh-anp.jpeg"></a></div>
-          <div class="col-auto"><span class="logo-label">Fomento</span><a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg"></a></div>
-          <div class="col-auto"><span class="logo-label">Gestão</span><a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg"></a></div>
+          <div class="col-auto">
+            <span class="logo-label">Programa</span>
+            <a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos" target="_blank"><img src="img/logo-prh-anp.jpeg" alt="PRH ANP"></a>
+          </div>
+          <div class="col-auto">
+            <span class="logo-label">Fomento</span>
+            <a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg" alt="ANP"></a>
+          </div>
+          <div class="col-auto">
+            <span class="logo-label">Gestão</span>
+            <a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg" alt="FAPESP"></a>
+          </div>
         </div>
       </div>
 
