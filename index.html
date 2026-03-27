@@ -71,14 +71,7 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-    .purpose-label { 
-      font-weight: 800; 
-      text-transform: uppercase; 
-      letter-spacing: 1px; 
-      color: #ffffff; 
-      font-size: 0.8rem; 
-    }
-
+    .purpose-label { font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: #ffffff; font-size: 0.8rem; }
     .purpose-icon { font-size: 1.1rem; margin-right: 8px; color: #ffffff; display: flex; align-items: center; }
 
     .edital-badge {
@@ -96,13 +89,7 @@
     }
     .edital-badge:hover { background-color: #0d6efd; color: #fff; }
 
-    .history-phrase { 
-      font-size: 1.05rem; 
-      font-weight: 600; 
-      color: #0d47a1; 
-      margin-top: 35px; 
-      font-style: italic; 
-    }
+    .history-phrase { font-size: 1.05rem; font-weight: 600; color: #0d47a1; margin-top: 35px; font-style: italic; }
     
     /* CARDS */
     .feature-card { border: none; border-radius: 15px; transition: 0.3s; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); padding: 2.5rem 1.5rem !important; }
@@ -121,15 +108,15 @@
     .footer-logos img { height: 35px; background: #fff; padding: 3px; border-radius: 4px; transition: 0.3s; }
     
     /* Efeito de brilho nas logos do rodapé ao passar o mouse */
-    .footer-logos img:hover, .footer-sage a:hover img { transform: scale(1.05); box-shadow: 0 0 10px #ffc107; }
+    .footer-logos a:hover img, .footer-sage a:hover img { transform: scale(1.05); box-shadow: 0 0 10px #ffc107; }
 
     .logo-label { font-size:.6rem; text-transform:uppercase; font-weight:700; margin-bottom:4px; display:block; color:rgba(255,255,255,0.8)}
     .contact-label { font-size: 0.8rem; text-transform: uppercase; font-weight: 800; margin-bottom: 2px; color: #ffc107; display: flex; align-items: center; gap: 6px; }
     .footer-email { font-size: 0.85rem; font-weight: 600; color: #fff; text-decoration: none; transition: 0.3s; }
     .footer-email:hover { color: #ffc107; }
-    
+
     .social-icons a { color: #fff; font-size: 1.4rem; margin: 0 8px; transition: 0.3s; display: inline-block; }
-    .social-icons a:hover { color: #ffc107; transform: scale(1.2); }
+    .social-icons a:hover { color: #ffc107 !important; transform: scale(1.2); }
 
     @media (max-width: 992px) { .program-title { font-size: 2.8rem; } }
   </style>
@@ -166,25 +153,22 @@
       <div class="program-full-name">
         <p class="mb-0">Programa Institucional da UFC para Formação de Recursos Humanos em Engenharia e Ciências do Petróleo e Gás Natural</p>
       </div>
-
       <div class="objective-container">
         <div class="purpose-box">
           <span class="purpose-icon"><i class="bi bi-target"></i></span>
           <span class="purpose-label">Objetivo</span>
         </div>
         <p class="program-purpose">
-          O PRH 31 tem por finalidade formar recursos humanos altamente qualificados, atendendo às expectativas do setor de petróleo e gás natural, como forma de aumentar a competitividade da região Nordeste e melhorar a qualidade de vida da population.
+          O PRH 31 tem por finalidade formar recursos humanos altamente qualificados, atendendo às expectativas do setor de petróleo e gás natural, como forma de aumentar a competitividade da região Nordeste e melhorar a qualidade de vida da população.
         </p>
       </div>
-      
       <a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos/eixo-academico/edital-de-chamada-publica" target="_blank" class="edital-badge">
           <i class="bi bi-file-earmark-check-fill me-1"></i> Selecionado via Edital de Chamada Pública nº 01/PRH-ANP/2025
       </a>
-
       <p class="history-phrase">Mais de 25 anos de atuação na formação de especialistas para o setor de petróleo, gás e energia.</p>
     </div>
   </section>
-  
+
   <section class="container py-5">
     <div class="row g-4 text-center">
       <div class="col-md-4"><div class="card h-100 feature-card"><i class="bi bi-mortarboard text-primary fs-1 mb-3"></i><h5 class="fw-bold">Excelência Acadêmica</h5><p class="text-muted small">Suporte direto aos cursos de graduação e pós-graduação da UFC voltados ao setor energético.</p></div></div>
@@ -225,6 +209,60 @@
               <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqPRH">
                 <div class="accordion-body text-muted">
                   Conforme a <strong>Tabela 1 (Item 6.1)</strong>, as bolsas incluem: Graduação (R$ 1.080), Mestrado (R$ 3.120), Doutorado (R$ 5.520) e Pós-Doutorado (R$ 12.000).
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  Posso ter vínculo empregatício enquanto sou bolsista?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqPRH">
+                <div class="accordion-body text-muted">
+                  Não. O bolsista não pode manter qualquer outra atividade remunerada durante a vigência da bolsa (Item 6.1.1.1.j). Exceções são permitidas apenas para estágios em empresas do setor ou pesquisas vinculadas à cláusula de PD&I da ANP (Item 6.1.1.1.j e 6.1.8).
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  O que pode ser pago com a Taxa de Bancada?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqPRH">
+                <div class="accordion-body text-muted">
+                  O recurso (até 30% do valor das bolsas) destina-se a despesas como taxas de inscrição em eventos (6.8.1), diárias (6.8.2), passagens (6.8.3), serviços de terceiros (6.8.4) e bens de consumo ou capital (6.8.5 e 6.8.6), visando a manutenção das atividades do projeto (Item 6.6).
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                  Quais situações levam ao cancelamento da bolsa?
+                </button>
+              </h2>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqPRH">
+                <div class="accordion-body text-muted">
+                  O cancelamento ocorre por abandono, mau desempenho ou descumprimento das regras do Manual ou Termo de Outorga, obrigando a devolução dos recursos (Item 6.5). Casos de saúde documentados ou obtenção de emprego no setor são exceções para a devolução (Item 6.5.c).
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                  Como devo creditar o apoio em minhas publicações?
+                </button>
+              </h2>
+              <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqPRH">
+                <div class="accordion-body text-muted">
+                  É obrigatório citar o PRH-ANP e a FAPESP em todos os trabalhos e comunicações científicas (Item 13).<br>
+                  <span class="mt-2 d-block"><strong>Sugestão de agradecimento:</strong></span>
+                  <em class="small d-block mt-1">The authors acknowledge financial support from the Human Resources Training Program of the Brazilian National Agency for Petroleum, Natural Gas and Biofuels (PRH-ANP), under the management of the São Paulo Research Foundation (FAPESP), Brazil, Process No. 2025/03400-7.</em>
                 </div>
               </div>
             </div>
