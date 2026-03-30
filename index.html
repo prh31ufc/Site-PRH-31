@@ -95,6 +95,13 @@
     .feature-card { border: none; border-radius: 15px; transition: 0.3s; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); padding: 2.5rem 1.5rem !important; }
     .feature-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
     
+    /* TABELA DE BOLSAS */
+    .bolsas-section { background-color: #ffffff; border-top: 1px solid #eee; }
+    .table-bolsas thead { background-color: #0a192f; color: white; }
+    .table-bolsas th { font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; padding: 15px; }
+    .table-bolsas td { padding: 12px 15px; font-size: 0.95rem; vertical-align: middle; }
+    .valor-bolsa { font-weight: 800; color: #198754; }
+
     /* FAQ SECTION */
     .faq-section { background-color: #f1f3f5; border-top: 1px solid #dee2e6; }
     .accordion-item { border: none; margin-bottom: 10px; border-radius: 10px !important; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.03); }
@@ -174,6 +181,72 @@
       <div class="col-md-4"><div class="card h-100 feature-card"><i class="bi bi-mortarboard text-primary fs-1 mb-3"></i><h5 class="fw-bold">Excelência Acadêmica</h5><p class="text-muted small">Suporte direto aos cursos de graduação e pós-graduação da UFC voltados ao setor energético.</p></div></div>
       <div class="col-md-4"><div class="card h-100 feature-card"><i class="bi bi-fuel-pump text-primary fs-1 mb-3"></i><h5 class="fw-bold">Setor Estratégico</h5><p class="text-muted small">Fomento à pesquisa em Petróleo, Gás Natural, Biocombustíveis e Transição Energética.</p></div></div>
       <div class="col-md-4"><div class="card h-100 feature-card"><i class="bi bi-briefcase text-primary fs-1 mb-3"></i><h5 class="fw-bold">Inserção Profissional</h5><p class="text-muted small">Preparação de talentos para atender às demandas reais do mercado de trabalho.</p></div></div>
+    </div>
+  </section>
+
+  <section class="bolsas-section py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold" style="color: #0a192f;">Modalidades e Valores</h2>
+        <p class="text-muted">Confira as modalidades de bolsas disponíveis e seus respectivos valores mensais</p>
+      </div>
+      <div class="table-responsive shadow-sm rounded-3">
+        <table class="table table-hover table-bolsas mb-0">
+          <thead>
+            <tr class="text-center align-middle">
+              <th class="text-start">Modalidade</th>
+              <th>Sigla</th>
+              <th>Duração Máxima</th>
+              <th>Valor Mensal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="text-center align-middle">
+              <td class="text-start fw-semibold">Graduação</td>
+              <td>GRA</td>
+              <td>24 meses</td>
+              <td class="valor-bolsa">R$ 1.080,00</td>
+            </tr>
+            <tr class="text-center align-middle">
+              <td class="text-start fw-semibold">Mestrado</td>
+              <td>MSc</td>
+              <td>24 meses</td>
+              <td class="valor-bolsa">R$ 3.120,00</td>
+            </tr>
+            <tr class="text-center align-middle">
+              <td class="text-start fw-semibold">Doutorado</td>
+              <td>DSc</td>
+              <td>48 meses</td>
+              <td class="valor-bolsa">R$ 5.520,00</td>
+            </tr>
+            <tr class="text-center align-middle">
+              <td class="text-start fw-semibold">Pós-Doutorado</td>
+              <td>PDSc</td>
+              <td>12 meses</td>
+              <td class="valor-bolsa">R$ 12.000,00</td>
+            </tr>
+            <tr class="text-center align-middle">
+              <td class="text-start fw-semibold">Coordenação</td>
+              <td>COO</td>
+              <td>60 meses</td>
+              <td class="valor-bolsa">R$ 3.900,00</td>
+            </tr>
+            <tr class="text-center align-middle">
+              <td class="text-start fw-semibold">Pesquisador Visitante</td>
+              <td>PV</td>
+              <td>60 meses</td>
+              <td class="valor-bolsa">R$ 12.000,00</td>
+            </tr>
+            <tr class="text-center align-middle">
+              <td class="text-start fw-semibold">Apoio Administrativo</td>
+              <td>AA</td>
+              <td>60 meses</td>
+              <td class="valor-bolsa">R$ 1.230,00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-center small text-muted mt-3 italic">* Os valores e durações seguem as normas vigentes do PRH-ANP/FAPESP.</p>
     </div>
   </section>
 
