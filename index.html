@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PRH 31 - UFC | Início</title>
+  
+  <link rel="icon" type="image/jpeg" href="img/logo.jpeg">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+    
+    body { font-family: 'Inter', sans-serif; background: #f8f9fa; color: #333; }
+
+    /* NAVBAR */
+    .navbar {
+      background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%);
+      border-bottom: 3px solid #ffc107; 
+      padding: 12px 0;
+    }
+    .navbar-brand img { height: 45px; background: #fff; padding: 3px; border-radius: 5px; transition: 0.3s; }
+    
+    .navbar-brand a:hover img { transform: scale(1.05); box-shadow: 0 0 10px #ffc107; }
+
+    .nav-link { font-weight: 600; color: rgba(255, 255, 255, 0.9) !important; transition: 0.3s; margin: 0 8px; }
+    .nav-link:hover { color: #ffc107 !important; }
+    .nav-link.active { color: #fff !important; border-bottom: 2px solid #ffc107 !important; }
+
+    /* HERO SECTION */
+    .hero-section { 
+      padding: 80px 0;
+      background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
+                  url('img/plat.jpeg') no-repeat center center;
+      background-size: cover;
+      text-align: center; 
+    }
+    
+    .program-title { font-size: 3.5rem; font-weight: 800; color: #000; margin-bottom: 5px; }
+    .program-full-name { 
+      font-size: 1.15rem; 
+      color: #444; 
+      max-width: 800px; 
+      margin: 0 auto; 
+      line-height: 1.3;
+      font-weight: 600; 
+    }
+    
+    .objective-container { margin-top: 50px; }
+
+    .program-purpose { 
+      font-size: 1rem;
+      max-width: 750px; 
+      margin: 10px auto 0 auto;
+      line-height: 1.5;
+      font-weight: 400;
+      background: linear-gradient(135deg, #e65100 0%, #ff8f00 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .purpose-box {
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(135deg, #ff6600 0%, #ffcc00 100%);
+      padding: 6px 20px; 
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .purpose-label { font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: #ffffff; font-size: 0.8rem; }
+    .purpose-icon { font-size: 1.1rem; margin-right: 8px; color: #ffffff; display: flex; align-items: center; }
+
+    .edital-badge {
+      display: inline-block;
+      background-color: #e7f1ff;
+      color: #0d6efd;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 6px 18px;
+      border-radius: 50px;
+      margin-top: 30px;
+      border: 1px solid #0d6efd;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .edital-badge:hover { background-color: #0d6efd; color: #fff; }
+
+    .history-phrase { font-size: 1.05rem; font-weight: 600; color: #0d47a1; margin-top: 35px; font-style: italic; }
+    
+    /* CARDS */
+    .feature-card { border: none; border-radius: 15px; transition: 0.3s; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); padding: 2.5rem 1.5rem !important; }
+    .feature-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+    
+    /* TABELA DE BOLSAS */
+    .bolsas-section { background-color: #ffffff; border-top: 1px solid #eee; }
+    .table-bolsas thead { background-color: #0a192f; color: white; }
+    .table-bolsas th { font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; padding: 15px; }
+    .table-bolsas td { padding: 12px 15px; font-size: 0.95rem; vertical-align: middle; }
+    .valor-bolsa { font-weight: 800; color: #198754; }
+
+    /* ÁREAS DE PESQUISA CARD */
+    .research-card { 
+      border: none; 
+      border-radius: 12px; 
+      transition: 0.3s; 
+      background: #fff; 
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+      cursor: pointer;
+    }
+    .research-card:hover { transform: scale(1.03); box-shadow: 0 5px 20px rgba(0,0,0,0.1); border-left: 4px solid #ffc107; }
+    .modal-header { background: #0a192f; color: white; border-bottom: 2px solid #ffc107; }
+    .modal-title { font-weight: 800; }
+
+    /* FAQ SECTION */
+    .faq-section { background-color: #f1f3f5; border-top: 1px solid #dee2e6; }
+    .accordion-item { border: none; margin-bottom: 10px; border-radius: 10px !important; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.03); }
+    .accordion-button { font-size: 0.95rem; color: #0a192f; }
+    .accordion-button:not(.collapsed) { background-color: #fff; color: #0d47a1; box-shadow: none; border-bottom: 1px solid #eee; }
+    .accordion-button:focus { box-shadow: none; }
+    .accordion-body { font-size: 0.9rem; line-height: 1.6; background-color: #fff; }
+
+    /* FOOTER */
+    footer { background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%); color: #fff; padding: 25px 0; border-top: 3px solid #ffc107; }
+    .footer-logos img { height: 35px; background: #fff; padding: 3px; border-radius: 4px; transition: 0.3s; }
+    
+    .footer-logos a:hover img, .footer-sage a:hover img { transform: scale(1.05); box-shadow: 0 0 10px #ffc107; }
+
+    .logo-label { font-size:.6rem; text-transform:uppercase; font-weight:700; margin-bottom:4px; display:block; color:rgba(255,255,255,0.8)}
+    .contact-label { font-size: 0.8rem; text-transform: uppercase; font-weight: 800; margin-bottom: 2px; color: #ffc107; display: flex; align-items: center; gap: 6px; }
+    .footer-email { font-size: 0.85rem; font-weight: 600; color: #fff; text-decoration: none; transition: 0.3s; }
+    .footer-email:hover { color: #ffc107; }
+
+    .social-icons a { color: #fff; font-size: 1.4rem; margin: 0 8px; transition: 0.3s; display: inline-block; }
+    .social-icons a:hover { color: #ffc107 !important; transform: scale(1.2); }
+
+    @media (max-width: 992px) { .program-title { font-size: 2.8rem; } }
+  </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+  <div class="container">
+    <div class="navbar-brand d-flex align-items-center">
+        <a href="index.html"><img src="img/logo.jpeg" alt="Logo PRH"></a>
+        <a href="https://www.ufc.br/" target="_blank"><img src="img/logo-ufc.jpeg" class="ms-2 border-start ps-2" alt="Logo UFC"></a>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
+        <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
+        <li class="nav-item"><a class="nav-link" href="bolsistas.html">Bolsistas</a></li>
+        <li class="nav-item"><a class="nav-link" href="documentos.html">Documentos</a></li>
+        <li class="nav-item"><a class="nav-link" href="editais.html">Editais</a></li>
+        <li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="flex-grow-1">
+  <section class="hero-section">
+    <div class="container text-center">
+      <h1 class="program-title">PRH 31</h1>
+      <div class="program-full-name">
+        <p class="mb-0">Programa Institucional da UFC para Formação de Recursos Humanos em Engenharia e Ciências do Petróleo e Gás Natural</p>
+      </div>
+      <div class="objective-container">
+        <div class="purpose-box">
+          <span class="purpose-icon"><i class="bi bi-target"></i></span>
+          <span class="purpose-label">Objetivo</span>
+        </div>
+        <p class="program-purpose">
+          O PRH 31 tem por finalidade formar recursos humanos altamente qualificados, atendendo às expectativas do setor de petróleo e gás natural, como forma de aumentar a competitividade da região Nordeste e melhorar a qualidade de vida da população.
+        </p>
+      </div>
+      <a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos/eixo-academico/edital-de-chamada-publica" target="_blank" class="edital-badge">
+          <i class="bi bi-file-earmark-check-fill me-1"></i> Selecionado via Edital de Chamada Pública nº 01/PRH-ANP/2025
+      </a>
+      <p class="history-phrase">Mais de 25 anos de atuação na formação de especialistas para o setor de petróleo, gás e energia.</p>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <div class="row g-4 text-center">
+      <div class="col-md-4"><div class="card h-100 feature-card"><i class="bi bi-mortarboard text-primary fs-1 mb-3"></i><h5 class="fw-bold">Excelência Acadêmica</h5><p class="text-muted small">Suporte direto aos cursos de graduação e pós-graduação da UFC voltados ao setor energético.</p></div></div>
+      <div class="col-md-4"><div class="card h-100 feature-card"><i class="bi bi-fuel-pump text-primary fs-1 mb-3"></i><h5 class="fw-bold">Setor Estratégico</h5><p class="text-muted small">Fomento à pesquisa em Petróleo, Gás Natural, Biocombustíveis e Transição Energética.</p></div></div>
+      <div class="col-md-4"><div class="card h-100 feature-card"><i class="bi bi-briefcase text-primary fs-1 mb-3"></i><h5 class="fw-bold">Inserção Profissional</h5><p class="text-muted small">Preparação de talentos para atender às demandas reais do mercado de trabalho.</p></div></div>
+    </div>
+  </section>
+
+  <section class="bolsas-section py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold" style="color: #0a192f;">Modalidades e Valores</h2>
+        <p class="text-muted">Confira as modalidades de bolsas disponíveis e seus respectivos valores mensais</p>
+      </div>
+      <div class="table-responsive shadow-sm rounded-3">
+        <table class="table table-hover table-bolsas mb-0">
+          <thead>
+            <tr class="text-center align-middle">
+              <th class="text-start">Modalidade</th>
+              <th>Sigla</th>
+              <th>Duração Máxima</th>
+              <th>Valor Mensal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="text-center align-middle">
+              <td class="text-start fw-semibold">Graduação</td>
+              <td>GRA</td>
+              <td>24 meses</td>
+              <td class="valor-bolsa">R$ 1.080,00</td>
+            </tr>
+            <tr class="text-center align-middle">
+              <td class="text-start fw-semibold">Mestrado</td>
+              <td>MSc</td>
+              <td>24 meses</td>
+              <td class="valor-bolsa">R$ 3.120,00</td>
+            </tr>
+            <tr class="text-center align-middle">
+              <td class="text-start fw-semibold">Doutorado</td>
+              <td>DSc</td>
+              <td>48 meses</td>
+              <td class="valor-bolsa">R$ 5.520,00</td>
+            </tr>
+            <tr class="text-center align-middle">
+              <td class="text-start fw-semibold">Pós-Doutorado</td>
+              <td>PDSc</td>
+              <td>12 meses</td>
+              <td class="valor-bolsa">R$ 12.000,00</td>
+            </tr>
+            <tr class="text-center align-middle">
+              <td class="text-start fw-semibold">Coordenação</td>
+              <td>COO</td>
+              <td>60 meses</td>
+              <td class="valor-bolsa">R$ 3.900,00</td>
+            </tr>
+            <tr class="text-center align-middle">
+              <td class="text-start fw-semibold">Pesquisador Visitante</td>
+              <td>PV</td>
+              <td>60 meses</td>
+              <td class="valor-bolsa">R$ 12.000,00</td>
+            </tr>
+            <tr class="text-center align-middle">
+              <td class="text-start fw-semibold">Apoio Administrativo</td>
+              <td>AA</td>
+              <td>60 meses</td>
+              <td class="valor-bolsa">R$ 1.230,00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-center small text-muted mt-3 italic">* Os valores e durações seguem as normas vigentes do PRH-ANP/FAPESP.</p>
+    </div>
+  </section>
+
+  <section class="py-5 bg-light border-top">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold" style="color: #0a192f;">
+          Área, Tema e Subtema inseridos no PRH 31<br>
+          <span style="font-size: 0.6em; font-weight: 400;"><a href="https://atosoficiais.com.br/anp/resolucao-n-918-2023" target="_blank" class="text-decoration-none" style="color: inherit;">Anexo I da Resolução ANP 918/2023</a></span>
+        </h2>
+        <p class="text-muted">As propostas de pesquisa devem obrigatoriamente estar alinhadas a um dos temas abaixo. Clique para ver detalhes.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="research-card p-4 text-center h-100 d-flex flex-column justify-content-center" data-bs-toggle="modal" data-bs-target="#areaI">
+            <i class="bi bi-droplet-half fs-1 text-primary mb-3"></i>
+            <h6 class="fw-bold m-0">I. Exploração e Produção</h6>
+            <small class="text-muted d-block mt-2">Onshore e Offshore</small>
+          </div>
+          
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="research-card p-4 text-center h-100 d-flex flex-column justify-content-center" data-bs-toggle="modal" data-bs-target="#areaII">
+            <i class="bi bi-fire fs-1 text-primary mb-3"></i>
+            <h6 class="fw-bold m-0">II. Gás Natural</h6>
+            <small class="text-muted d-block mt-2">Movimentação e Tratamento</small>
+          </div>
+          
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="research-card p-4 text-center h-100 d-flex flex-column justify-content-center" data-bs-toggle="modal" data-bs-target="#areaIII">
+            <i class="bi bi-truck fs-1 text-primary mb-3"></i>
+            <h6 class="fw-bold m-0">III. Abastecimento</h6>
+            <small class="text-muted d-block mt-2">Refino e Petroquímica</small>
+          </div>
+          
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="research-card p-4 text-center h-100 d-flex flex-column justify-content-center" data-bs-toggle="modal" data-bs-target="#areaIV">
+            <i class="bi bi-fuel-pump-fill fs-1 text-primary mb-3"></i>
+            <h6 class="fw-bold m-0">IV. Biocombustíveis</h6>
+            <small class="text-muted d-block mt-2">Biodiesel, bioetanol e outros</small>
+          </div>
+          
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="research-card p-4 text-center h-100 d-flex flex-column justify-content-center" data-bs-toggle="modal" data-bs-target="#areaV">
+            <i class="bi bi-lightning-charge fs-1 text-primary mb-3"></i>
+            <h6 class="fw-bold m-0">V. Outras Fontes de Energia</h6>
+            <small class="text-muted d-block mt-2">Hidrogênio, Solar e Eólica</small>
+          </div>
+          
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="research-card p-4 text-center h-100 d-flex flex-column justify-content-center" data-bs-toggle="modal" data-bs-target="#areaVI">
+            <i class="bi bi-shield-check fs-1 text-primary mb-3"></i>
+            <h6 class="fw-bold m-0">VI. Temas Transversais</h6>
+            <small class="text-muted d-block mt-2">SMS, Materiais e Gestão</small>
+          </div>
+          
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="research-card p-4 text-center h-100 d-flex flex-column justify-content-center" data-bs-toggle="modal" data-bs-target="#areaVII">
+              <i class="bi bi-bank fs-1 text-primary mb-3"></i>
+              <h6 class="fw-bold m-0">VII. Regulação</h6>
+              <small class="text-muted d-block mt-2">Aspectos Econômicos e Jurídicos</small>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    
+  <div class="modal fade" id="areaI" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">ÁREA I - EXPLORAÇÃO E PRODUÇÃO DE PETRÓLEO E GÁS NATURAL ONSHORE E OFFSHORE</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><h6>Temas (Subtemas):</h6><ul><li>Tema I - Exploração - Horizonte Pré-Sal, Águas Profundas, Bacias Maduras e Novas Fronteiras Exploratórias (1-2-3-4-5-6-7-8-9-10-11-12-13-14).</li><li>Tema II - Produção - Horizonte Pré-Sal, Águas Profundas, Campos Maduros e Novas Fronteiras Exploratórias (1-2-3-4-5-6-7-8-9-10-11-12-14-15-16-17-19-21).</li><li>Tema III - Recuperação Avançada de Petróleo (1-2-3-4).</li><li>Tema IV - Engenharia de Poço (2-3-4-7-9).</li></ul></div></div></div></div>
+  <div class="modal fade" id="areaII" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">ÁREA II - GÁS NATURAL</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><h6>Temas (Subtemas):</h6><ul><li>Tema I - Produção e Processamento (1-2-4-5-6).</li><li>Tema II - Movimentação e Armazenamento (4-5).</li><li>Tema III - Utilização (1-2-5).</li></ul></div></div></div></div>
+  <div class="modal fade" id="areaIII" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> ÁREA III - ABASTECIMENTO</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><h6>Temas (Subtemas):</h6><ul><li> Tema I - Refino (1-2-3-4-5-6-7-8).</li><li> Tema II - Combustíveis e Lubrificantes (1-2-3-4-6-7-8).</li><li>Tema III - Petroquímica de 1ª e 2ª Geração (2-3-4-7).</li></ul></div></div></div></div>
+  <div class="modal fade" id="areaIV" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">ÁREA IV - BIOCOMBUSTÍVEIS</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><h6>Temas (Subtemas):</h6><ul><li>Tema I - Biodiesel (1-3-4-5-8-9-10-11).</li><li>Tema II - Bioetanol (1-2-3-4-5-6).</li><li>Tema III - Energia a de Outras Fontes de Biomassa (2-3-4-5).</li><li>Tema IV - Biocombustíveis Avançados[2ª,3ª,4ª geração] (1-2-3-4-5-6-7-8).</li><li>Tema V - Bioquerosene de Aviação (1-2-3-4-5)</li></ul></div></div></div></div>
+  <div class="modal fade" id="areaV" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">ÁREA V - OUTRAS FONTES DE ENERGIA</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><h6>Temas (Subtemas):</h6><ul><li>Tema I - Hidrogênio (1-3-4-5-6).</li><li>Tema II - Energia Solar (2-5).</li><li>Tema III - Outras Fontes Alternativas (1-4).</li></ul></div></div></div></div>
+  <div class="modal fade" id="areaVI" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">ÁREA VI - TEMAS TRANSVERSAIS</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><h6>Temas (Subtemas):</h6><ul><li>Tema I – Materiais (1-2-3-4-5-6).</li><li>Tema II - Segurança e Meio Ambiente (1-2-3-4-5-6-7-8-9-10-11-12-13).</li><li>Tema III - Distribuição, Logística e Transporte (2-3-4).</li><li>Tema IV - Avaliação da Conformidade, Monitoramento e Controle (1-2-3-4).</li></ul></div></div></div></div>
+  <div class="modal fade" id="areaVII" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">ÁREA VII - REGULAÇÃO DO SETOR DE PETRÓLEO, GÁS NATURAL E BIOCOMBUSTÍVEIS</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><h6>Temas (Subtemas):</h6><ul><li>Tema I – Aspectos Econômicos da Regulação da Indústria do Petróleo, Gás Natural e Biocombustíveis (1-2-3-4-5-9).</li></ul></div></div></div></div>
+
+  <section class="faq-section py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold" style="color: #0a192f;">Perguntas Frequentes</h2>
+            <p class="text-muted">Esclareça suas dúvidas com base no Manual do Usuário PRH-ANP 2025</p>
+          </div>
+
+          <div class="accordion accordion-flush" id="faqPRH">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  Quem pode se candidatar às bolsas do PRH 31?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqPRH">
+                <div class="accordion-body text-muted">
+                  Os candidatos devem estar obrigatoriamente matriculados na <strong>Universidade Federal do Ceará (UFC)</strong> e fazerem parte de um dos cursos vinculados ao programa. Além disso, devem ser brasileiros ou estrangeiros com visto permanente (Item 6.1.1.1.g) e possuir tema de estudo alinhado ao setor de Petróleo e Gás (Item 2).
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  Quais são as modalidades de bolsa e valores?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqPRH">
+                <div class="accordion-body text-muted">
+                  Conforme a <strong>Tabela 1 (Item 6.1)</strong>, as bolsas incluem: Graduação (R$ 1.080), Mestrado (R$ 3.120), Doutorado (R$ 5.520) e Pós-Doutorado (R$ 12.000).
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  Posso ter vínculo empregatício enquanto sou bolsista?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqPRH">
+                <div class="accordion-body text-muted">
+                  Não. O bolsista não pode manter qualquer outra atividade remunerada durante a vigência da bolsa (Item 6.1.1.1.j). Exceções são permitidas apenas para estágios em empresas do setor ou pesquisas vinculadas à cláusula de PD&I da ANP (Item 6.1.1.1.j e 6.1.8).
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  O que pode ser pago com a Taxa de Bancada?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqPRH">
+                <div class="accordion-body text-muted">
+                  O recurso (até 30% do valor das bolsas) destina-se a despesas como taxas de inscrição em eventos (6.8.1), diárias (6.8.2), passagens (6.8.3), serviços de terceiros (6.8.4) e bens de consumo ou capital (6.8.5 e 6.8.6), visando a manutenção das atividades do projeto (Item 6.6).
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                  Quais situações levam ao cancelamento da bolsa?
+                </button>
+              </h2>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqPRH">
+                <div class="accordion-body text-muted">
+                  O cancelamento ocorre por abandono, mau desempenho ou descumprimento das regras do Manual ou Termo de Outorga, obrigando a devolução dos recursos (Item 6.5). Casos de saúde documentados ou obtenção de emprego no setor são exceções para a devolução (Item 6.5.c).
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                  Como devo creditar o apoio em minhas publicações?
+                </button>
+              </h2>
+              <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqPRH">
+                <div class="accordion-body text-muted">
+                  É obrigatório citar o PRH-ANP e a FAPESP em todos os trabalhos e comunicações científicas (Item 13).<br>
+                  <span class="mt-2 d-block"><strong>Sugestão de agradecimento:</strong></span>
+                  <em class="small d-block mt-1">The authors acknowledge financial support from the Human Resources Training Program of the Brazilian National Agency for Petroleum, Natural Gas and Biofuels (PRH-ANP), under the management of the São Paulo Research Foundation (FAPESP), Brazil, Process No. 2025/03400-7.</em>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-4">
+            <p class="small text-muted">Dúvidas adicionais? Consulte o <a href="documentos.html" class="fw-bold text-decoration-none" style="color:#0d47a1">Manual completo</a> ou contate-nos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="text-center">
+  <div class="container">
+    <div class="social-icons mb-2">
+      <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/prh31ufc/" target="_blank"><i class="bi bi-linkedin"></i></a>
+    </div>
+    <p class="mb-3 small" style="font-size: 0.75rem; opacity: 0.8;">© 2026 PRH 31 - UFC | Todos os direitos reservados</p>
+    
+    <div class="row align-items-end">
+      <div class="col-md-3 text-start mb-3 mb-md-0 footer-sage">
+        <span class="logo-label" style="color:#ffc107">Acesso Rápido</span>
+        <a href="https://sage.fapesp.br/SAGe_WEB/processManagement.do" target="_blank">
+          <img src="img/sage.jpeg" style="height:38px;border-radius:4px;background:#fff;padding:2px">
+        </a>
+      </div>
+      <div class="col-md-6">
+        <div class="row justify-content-center g-3 footer-logos">
+          <div class="col-auto">
+            <span class="logo-label">Programa</span>
+            <a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos" target="_blank"><img src="img/logo-prh-anp.jpeg"></a>
+          </div>
+          <div class="col-auto">
+            <span class="logo-label">Fomento</span>
+            <a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg"></a>
+          </div>
+          <div class="col-auto">
+            <span class="logo-label">Gestão</span>
+            <a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-2 mb-md-0 contact-block" style="display: flex; flex-direction: column; align-items: flex-end;">
+        <span class="contact-label"><i class="bi bi-envelope-at"></i> CONTATO</span>
+        <a href="mailto:prh31@ufc.br" class="footer-email">prh31@ufc.br</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
