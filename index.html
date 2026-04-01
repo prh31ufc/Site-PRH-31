@@ -38,10 +38,14 @@
     } 
     
     .hero-logo {
-      height: 75px; /* Reduzido para 75% de 100px */
+      height: 75px; 
       margin-bottom: 20px;
       transition: 0.3s;
-      filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1));
+      /* Modificações solicitadas */
+      border: 2px solid #ff6600; /* Borda laranja */
+      border-radius: 12px;       /* Cantos levemente arredondados */
+      mix-blend-mode: multiply;  /* Remove o fundo branco das imagens Jpeg */
+      padding: 5px;
     }
     .hero-logo:hover { transform: scale(1.05); }
 
@@ -69,9 +73,9 @@
       background-clip: text; 
     } 
 
-    .purpose-box { 
-      display: inline-flex; 
-      align-items: center; 
+    .purpose-box {  
+      display: inline-flex;  
+      align-items: center;  
       background: linear-gradient(135deg, #ff6600 0%, #ffcc00 100%); 
       padding: 6px 20px;  
       border-radius: 8px; 
@@ -81,7 +85,7 @@
     .purpose-label { font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: #ffffff; font-size: 0.8rem; } 
     .purpose-icon { font-size: 1.1rem; margin-right: 8px; color: #ffffff; display: flex; align-items: center; } 
 
-    .edital-badge { 
+    .edital-badge {  
       display: inline-block; 
       background-color: #e7f1ff; 
       color: #0d6efd; 
@@ -177,7 +181,7 @@
     <div class="container text-center"> 
       <div class="d-flex justify-content-center align-items-center gap-3">
         <a href="index.html">
-          <img src="img/logo.jpeg" alt="Logo PRH 31" class="hero-logo rounded">
+          <img src="img/logo.jpeg" alt="Logo PRH 31" class="hero-logo">
         </a>
         <a href="https://www.ufc.br/" target="_blank">
           <img src="img/logo-ufc.jpeg" alt="Brasão UFC" class="hero-logo">
@@ -468,7 +472,7 @@
       <a href="https://www.linkedin.com/in/prh31ufc/" target="_blank"><i class="bi bi-linkedin"></i></a> 
     </div> 
     <p class="mb-3 small" style="font-size: 0.75rem; opacity: 0.8;">© 2026 PRH 31 - UFC | Todos os direitos reservados</p> 
-     
+      
     <div class="row align-items-end"> 
       <div class="col-md-3 text-start mb-3 mb-md-0 footer-sage"> 
         <span class="logo-label" style="color:#ffc107">Acesso Rápido</span> 
