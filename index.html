@@ -12,7 +12,11 @@
   <style> 
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap'); 
      
-    body { font-family: 'Inter', sans-serif; background: #f8f9fa; color: #333; } 
+    body { font-family: 'Inter', sans-serif; background: #f8f9fa; color: #333; top: 0 !important; } 
+
+    /* Oculta a barra e os balões originais do Google Tradutor */
+    .skiptranslate iframe, .goog-te-banner-frame { display: none !important; }
+    #goog-gt-tt { display: none !important; }
 
     /* NAVBAR */ 
     .navbar { 
@@ -41,7 +45,6 @@
       height: 75px; 
       margin-bottom: 20px;
       transition: 0.3s;
-      /* Alterado para 1px para ficar mais fino/elegante */
       border: 1px solid #ff6600; 
       border-radius: 12px;       
       mix-blend-mode: multiply;  
@@ -91,7 +94,6 @@
       color: #0d6efd; 
       font-size: 0.8rem; 
       font-weight: 700; 
-      /* Reduzido o padding horizontal de 188px para 40px */
       padding: 6px 40px; 
       border-radius: 50px; 
       margin-top: 30px; 
@@ -159,6 +161,8 @@
     <div class="navbar-brand d-flex align-items-center"> 
         <a href="index.html"><img src="img/logo.jpeg" alt="Logo PRH"></a> 
         <a href="https://www.ufc.br/" target="_blank"><img src="img/logo-ufc.jpeg" class="ms-2 border-start ps-2" alt="Logo UFC"></a> 
+        
+        <span class="ms-3 text-white fw-bold fs-5">2025-2030</span>
     </div> 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"> 
       <span class="navbar-toggler-icon"></span> 
@@ -172,6 +176,17 @@
         <li class="nav-item"><a class="nav-link" href="documentos.html">Documentos</a></li> 
         <li class="nav-item"><a class="nav-link" href="editais.html">Editais</a></li> 
         <li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li> 
+        
+        <li class="nav-item dropdown ms-lg-3">
+          <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="langDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            🇧🇷 PT
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="langDropdown" style="min-width: auto; background: #0a192f; border: 1px solid #ffc107;">
+            <li><a class="dropdown-item text-white nav-link m-0 px-3" href="#" onclick="changeLanguage('pt', '🇧🇷 PT')">🇧🇷 PT</a></li>
+            <li><a class="dropdown-item text-white nav-link m-0 px-3" href="#" onclick="changeLanguage('en', '🇬🇧 EN')">🇬🇧 EN</a></li>
+          </ul>
+        </li>
+
       </ul> 
     </div> 
   </div> 
@@ -188,7 +203,7 @@
           <img src="img/logo-ufc.jpeg" alt="Brasão UFC" class="hero-logo">
         </a>
       </div>
-      
+       
       <h1 class="program-title">PRH 31</h1> 
       <div class="program-full-name"> 
         <p class="mb-0">Programa Institucional da UFC para Formação de Recursos Humanos em Engenharia e Ciências do Petróleo e Gás Natural</p> 
@@ -507,5 +522,30 @@
 </footer> 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> 
+
+<div id="google_translate_element" style="display:none;"></div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'pt',
+      includedLanguages: 'pt,en',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  function changeLanguage(lang, label) {
+    /* Troca o texto do botão pela bandeira escolhida */
+    document.getElementById('langDropdown').innerHTML = label;
+    
+    /* Dispara a alteração de idioma no plugin invisível do Google */
+    var selectField = document.querySelector(".goog-te-combo");
+    if (selectField) {
+      selectField.value = lang;
+      selectField.dispatchEvent(new Event('change'));
+    }
+  }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body> 
 </html>
