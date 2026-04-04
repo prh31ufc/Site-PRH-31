@@ -218,15 +218,12 @@
       imagem: "img/wiley-top-cited.jpeg",
       texto: `É com grande orgulho que comunicamos que o artigo desenvolvido por pesquisadores do PRH 31 - UFC foi reconhecido pela editora Wiley como um dos trabalhos mais citados internacionalmente entre 01/01/2024 a 31/12/2024.<br><br>
               <strong>São Autores do artigo:</strong> Lucas Sassaki Vieira da Silva (ex-bolsista de mestrado do PRH 31), Juceline Batista dos Santos Bastos (Profª do IFCE), Jorge Luiz Oliveira Lucas Júnior (Pesquisador Visitante do PRH 31), Lucas Feitosa de Albuquerque Lima Babadopulos (Membro do Comitê Gestor do PRH 31) e Jorge Barbosa Soares (Coordenador do PRH 31).`,
-      
-      /* ESTA É A LINHA ADICIONADA: COLE O LINK CORRETO ABAIXO */
       link: "COLOQUE_O_LINK_DO_ARTIGO_AQUI"
     },
     {
       titulo: "Novidades em breve!",
       imagem: "img/RAA.jpeg",
       texto: "Estamos preparando este espaço para compartilhar as últimas atualizações, eventos e conquistas do PRH 31 - UFC.",
-      /* Esta notícia não tem link, então o botão não vai aparecer */
     }
   ];
 
@@ -234,11 +231,13 @@
     const container = document.getElementById('container-noticias');
     container.innerHTML = listaDeNoticias.map(noticia => `
       <div class="news-placeholder">
-        <h4 class="fw-bold mb-4" style="color: #0a192f;">${noticia.titulo}</h4>
+        
+        <h4 class="fw-bold mb-4" style="color: #0d47a1 !important;">${noticia.titulo}</h4>
+        
         <img src="${noticia.imagem}" alt="${noticia.titulo}" class="news-img">
         <p class="text-muted fs-5 mb-4">${noticia.texto}</p>
         
-        ${noticia.link ? `<a href="${noticia.link}" target="_blank" class="btn btn-news px-4 py-2" style="background-color: #0a192f; color: #fff; font-weight: 600; border-radius: 8px;">Acessar Artigo <i class="bi bi-box-arrow-up-right ms-2" style="color: #ffc107;"></i></a>` : ''}
+        ${noticia.link ? `<a href="${noticia.link}" target="_blank" class="btn btn-news px-4 py-2" style="background-color: #0d47a1; color: #fff; font-weight: 600; border-radius: 8px;">Acessar Artigo <i class="bi bi-box-arrow-up-right ms-2" style="color: #ffc107;"></i></a>` : ''}
         
         <hr class="my-4 mx-auto w-25" style="border-top: 2px solid #ffc107; opacity: 1;">
         <p class="small text-uppercase fw-bold text-primary mb-3">Acompanhe também nossas redes sociais</p>
