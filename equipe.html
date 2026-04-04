@@ -51,6 +51,11 @@
     .navbar-toggler { border-color: rgba(255,255,255,0.3); }
     .navbar-toggler-icon { filter: invert(1); }
 
+    /* BANDEIRINHAS */
+    .flags-container { display: flex; gap: 8px; margin-left: 15px; }
+    .flags-container img { width: 24px; height: auto; cursor: pointer; transition: 0.3s; border-radius: 2px; }
+    .flags-container img:hover { transform: scale(1.15); box-shadow: 0 0 8px rgba(255,193,7,0.8); }
+
     .section-title { color: #0a192f; font-weight: 800; margin-bottom: 50px; }
 
     /* CARDS DA EQUIPE */
@@ -132,6 +137,7 @@
     @media (max-width: 992px) { 
         .contact-block { align-items: center; margin-top: 15px; } 
         .navbar-brand img { height: 38px; }
+        .flags-container { margin-left: 0; margin-top: 15px; }
     }
   </style>
 </head>
@@ -158,6 +164,11 @@
         <li class="nav-item"><a class="nav-link" href="editais.html">Editais</a></li>
         <li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
       </ul>
+      
+      <div class="flags-container align-items-center justify-content-center">
+        <a href="#"><img src="img/br.png" alt="PT-BR" title="Português"></a>
+        <a href="#"><img src="img/us.png" alt="EN" title="English"></a>
+      </div>
     </div>
   </div>
 </nav>
