@@ -52,7 +52,7 @@
     .navbar-toggler { border-color: rgba(255,255,255,0.3); }
     .navbar-toggler-icon { filter: invert(1); }
 
-    /* NOVO ESTILO DOS CURSOS (Glassmorphism + Efeitos Premium) */
+    /* ESTILO DOS CURSOS (Glassmorphism) */
     .course-link { 
       position: relative;
       text-decoration: none; 
@@ -73,7 +73,7 @@
       z-index: 1;
     }
 
-    /* Efeito de hover (passar o mouse) na caixa principal */
+    /* Efeito de hover na caixa principal */
     .course-link:hover { 
       background: rgba(255, 255, 255, 0.12); 
       border-left-color: #ffc107; 
@@ -82,7 +82,7 @@
       box-shadow: 0 15px 30px rgba(0,0,0,0.4); 
     }
 
-    /* Efeito de brilho "passando" sobre o botão */
+    /* Efeito de brilho */
     .course-link::before {
       content: "";
       position: absolute;
@@ -98,7 +98,7 @@
       left: 150%;
     }
 
-    /* Caixa interna do ícone */
+    /* Caixa interna dos ícones (Graduação) */
     .course-link i { 
       margin-right: 18px; 
       font-size: 1.3rem; 
@@ -114,12 +114,29 @@
       height: 48px;
     }
 
-    /* Efeito de hover no ícone */
     .course-link:hover i { 
       background: #ffc107; 
-      color: #0a192f; /* Azul escuro para contrastar com o amarelo */
+      color: #0a192f;
       transform: scale(1.1) rotate(5deg);
       box-shadow: 0 0 15px rgba(255, 193, 7, 0.5);
+    }
+
+    /* Caixa interna das logos (Pós-Graduação) */
+    .course-link img.course-logo {
+      margin-right: 18px;
+      width: 48px;
+      height: 48px;
+      object-fit: contain; /* Mantém a proporção da logo sem distorcer */
+      background: rgba(255, 255, 255, 0.95); /* Fundo quase branco para destacar a logo */
+      padding: 4px; /* Espaçamento interno para a logo respirar */
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .course-link:hover img.course-logo {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 0 15px rgba(255, 193, 7, 0.5);
+      background: #fff; /* Fundo totalmente branco no hover */
     }
 
     .category-title { 
@@ -218,15 +235,33 @@
     <div class="col-md-6">
       <h4 class="category-title" style="color: #00e5ff; border-color: #00e5ff;">Pós-Graduação</h4>
       <div class="d-flex flex-column gap-3">
-        <a href="https://www.pec.ufc.br/index.php/pt-br/" target="_blank" class="course-link"><i class="bi bi-award"></i> PEC | Eng. Civil: Estruturas e Construção Civil</a>
-        <a href="http://posdeha.ufc.br" target="_blank" class="course-link"><i class="bi bi-award"></i> POSDEHA | Eng. Civil: Rec. Hídricos, Saneamento Amb. e Geotecnia</a>
-        <a href="https://det.ufc.br/petran" target="_blank" class="course-link"><i class="bi bi-award"></i> PETRAN | Engenharia de Transportes</a>
-        <a href="https://materiais.ufc.br/pt/" target="_blank" class="course-link"><i class="bi bi-award"></i> PPGECM | Engenharia e Ciência de Materiais</a>
-        <a href="https://ppgee.ufc.br/pt/pagina-de-introducao/" target="_blank" class="course-link"><i class="bi bi-award"></i> PPGEE | Engenharia Elétrica</a>
-        <a href="https://ppgeq.ufc.br" target="_blank" class="course-link"><i class="bi bi-award"></i> PPGEQ | Engenharia Química</a>
-        <a href="https://www.fisica.ufc.br/portal/pos/" target="_blank" class="course-link"><i class="bi bi-award"></i> PPGFís | Física</a>
-        <a href="https://ppggeologia.ufc.br/pt/" target="_blank" class="course-link"><i class="bi bi-award"></i> PPGG | Geologia</a>
-        <a href="https://pgquim.ufc.br/pt/" target="_blank" class="course-link"><i class="bi bi-award"></i> PGQUIM | Química</a>
+        <a href="https://www.pec.ufc.br/index.php/pt-br/" target="_blank" class="course-link">
+          <img src="img/logo-pec.png" alt="PEC" class="course-logo"> PEC | Eng. Civil: Estruturas e Construção Civil
+        </a>
+        <a href="http://posdeha.ufc.br" target="_blank" class="course-link">
+          <img src="img/logo-posdeha.png" alt="POSDEHA" class="course-logo"> POSDEHA | Eng. Civil: Rec. Hídricos, Saneamento Amb. e Geotecnia
+        </a>
+        <a href="https://det.ufc.br/petran" target="_blank" class="course-link">
+          <img src="img/logo-petran.png" alt="PETRAN" class="course-logo"> PETRAN | Engenharia de Transportes
+        </a>
+        <a href="https://materiais.ufc.br/pt/" target="_blank" class="course-link">
+          <img src="img/logo-ppgecm.png" alt="PPGECM" class="course-logo"> PPGECM | Engenharia e Ciência de Materiais
+        </a>
+        <a href="https://ppgee.ufc.br/pt/pagina-de-introducao/" target="_blank" class="course-link">
+          <img src="img/logo-ppgee.png" alt="PPGEE" class="course-logo"> PPGEE | Engenharia Elétrica
+        </a>
+        <a href="https://ppgeq.ufc.br" target="_blank" class="course-link">
+          <img src="img/logo-ppgeq.png" alt="PPGEQ" class="course-logo"> PPGEQ | Engenharia Química
+        </a>
+        <a href="https://www.fisica.ufc.br/portal/pos/" target="_blank" class="course-link">
+          <img src="img/logo-ppgfis.png" alt="PPGFís" class="course-logo"> PPGFís | Física
+        </a>
+        <a href="https://ppggeologia.ufc.br/pt/" target="_blank" class="course-link">
+          <img src="img/logo-ppgg.png" alt="PPGG" class="course-logo"> PPGG | Geologia
+        </a>
+        <a href="https://pgquim.ufc.br/pt/" target="_blank" class="course-link">
+          <img src="img/logo-pgquim.png" alt="PGQUIM" class="course-logo"> PGQUIM | Química
+        </a>
       </div>
     </div>
   </div>
