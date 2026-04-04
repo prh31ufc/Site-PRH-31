@@ -9,132 +9,30 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
     
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f8f9fa;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+    body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; min-height: 100vh; display: flex; flex-direction: column; }
 
-    /* NAVBAR PADRONIZADA */
-    .navbar {
-      background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%);
-      border-bottom: 3px solid #ffc107;
-      padding: 12px 0;
-    }
-
-    .navbar-brand img { 
-      height: 45px; 
-      background: #fff; 
-      padding: 3px; 
-      border-radius: 5px; 
-      transition: 0.3s ease;
-    }
-
-    /* Efeito nas logos superiores */
-    .navbar-brand a:hover img { transform: scale(1.05); box-shadow: 0 0 10px #ffc107; }
-
-    .nav-link { 
-      font-weight: 600; 
-      color: rgba(255, 255, 255, 0.9) !important; 
-      border-bottom: 2px solid transparent; 
-      transition: 0.3s; 
-      margin: 0 8px;
-    }
-
+    /* NAVBAR */
+    .navbar { background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%); border-bottom: 3px solid #ffc107; padding: 12px 0; }
+    .navbar-brand img { height: 45px; background: #fff; padding: 3px; border-radius: 5px; transition: 0.3s ease; }
+    .nav-link { font-weight: 600; color: rgba(255, 255, 255, 0.9) !important; margin: 0 8px; transition: 0.3s; }
     .nav-link:hover { color: #ffc107 !important; }
+    .nav-link.active { border-bottom: 2px solid #ffc107 !important; }
 
-    .nav-link.active { 
-      color: #fff !important; 
-      border-bottom: 2px solid #ffc107 !important; 
-    }
+    /* CONTEÚDO */
+    .main-title { color: #0a192f; font-weight: 800; letter-spacing: 1px; }
+    .news-placeholder { background: #fff; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); max-width: 800px; margin: 0 auto 30px auto; padding: 40px; border-left: 5px solid #ffc107; }
+    .news-img { max-width: 100%; height: auto; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .news-social-links a { color: #0d47a1; font-size: 1.8rem; margin: 0 10px; transition: 0.3s; display: inline-block; text-decoration: none; }
+    .news-social-links a:hover { color: #ffc107; transform: scale(1.2); }
 
-    .navbar-toggler { border-color: rgba(255,255,255,0.3); }
-    .navbar-toggler-icon { filter: invert(1); }
-
-    /* CONTEÚDO PRINCIPAL */
-    .main-title { 
-      color: #0a192f; 
-      font-weight: 800; 
-      letter-spacing: 1px;
-    }
-
-    .news-placeholder {
-      background: #fff;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 50px 40px;
-      border-left: 5px solid #ffc107;
-    }
-
-    .news-img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .news-social-links a {
-      color: #0d47a1;
-      font-size: 2.2rem;
-      margin: 0 15px;
-      transition: 0.3s;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .news-social-links a:hover {
-      color: #ffc107;
-      transform: scale(1.2);
-    }
-
-    /* RODAPÉ PADRONIZADO */
-    footer { 
-      background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%); 
-      color: #fff; 
-      padding: 25px 0; 
-      margin-top: auto; 
-      border-top: 3px solid #ffc107; 
-    }
-
-    .footer-logos img, .footer-sage img { 
-      height: 35px; 
-      background: #fff; 
-      padding: 3px; 
-      border-radius: 4px; 
-      transition: 0.3s ease;
-    }
-
-    /* Efeito de brilho nas logos do rodapé */
-    .footer-logos a:hover img, .footer-sage a:hover img { transform: scale(1.05); box-shadow: 0 0 10px #ffc107; }
-
-    .logo-label { 
-      font-size: .6rem; 
-      text-transform: uppercase; 
-      font-weight: 700; 
-      margin-bottom: 4px; 
-      display: block; 
-      color: rgba(255,255,255,0.8); 
-    }
-    
-    .contact-block { display: flex; flex-direction: column; align-items: flex-end; justify-content: center; }
-    .contact-label { font-size: 0.8rem; text-transform: uppercase; font-weight: 800; margin-bottom: 2px; color: #ffc107; display: flex; align-items: center; gap: 6px; }
-    .footer-email { font-size: 0.85rem; font-weight: 600; color: #fff; text-decoration: none; transition: 0.3s; }
-    .footer-email:hover { color: #ffc107; }
-
-    .social-icons a { color: #fff; font-size: 1.4rem; margin: 0 8px; transition: 0.3s; display: inline-block; }
-    .social-icons a:hover { color: #ffc107 !important; transform: scale(1.2); }
-
-    @media (max-width: 992px) { 
-        .contact-block { align-items: center; margin-top: 20px; } 
-        .navbar-brand img { height: 38px; }
-    }
+    /* FOOTER */
+    footer { background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%); color: #fff; padding: 25px 0; margin-top: auto; border-top: 3px solid #ffc107; }
+    .footer-logos img { height: 35px; background: #fff; padding: 3px; border-radius: 4px; }
+    .contact-label { font-size: 0.8rem; font-weight: 800; color: #ffc107; }
+    .footer-email { color: #fff; text-decoration: none; font-size: 0.85rem; }
   </style>
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body>
 
 <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
   <div class="container">
@@ -142,83 +40,81 @@
       <a href="index.html"><img src="img/logo.jpeg" alt="Logo PRH"></a>
       <a href="https://www.ufc.br/" target="_blank"><img src="img/logo-ufc.jpeg" class="ms-2 border-start ps-2" alt="Logo UFC"></a>
     </div>
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto align-items-center">
         <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-        <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
-        <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
-        <li class="nav-item"><a class="nav-link" href="bolsistas.html">Bolsistas</a></li>
-        <li class="nav-item"><a class="nav-link" href="documentos.html">Documentos</a></li>
-        <li class="nav-item"><a class="nav-link" href="editais.html">Editais</a></li>
         <li class="nav-item"><a class="nav-link active" href="noticias.html">Notícias</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<main class="container py-5 flex-grow-1 text-center">
-  <h2 class="main-title mb-5 mt-4">NOTÍCIAS</h2>
+<main class="container py-5 flex-grow-1">
+  <h2 class="main-title mb-5 mt-4 text-center">NOTÍCIAS</h2>
   
-  <div class="news-placeholder">
-    <img src="img/RAA.jpeg" alt="Relatório Anual de Atividades" class="news-img">
-    
-    <h4 class="fw-bold text-dark">Novidades em breve!</h4>
-    <p class="text-muted fs-5">Estamos preparando este espaço para compartilhar as últimas atualizações, eventos e conquistas do PRH 31 - UFC.</p>
-    <hr class="my-4 mx-auto w-25" style="border-top: 2px solid #ffc107; opacity: 1;">
-    <p class="small text-uppercase fw-bold text-primary mb-3">Acompanhe também nossas redes sociais</p>
-    
-    <div class="news-social-links">
-      <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/prh31ufc/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-    </div>
-  </div>
+  <div id="lista-noticias"></div>
 </main>
 
 <footer class="text-center">
   <div class="container">
-    <div class="social-icons mb-2">
-      <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank"><i class="bi bi-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/prh31ufc/" target="_blank"><i class="bi bi-linkedin"></i></a>
-    </div>
-    <p class="mb-3 small" style="font-size: 0.75rem; opacity: 0.8;">© 2026 PRH 31 - UFC | Todos os direitos reservados</p>
-    
-    <div class="row align-items-end">
-      <div class="col-md-3 text-start mb-3 mb-md-0 footer-sage">
-        <span class="logo-label" style="color:#ffc107">Acesso Rápido</span>
-        <a href="https://sage.fapesp.br/SAGe_WEB/processManagement.do" target="_blank">
-          <img src="img/sage.jpeg" alt="SAGE" style="height:38px;border-radius:4px;background:#fff;padding:2px">
-        </a>
+    <div class="row align-items-center">
+      <div class="col-md-9 footer-logos text-start">
+        <img src="img/logo-prh-anp.jpeg" alt="PRH" class="me-2">
+        <img src="img/logo-anp.jpeg" alt="ANP" class="me-2">
+        <img src="img/logo-fapesp.jpeg" alt="FAPESP">
       </div>
-
-      <div class="col-md-6">
-        <div class="row justify-content-center g-3 footer-logos">
-          <div class="col-auto">
-            <span class="logo-label">Programa</span>
-            <a href="https://www.gov.br/anp/pt-br/assuntos/tecnologia-meio-ambiente/prh-anp-programa-de-formacao-de-recursos-humanos" target="_blank"><img src="img/logo-prh-anp.jpeg" alt="PRH ANP"></a>
-          </div>
-          <div class="col-auto">
-            <span class="logo-label">Fomento</span>
-            <a href="https://www.gov.br/anp/pt-br" target="_blank"><img src="img/logo-anp.jpeg" alt="ANP"></a>
-          </div>
-          <div class="col-auto">
-            <span class="logo-label">Gestão</span>
-            <a href="https://fapesp.br/" target="_blank"><img src="img/logo-fapesp.jpeg" alt="FAPESP"></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3 mb-2 mb-md-0 contact-block">
-        <span class="contact-label"><i class="bi bi-envelope-at"></i> CONTATO</span>
+      <div class="col-md-3 text-end">
+        <span class="contact-label">CONTATO</span><br>
         <a href="mailto:prh31@ufc.br" class="footer-email">prh31@ufc.br</a>
       </div>
     </div>
   </div>
 </footer>
+
+<script>
+  // ============================================================
+  // PARA ADICIONAR NOTÍCIA: Copie um bloco { ... } e cole abaixo.
+  // A PRIMEIRA da lista será a primeira a aparecer no site.
+  // ============================================================
+  const minhasNoticias = [
+    {
+      titulo: "Novo Relatório de Atividades Liberado",
+      data: "03 de Abril, 2026",
+      imagem: "img/RAA.jpeg",
+      descricao: "O relatório anual detalhando as conquistas do PRH 31 já está disponível para consulta dos órgãos reguladores e alunos.",
+      linkSaibaMais: "documentos.html"
+    },
+    {
+      titulo: "Inscrições para Bolsas de Mestrado",
+      data: "20 de Março, 2026",
+      imagem: "img/logo.jpeg", 
+      descricao: "Estão abertas as inscrições para o processo seletivo de novos bolsistas. Não perca o prazo!",
+      linkSaibaMais: "editais.html"
+    }
+  ];
+
+  // FUNÇÃO QUE COLOCA AS NOTÍCIAS NA TELA
+  function renderizarNoticias() {
+    const container = document.getElementById('lista-noticias');
+    container.innerHTML = minhasNoticias.map(noticia => `
+      <div class="news-placeholder text-center">
+        <img src="${noticia.imagem}" alt="${noticia.titulo}" class="news-img">
+        <h4 class="fw-bold text-dark">${noticia.titulo}</h4>
+        <p class="text-primary small fw-bold">${noticia.data}</p>
+        <p class="text-muted fs-5">${noticia.descricao}</p>
+        <a href="${noticia.linkSaibaMais}" class="btn btn-sm btn-outline-primary mb-3">Saiba mais</a>
+        <hr class="my-4 mx-auto w-25" style="border-top: 2px solid #ffc107; opacity: 1;">
+        <div class="news-social-links">
+          <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/prh31ufc/" target="_blank"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // Executa a função ao abrir a página
+  renderizarNoticias();
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
