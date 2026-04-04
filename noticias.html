@@ -32,7 +32,6 @@
       transition: 0.3s ease;
     }
 
-    /* Efeito nas logos superiores */
     .navbar-brand a:hover img { transform: scale(1.05); box-shadow: 0 0 10px #ffc107; }
 
     .nav-link { 
@@ -65,7 +64,7 @@
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.08);
       max-width: 800px;
-      margin: 0 auto;
+      margin: 0 auto 40px auto; /* Adicionado margem inferior para separar as notícias */
       padding: 50px 40px;
       border-left: 5px solid #ffc107;
     }
@@ -108,7 +107,6 @@
       transition: 0.3s ease;
     }
 
-    /* Efeito de brilho nas logos do rodapé */
     .footer-logos a:hover img, .footer-sage a:hover img { transform: scale(1.05); box-shadow: 0 0 10px #ffc107; }
 
     .logo-label { 
@@ -164,19 +162,7 @@
 <main class="container py-5 flex-grow-1 text-center">
   <h2 class="main-title mb-5 mt-4">NOTÍCIAS</h2>
   
-  <div class="news-placeholder">
-    <img src="img/RAA.jpeg" alt="Relatório Anual de Atividades" class="news-img">
-    
-    <h4 class="fw-bold text-dark">Novidades em breve!</h4>
-    <p class="text-muted fs-5">Estamos preparando este espaço para compartilhar as últimas atualizações, eventos e conquistas do PRH 31 - UFC.</p>
-    <hr class="my-4 mx-auto w-25" style="border-top: 2px solid #ffc107; opacity: 1;">
-    <p class="small text-uppercase fw-bold text-primary mb-3">Acompanhe também nossas redes sociais</p>
-    
-    <div class="news-social-links">
-      <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/prh31ufc/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-    </div>
-  </div>
+  <div id="container-noticias"></div>
 </main>
 
 <footer class="text-center">
@@ -221,5 +207,48 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  /**
+   * PARA ADICIONAR UMA NOTÍCIA:
+   * Basta copiar um bloco { ... } e colar abaixo.
+   * A primeira notícia da lista será a primeira a aparecer no site.
+   */
+  const listaDeNoticias = [
+    {
+      titulo: "Pesquisa do PRH 31 recebe selo 'Top Cited Article 2025' da Editora Wiley",
+      imagem: "img/wiley-top-cited.jpeg",
+      texto: `É com grande orgulho que comunicamos que o artigo desenvolvido por pesquisadores do PRH 31 - UFC foi reconhecido pela editora Wiley como um dos trabalhos mais citados internacionalmente entre 01/01/2024 a 31/12/2024.<br><br>
+              <strong>São Autores do artigo:</strong> Lucas Sassaki Vieira da Silva (ex-bolsista de mestrado do PRH 31), Juceline Batista dos Santos Bastos (Profª do IFCE), Jorge Luiz Oliveira Lucas Júnior (Pesquisador Visitante do PRH 31), Lucas Feitosa de Albuquerque Lima Babadopulos (Membro do Comitê Gestor do PRH 31) e Jorge Barbosa Soares (Coordenador do PRH 31).`,
+    },
+    {
+      titulo: "Novidades em breve!",
+      imagem: "img/RAA.jpeg",
+      texto: "Estamos preparando este espaço para compartilhar as últimas atualizações, eventos e conquistas do PRH 31 - UFC.",
+    }
+    // Adicione a próxima notícia aqui seguindo o modelo acima
+  ];
+
+  function renderizarNoticias() {
+    const container = document.getElementById('container-noticias');
+    container.innerHTML = listaDeNoticias.map(noticia => `
+      <div class="news-placeholder">
+        <img src="${noticia.imagem}" alt="${noticia.titulo}" class="news-img">
+        <h4 class="fw-bold text-dark">${noticia.titulo}</h4>
+        <p class="text-muted fs-5">${noticia.texto}</p>
+        <hr class="my-4 mx-auto w-25" style="border-top: 2px solid #ffc107; opacity: 1;">
+        <p class="small text-uppercase fw-bold text-primary mb-3">Acompanhe também nossas redes sociais</p>
+        <div class="news-social-links">
+          <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/prh31ufc/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // Executa a função ao carregar a página
+  renderizarNoticias();
+</script>
+
 </body>
 </html>
