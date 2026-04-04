@@ -173,6 +173,19 @@
 
 </main>
 
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-transparent border-0">
+      <div class="modal-header border-0 pb-0 justify-content-end">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar" style="filter: invert(1); background-color: rgba(255,255,255,0.8); border-radius: 50%; padding: 10px;"></button>
+      </div>
+      <div class="modal-body text-center pt-2">
+        <img src="" id="modalExpandedImage" class="img-fluid rounded shadow" alt="Imagem Ampliada">
+      </div>
+    </div>
+  </div>
+</div>
+
 <footer class="text-center">
   <div class="container">
     <div class="social-icons mb-2">
@@ -227,14 +240,20 @@
       imagem: "img/wiley-top-cited.jpeg",
       texto: `É com grande orgulho que comunicamos que o artigo desenvolvido por pesquisadores do PRH 31 - UFC foi reconhecido pela editora Wiley como um dos trabalhos mais citados internacionalmente entre 01/01/2024 a 31/12/2024.<br><br>
               <strong>São Autores do artigo:</strong> Lucas Sassaki Vieira da Silva (ex-bolsista de mestrado do PRH 31), Juceline Batista dos Santos Bastos (Profª do IFCE), Jorge Luiz Oliveira Lucas Júnior (Pesquisador Visitante do PRH 31), Lucas Feitosa de Albuquerque Lima Babadopulos (Membro do Comitê Gestor do PRH 31) e Jorge Barbosa Soares (Coordenador do PRH 31).`,
-      link: "https://onlinelibrary.wiley.com/doi/abs/10.1111/ffe.14280"
+      link: "COLOQUE_O_LINK_DO_ARTIGO_AQUI"
     },
     {
-      titulo: "Novidades em breve!",
+      titulo: "Encontro Nacional PRH-ANP/2026",
       imagem: "img/RAA.jpeg",
-      texto: "Estamos preparando este espaço para compartilhar as últimas atualizações, eventos e conquistas do PRH 31 - UFC.",
+      texto: "Reservem as datas do Encontro Nacional do PRH-ANP/2026:
+              DIAS: 19, 20 E 21 DE OUTUBRO DE 2026
+              LOCAL: SENAI CIMATEC - Salvador, BA",
     }
   ];
+
+  function abrirImagemNoModal(src) {
+    document.getElementById('modalExpandedImage').src = src;
+  }
 
   function renderizarNoticias() {
     const container = document.getElementById('container-noticias');
@@ -246,10 +265,14 @@
             <h5 class="card-title fw-bold mb-0" style="color: #007bff !important;">${noticia.titulo}</h5>
           </div>
           
-          <img src="${noticia.imagem}" alt="${noticia.titulo}" style="height: 220px; object-fit: contain; width: 100%;">
+          <img src="${noticia.imagem}" alt="${noticia.titulo}" 
+               style="height: 220px; object-fit: cover; width: 100%; cursor: pointer;"
+               data-bs-toggle="modal" data-bs-target="#imageModal"
+               onclick="abrirImagemNoModal('${noticia.imagem}')"
+               title="Clique para ampliar a imagem">
           
           <div class="card-body d-flex flex-column">
-            <p class="card-text" style="font-size: 0.80rem; color: #000000; font-family: 'Calibri Light', Calibri, sans-serif;">${noticia.texto}</p>
+            <p class="card-text" style="font-size: 0.85rem; color: #000000; font-family: 'Calibri Light', Calibri, sans-serif; text-align: justify;">${noticia.texto}</p>
             
             <div class="mt-auto pt-4">
               ${noticia.link ? `<a href="${noticia.link}" target="_blank" class="btn w-100 py-2" style="background-color: #0d47a1; color: #fff; font-weight: 600; border-radius: 8px; transition: 0.3s;">Acessar Artigo <i class="bi bi-box-arrow-up-right ms-1" style="color: #ffc107;"></i></a>` : ''}
