@@ -8,28 +8,22 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-    
     body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; min-height: 100vh; display: flex; flex-direction: column; }
-
-    /* NAVBAR */
     .navbar { background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%); border-bottom: 3px solid #ffc107; padding: 12px 0; }
     .navbar-brand img { height: 45px; background: #fff; padding: 3px; border-radius: 5px; transition: 0.3s ease; }
     .nav-link { font-weight: 600; color: rgba(255, 255, 255, 0.9) !important; margin: 0 8px; transition: 0.3s; }
     .nav-link:hover { color: #ffc107 !important; }
     .nav-link.active { border-bottom: 2px solid #ffc107 !important; }
-
-    /* CONTEÚDO */
     .main-title { color: #0a192f; font-weight: 800; letter-spacing: 1px; }
-    .news-placeholder { background: #fff; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); max-width: 800px; margin: 0 auto 30px auto; padding: 40px; border-left: 5px solid #ffc107; }
+    .news-placeholder { background: #fff; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); max-width: 800px; margin: 0 auto 30px auto; padding: 40px; border-left: 5px solid #ffc107; text-align: center; }
     .news-img { max-width: 100%; height: auto; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
     .news-social-links a { color: #0d47a1; font-size: 1.8rem; margin: 0 10px; transition: 0.3s; display: inline-block; text-decoration: none; }
     .news-social-links a:hover { color: #ffc107; transform: scale(1.2); }
-
-    /* FOOTER */
     footer { background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%); color: #fff; padding: 25px 0; margin-top: auto; border-top: 3px solid #ffc107; }
     .footer-logos img { height: 35px; background: #fff; padding: 3px; border-radius: 4px; }
     .contact-label { font-size: 0.8rem; font-weight: 800; color: #ffc107; }
     .footer-email { color: #fff; text-decoration: none; font-size: 0.85rem; }
+    .autor-item { font-size: 0.95rem; margin-bottom: 4px; }
   </style>
 </head>
 <body>
@@ -51,7 +45,6 @@
 
 <main class="container py-5 flex-grow-1">
   <h2 class="main-title mb-5 mt-4 text-center">NOTÍCIAS</h2>
-  
   <div id="lista-noticias"></div>
 </main>
 
@@ -72,49 +65,45 @@
 </footer>
 
 <script>
-  // ============================================================
-  // PARA ADICIONAR NOTÍCIA: Copie um bloco { ... } e cole abaixo.
-  // A PRIMEIRA da lista será a primeira a aparecer no site.
-  // ============================================================
   const minhasNoticias = [
-    {
-      titulo: "Novo Relatório de Atividades Liberado",
-      data: "03 de Abril, 2026",
-      imagem: "img/RAA.jpeg",
-      descricao: "Encontro Nacional PRH-ANP 2026.",
-      linkSaibaMais: "documentos.html"
-    },
     {
       titulo: "🏆 Excelência Acadêmica: PRH 31 recebe selo 'Top Cited Article 2025'",
       data: "03 de Abril, 2026",
       imagem: "img/wiley-top-cited.jpeg", 
-      descricao: "<p class="mb-3">É com grande orgulho que comunicamos que a pesquisa desenvolvida pelo <strong>PRH 31 - UFC</strong> foi reconhecida pela editora <strong>Wiley</strong> como um dos trabalhos mais citados internacionalmente entre 2024 e 2025.</p>
-    
-    <div class="alert alert-light border-0 p-0 mb-4" style="font-size: 0.95rem; line-height: 1.6;">
-      <span class="badge bg-primary mb-2">AUTORES DO ARTIGO</span><br>
-      • <strong>Lucas Sassaki Vieira da Silva</strong> <small>(Ex-bolsista de mestrado PRH 31)</small><br>
-      • <strong>Juceline Batista dos Santos Bastos</strong> <small>(Profª do IFCE)</small><br>
-      • <strong>Jorge Luiz Oliveira Lucas Júnior</strong> <small>(Pesquisador Visitante PRH 31)</small><br>
-      • <strong>Lucas Feitosa de A. L. Babadopulos</strong> <small>(Comitê Gestor PRH 31)</small><br>
-      • <strong>Jorge Barbosa Soares</strong> <small>(Coordenador PRH 31)</small>
-    </div>
-    
-    <p class="small text-muted italic">O reconhecimento destaca a relevância técnica e o alto impacto das nossas pesquisas no cenário global de energia e petróleo.</p>
-  `,".
+      descricao: `
+        <p class="mb-3">É com grande orgulho que comunicamos que a pesquisa desenvolvida pelo <strong>PRH 31 - UFC</strong> foi reconhecida pela editora <strong>Wiley</strong> como um dos trabalhos mais citados internacionalmente entre 2024 e 2025.</p>
+        
+        <div class="text-start mx-auto mb-4 p-3 border rounded bg-light" style="max-width: 600px;">
+          <h6 class="fw-bold text-primary border-bottom pb-2 mb-3">AUTORES DO ARTIGO:</h6>
+          <div class="autor-item">• <strong>Lucas Sassaki Vieira da Silva</strong> <small class="text-muted">(Ex-bolsista de mestrado PRH 31)</small></div>
+          <div class="autor-item">• <strong>Juceline Batista dos Santos Bastos</strong> <small class="text-muted">(Profª do IFCE)</small></div>
+          <div class="autor-item">• <strong>Jorge Luiz Oliveira Lucas Júnior</strong> <small class="text-muted">(Pesquisador Visitante PRH 31)</small></div>
+          <div class="autor-item">• <strong>Lucas Feitosa de A. L. Babadopulos</strong> <small class="text-muted">(Membro do Comitê Gestor PRH 31)</small></div>
+          <div class="autor-item">• <strong>Jorge Barbosa Soares</strong> <small class="text-muted">(Coordenador PRH 31)</small></div>
+        </div>
+        
+        <p class="small text-muted mb-4">O reconhecimento destaca a relevância técnica e o impacto das nossas pesquisas no setor de energia e petróleo.</p>
+      `,
       linkSaibaMais: "https://onlinelibrary.wiley.com/doi/abs/10.1111/ffe.14280"
+    },
+    {
+      titulo: "Novo Relatório de Atividades Liberado",
+      data: "03 de Abril, 2026",
+      imagem: "img/RAA.jpeg",
+      descricao: "Encontro Nacional PRH-ANP 2026. Confira os detalhes das atividades e as metas alcançadas pelo programa neste último período.",
+      linkSaibaMais: "documentos.html"
     }
   ];
 
-  // FUNÇÃO QUE COLOCA AS NOTÍCIAS NA TELA
   function renderizarNoticias() {
     const container = document.getElementById('lista-noticias');
     container.innerHTML = minhasNoticias.map(noticia => `
-      <div class="news-placeholder text-center">
+      <div class="news-placeholder shadow">
         <img src="${noticia.imagem}" alt="${noticia.titulo}" class="news-img">
-        <h4 class="fw-bold text-dark">${noticia.titulo}</h4>
-        <p class="text-primary small fw-bold">${noticia.data}</p>
-        <p class="text-muted fs-5">${noticia.descricao}</p>
-        <a href="${noticia.linkSaibaMais}" class="btn btn-sm btn-outline-primary mb-3">Saiba mais</a>
+        <h4 class="fw-bold text-dark mb-2">${noticia.titulo}</h4>
+        <p class="text-primary small fw-bold mb-4">${noticia.data}</p>
+        <div class="text-dark mb-4">${noticia.descricao}</div>
+        <a href="${noticia.linkSaibaMais}" target="_blank" class="btn btn-primary px-4 mb-3">Saiba mais</a>
         <hr class="my-4 mx-auto w-25" style="border-top: 2px solid #ffc107; opacity: 1;">
         <div class="news-social-links">
           <a href="https://www.instagram.com/prh31.1.ufc.anp/" target="_blank"><i class="bi bi-instagram"></i></a>
@@ -124,7 +113,6 @@
     `).join('');
   }
 
-  // Executa a função ao abrir a página
   renderizarNoticias();
 </script>
 
