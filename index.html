@@ -18,7 +18,7 @@
     .skiptranslate iframe, .goog-te-banner-frame { display: none !important; }
     #goog-gt-tt { display: none !important; }
 
-    /* NAVBAR */ 
+    /* NAVBAR PADRONIZADA (Baseada na aba Cursos) */ 
     .navbar { 
       background: linear-gradient(135deg, #0a192f 0%, #0d47a1 50%, #01579b 100%); 
       border-bottom: 3px solid #ffc107;  
@@ -28,9 +28,19 @@
      
     .navbar-brand a:hover img { transform: scale(1.05); box-shadow: 0 0 10px #ffc107; } 
 
-    .nav-link { font-weight: 600; color: rgba(255, 255, 255, 0.9) !important; transition: 0.3s; margin: 0 8px; } 
+    .nav-link { 
+      font-weight: 600; 
+      color: rgba(255, 255, 255, 0.9) !important; 
+      border-bottom: 2px solid transparent; /* Adicionado da aba cursos para evitar pulo no alinhamento */
+      transition: 0.3s; 
+      margin: 0 8px; 
+    } 
     .nav-link:hover { color: #ffc107 !important; } 
     .nav-link.active { color: #fff !important; border-bottom: 2px solid #ffc107 !important; } 
+
+    /* Melhoria do botão mobile trazida da aba cursos */
+    .navbar-toggler { border-color: rgba(255,255,255,0.3); }
+    .navbar-toggler-icon { filter: invert(1); }
 
     /* HERO SECTION */ 
     .hero-section {  
@@ -151,7 +161,10 @@
     .social-icons a { color: #fff; font-size: 1.4rem; margin: 0 8px; transition: 0.3s; display: inline-block; } 
     .social-icons a:hover { color: #ffc107 !important; transform: scale(1.2); } 
 
-    @media (max-width: 992px) { .program-title { font-size: 2.8rem; } } 
+    @media (max-width: 992px) { 
+      .program-title { font-size: 2.8rem; } 
+      .navbar-brand img { height: 38px; } /* Adicionado ajuste mobile da logo */
+    } 
   </style> 
 </head> 
 <body class="d-flex flex-column min-vh-100"> 
@@ -162,7 +175,7 @@
         <a href="index.html"><img src="img/logo.jpeg" alt="Logo PRH"></a> 
         <a href="https://www.ufc.br/" target="_blank"><img src="img/logo-ufc.jpeg" class="ms-2 border-start ps-2" alt="Logo UFC"></a> 
         
-        <span class="ms-3 text-white fw-bold fs-5">2025-2030</span>
+        <span class="ms-3 text-white fw-bold fs-5 d-none d-md-block">2025-2030</span>
     </div> 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"> 
       <span class="navbar-toggler-icon"></span> 
@@ -203,7 +216,7 @@
           <img src="img/logo-ufc.jpeg" alt="Brasão UFC" class="hero-logo">
         </a>
       </div>
-       
+        
       <h1 class="program-title">PRH 31</h1> 
       <div class="program-full-name"> 
         <p class="mb-0">Programa Institucional da UFC para Formação de Recursos Humanos em Engenharia e Ciências do Petróleo e Gás Natural</p> 
@@ -319,7 +332,7 @@
             <h6 class="fw-bold m-0">I. Exploração e Produção</h6> 
             <small class="text-muted d-block mt-2">Onshore e Offshore</small> 
           </div> 
-           
+            
         </div> 
         <div class="col-lg-3 col-md-4 col-sm-6"> 
           <div class="research-card p-4 text-center h-100 d-flex flex-column justify-content-center" data-bs-toggle="modal" data-bs-target="#areaII"> 
@@ -327,7 +340,7 @@
             <h6 class="fw-bold m-0">II. Gás Natural</h6> 
             <small class="text-muted d-block mt-2">Movimentação e Tratamento</small> 
           </div> 
-           
+            
         </div> 
         <div class="col-lg-3 col-md-4 col-sm-6"> 
           <div class="research-card p-4 text-center h-100 d-flex flex-column justify-content-center" data-bs-toggle="modal" data-bs-target="#areaIII"> 
@@ -335,7 +348,7 @@
             <h6 class="fw-bold m-0">III. Abastecimento</h6> 
             <small class="text-muted d-block mt-2">Refino e Petroquímica</small> 
           </div> 
-           
+            
         </div> 
         <div class="col-lg-3 col-md-4 col-sm-6"> 
           <div class="research-card p-4 text-center h-100 d-flex flex-column justify-content-center" data-bs-toggle="modal" data-bs-target="#areaIV"> 
@@ -343,7 +356,7 @@
             <h6 class="fw-bold m-0">IV. Biocombustíveis</h6> 
             <small class="text-muted d-block mt-2">Biodiesel, bioetanol e outros</small> 
           </div> 
-           
+            
         </div> 
         <div class="col-lg-3 col-md-4 col-sm-6"> 
           <div class="research-card p-4 text-center h-100 d-flex flex-column justify-content-center" data-bs-toggle="modal" data-bs-target="#areaV"> 
@@ -351,7 +364,7 @@
             <h6 class="fw-bold m-0">V. Outras Fontes de Energia</h6> 
             <small class="text-muted d-block mt-2">Hidrogênio, Solar e Eólica</small> 
           </div> 
-           
+            
         </div> 
         <div class="col-lg-3 col-md-4 col-sm-6"> 
           <div class="research-card p-4 text-center h-100 d-flex flex-column justify-content-center" data-bs-toggle="modal" data-bs-target="#areaVI"> 
@@ -359,7 +372,7 @@
             <h6 class="fw-bold m-0">VI. Temas Transversais</h6> 
             <small class="text-muted d-block mt-2">SMS, Materiais e Gestão</small> 
           </div> 
-           
+            
         </div> 
         <div class="col-lg-3 col-md-4 col-sm-6"> 
             <div class="research-card p-4 text-center h-100 d-flex flex-column justify-content-center" data-bs-toggle="modal" data-bs-target="#areaVII"> 
@@ -372,7 +385,7 @@
     </div> 
   </section> 
 
-   
+    
   <div class="modal fade" id="areaI" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">ÁREA I - EXPLORAÇÃO E PRODUÇÃO DE PETRÓLEO E GÁS NATURAL ONSHORE E OFFSHORE</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><h6>Temas (Subtemas):</h6><ul><li>Tema I - Exploração - Horizonte Pré-Sal, Águas Profundas, Bacias Maduras e Novas Fronteiras Exploratórias (1-2-3-4-5-6-7-8-9-10-11-12-13-14).</li><li>Tema II - Produção - Horizonte Pré-Sal, Águas Profundas, Campos Maduros e Novas Fronteiras Exploratórias (1-2-3-4-5-6-7-8-9-10-11-12-14-15-16-17-19-21).</li><li>Tema III - Recuperação Avançada de Petróleo (1-2-3-4).</li><li>Tema IV - Engenharia de Poço (2-3-4-7-9).</li></ul></div></div></div></div> 
   <div class="modal fade" id="areaII" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">ÁREA II - GÁS NATURAL</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><h6>Temas (Subtemas):</h6><ul><li>Tema I - Produção e Processamento (1-2-4-5-6).</li><li>Tema II - Movimentação e Armazenamento (4-5).</li><li>Tema III - Utilização (1-2-5).</li></ul></div></div></div></div> 
   <div class="modal fade" id="areaIII" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"> ÁREA III - ABASTECIMENTO</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><h6>Temas (Subtemas):</h6><ul><li> Tema I - Refino (1-2-3-4-5-6-7-8).</li><li> Tema II - Combustíveis e Lubrificantes (1-2-3-4-6-7-8).</li><li>Tema III - Petroquímica de 1ª e 2ª Geração (2-3-4-7).</li></ul></div></div></div></div> 
@@ -537,8 +550,7 @@
     /* Troca o texto do botão pela bandeira escolhida */
     document.getElementById('langDropdown').innerHTML = label;
     
-    /* Dispara a alteração de idioma no plugin invisível do Google */
-    var selectField = document.querySelector(".goog-te-combo");
+    var selectField = document.querySelector("select.goog-te-combo");
     if (selectField) {
       selectField.value = lang;
       selectField.dispatchEvent(new Event('change'));
@@ -546,6 +558,5 @@
   }
 </script>
 <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 </body> 
 </html>
