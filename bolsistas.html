@@ -144,7 +144,8 @@
     .vertical-divider { border-right: 1px solid rgba(0,0,0,0.1); }
 
     @media (max-width: 992px) { 
-      .vertical-divider { border-right: none; border-bottom: 2px solid rgba(0,0,0,0.1); margin-bottom: 40px; padding-bottom: 20px; } 
+      /* No celular as colunas empilham; remove a linha vertical (cada nível agora tem a sua) */
+      .vertical-divider { border-right: none; }
       .contact-block { align-items: center; margin-top: 15px; } 
       .navbar-brand img { height: 38px; }
     }
@@ -178,66 +179,54 @@
 </nav>
 
 <main class="container-fluid px-4 py-5 flex-grow-1">
+
+  <!-- ============ TÍTULOS ============ -->
   <div class="row">
     <div class="col-lg-6 vertical-divider px-lg-5">
       <h3 class="section-title">BOLSISTAS ATUAIS</h3>
-      
+    </div>
+    <div class="col-lg-6 px-lg-5">
+      <h3 class="section-title">EGRESSOS</h3>
+    </div>
+  </div>
+
+  <!-- ============ GRADUAÇÃO ============ -->
+  <div class="row">
+
+    <!-- ATUAIS: GRADUAÇÃO -->
+    <div class="col-lg-6 vertical-divider px-lg-5">
       <div class="subsection-label">Graduação</div>
       <div class="row row-cols-1 row-cols-sm-2 g-3 mb-4">
         <div class="col"><div class="student-card p-3"><div><img src="./img/bol/en.jpeg" class="student-img"><div class="student-name">Eric do Nascimento de Andrade</div><div class="student-course">Engenharia de Petróleo</div><div class="student-dates">Início: 01/2025<br>Término: 12/2026</div></div><div class="d-flex"><a href="https://lattes.cnpq.br/5840905874982276" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/eric-nascimento-andrade-072b0b196" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
-        
+
         <div class="col"><div class="student-card p-3"><div><img src="./img/bol/fjapb.jpeg" class="student-img"><div class="student-name">Filandro Jullef</div><div class="student-course">Engenharia de Petróleo</div><div class="student-dates">Início: 01/2025<br>Término: 12/2026</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/9767215817941236" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/filandro-jullef-2615582b3" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
 
         <div class="col"><div class="student-card p-3"><div><img src="./img/bol/gcl.jpeg" class="student-img"><div class="student-name">Gabriel Cândido Carvalho Lima</div><div class="student-course">Engenharia Metalúrgica</div><div class="student-dates">Início: 06/2026<br>Término: 06/2026</div></div><div class="d-flex"><a href="https://lattes.cnpq.br/2060865869224457" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/gabriel-cândido-814835415" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
 
         <div class="col"><div class="student-card p-3"><div><img src="./img/bol/iln.jpeg" class="student-img"><div class="student-name">Iana Larissa Silva do Nascimento</div><div class="student-course">Geologia</div><div class="student-dates">Início: 04/2026<br>Término: 04/2026</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/8118806711658851" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/iana-larissa-6b9680432" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
-        
+
         <div class="col"><div class="student-card p-3"><div><img src="./img/bol/mels.jpeg" class="student-img"><div class="student-name">Maria Eduarda Lopes de Sales</div><div class="student-course">Engenharia Civil</div><div class="student-dates">Início: 04/2026<br>Término: 04/2028</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/8118806711658851" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/iana-larissa-6b9680432" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
-        
+
         <div class="col"><div class="student-card p-3"><div><img src="./img/bol/mefp.jpeg" class="student-img"><div class="student-name">Marcio Eduardo Fonseca Paulino</div><div class="student-course">Engenharia de Petróleo</div><div class="student-dates">Início: 01/2025<br>Término: 12/2026</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/0096967013491553" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/marcioeduardofonseca" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
-        
+
         <div class="col"><div class="student-card p-3"><div><img src="./img/bol/mcg.jpeg" class="student-img"><div class="student-name">Maryana Correia Guimarães</div><div class="student-course">Engenharia de Petróleo</div><div class="student-dates">Início: 01/2025<br>Término: 12/2026</div></div><div class="d-flex"><a href="https://lattes.cnpq.br/2224159398133622" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/maryanaguimarães" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
-        
+
         <div class="col"><div class="student-card p-3"><div><img src="./img/bol/mtm.jpeg" class="student-img"><div class="student-name">Maxwell Tavares Monte</div><div class="student-course">Engenharia Química</div><div class="student-dates">Início: 04/2025<br>Término: 03/2027</div></div><div class="d-flex"><a href="https://lattes.cnpq.br/0546581363239452" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/maxwell-tavares-monte-088b62206" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
-        
+
         <div class="col"><div class="student-card p-3"><div><img src="./img/bol/frml.jpeg" class="student-img"><div class="student-name">Rikelvem Mateus</div><div class="student-course">Engenharia Química</div><div class="student-dates">Início: 01/2025<br>Término: 12/2026</div></div><div class="d-flex"><a href="https://lattes.cnpq.br/2003414649538694" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/rikelvem-mateus-53965a203" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
-        
+
         <div class="col"><div class="student-card p-3"><div><img src="./img/bol/vo.jpeg" class="student-img"><div class="student-name">Vinicius de Oliveira Souza</div><div class="student-course">Engenharia Química</div><div class="student-dates">Início: 01/2025<br>Término: 12/2026</div></div><div class="d-flex"><a href="https://lattes.cnpq.br/7487153381908930" target="_blank" class="btn btn-social">Lattes</a><a href="http://www.linkedin.com/in/vinicius-oliveira-360b1b3aa" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
-        
+
         <div class="col"><div class="student-card p-3"><div><img src="./img/bol/vps.jpeg" class="student-img"><div class="student-name">Vitor Paiva da Silva</div><div class="student-course">Engenharia de Petróleo</div><div class="student-dates">Início: 01/2025<br>Término: 12/2026</div></div><div class="d-flex"><a href="https://lattes.cnpq.br/0234906244524294" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/vitor-paiva-b391a9212" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
 
         <div class="col"><div class="student-card p-3"><div><img src="./img/bol/vss.jpeg" class="student-img"><div class="student-name">Vitória Sousa da Silva</div><div class="student-course">Engenharia de Petróleo</div><div class="student-dates">Início: 06/2026<br>Término: 06/2028</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/1110983473471511" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/vitória-sousa-1b1556248" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
       </div>
-
-      <div class="subsection-label">Mestrado</div>
-      <div class="row row-cols-1 row-cols-sm-2 g-3 mb-4">
-         <div class="col"><div class="student-card p-3"><div><img src="./img/bol/aao.jpeg" class="student-img"><div class="student-name">Afonso Augusto de Oliveira Neto</div><div class="student-course">Mestrado em Engenharia Civil</div><div class="student-dates">Início: 04/2026<br>Término: 04/2028</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/9156501489278313" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/afonso-augusto" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
-         <div class="col"><div class="student-card p-3"><div><img src="./img/bol/gf.jpeg" class="student-img"><div class="student-name">Gabriel Facundo Simão</div><div class="student-course">Mestrado em Engenharia Química</div><div class="student-dates">Início: 01/2025<br>Término: 12/2026</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/3047920951175737" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/gabriel-simao" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
-         <div class="col"><div class="student-card p-3"><div><img src="./img/bol/mcs.jpeg" class="student-img"><div class="student-name">Marina Chavante Soeiro</div><div class="student-course">Mestrado em Engenharia Química</div><div class="student-dates">Início: 04/2026<br>Término: 04/2028</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/9788013132380685" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/marina-chavante" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
-         <div class="col"><div class="student-card p-3"><div><img src="./img/bol/lla.jpeg" class="student-img"><div class="student-name">Lucas de Lima Araújo</div><div class="student-course">Mestrado em Engenharia Química</div><div class="student-dates">Início: 03/2025<br>Término: 03/2027</div></div><div class="d-flex"><a href="https://lattes.cnpq.br/6766855569818327" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/lucas-araújo-8b4649307" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
-      </div>
-
-      <div class="subsection-label">Doutorado</div>
-      <div class="row row-cols-1 row-cols-sm-2 g-3 mb-4">
-        <div class="col"><div class="student-card p-3"><div><img src="./img/bol/mflc.jpeg" class="student-img"><div class="student-name">Moacir Frutuoso Leal da Costa</div><div class="student-course">Doutorado em Engenharia Química</div><div class="student-dates">Início: 01/2025<br>Término: 12/2028</div></div><div class="d-flex"><a href="https://lattes.cnpq.br/5147738945256583" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/moacir-costa-0ba094133/" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
-        
-        <div class="col"><div class="student-card p-3"><div><img src="./img/bol/np.jpeg" class="student-img"><div class="student-name">Natalia Porto Alexandre</div><div class="student-course">Doutorado em Química</div><div class="student-dates">Início: 07/2024<br>Término: 09/2026</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/6562079455551921" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/nataliapalexandre170894" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
-        
-        <div class="col"><div class="student-card p-3"><div><img src="./img/bol/vnso.jpeg" class="student-img"><div class="student-name">Vitória Natasha Silva Oliveira</div><div class="student-course">Doutorado em Engenharia Química</div><div class="student-dates">Início: 01/2025<br>Término: 12/2028</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/5023577209472434" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/vitoria26430/" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
-      </div>
-
-      <div class="subsection-label">Pós-doutorado</div>
-      <div class="row row-cols-1 row-cols-sm-2 g-3 mb-4">
-      </div>
-      
     </div>
 
+    <!-- EGRESSOS: GRADUAÇÃO -->
     <div class="col-lg-6 px-lg-5">
-      <h3 class="section-title">EGRESSOS</h3>
-
       <div class="subsection-label">Graduação</div>
       <div class="row row-cols-1 row-cols-sm-2 g-3 mb-4">
-
         <div class="col"><div class="student-card p-3"><div><img src="./img/bol/camb.jpeg" class="student-img"><div class="student-name">Cecilia Alves Martins Barros</div><div class="student-course">Geologia</div><div class="student-dates">Início: MM/AAAA<br>Término: MM/AAAA</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/1327481476244579" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/cecília-barros-8b1ba7271" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
 
         <div class="col"><div class="student-card p-3"><div><img src="./img/bol/kkv.jpeg" class="student-img"><div class="student-name">Kassia Kelly Alves Viana</div><div class="student-course">Geologia</div><div class="student-dates">Início: MM/AAAA<br>Término: MM/AAAA</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/3679284166317430" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/kassia-viana-geo" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
@@ -247,25 +236,85 @@
         <div class="col"><div class="student-card p-3"><div><img src="./img/bol/wls.jpeg" class="student-img"><div class="student-name">William Lima da Silva</div><div class="student-course">Geologia</div><div class="student-dates">Início: MM/AAAA<br>Término: MM/AAAA</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/7482060489069744" target="_blank" class="btn btn-social">Lattes</a><a href="INATIVO" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
 
         <div class="col"><div class="student-card p-3"><div><img src="./img/bol/ysl.jpeg" class="student-img"><div class="student-name">Yan Santisteban Alencar Lima</div><div class="student-course">Geologia</div><div class="student-dates">Início: MM/AAAA<br>Término: MM/AAAA</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/5306306590310304" target="_blank" class="btn btn-social">Lattes</a><a href="INATIVO" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
-
       </div>
+    </div>
 
+  </div>
+
+  <!-- ============ MESTRADO ============ -->
+  <div class="row">
+
+    <!-- ATUAIS: MESTRADO -->
+    <div class="col-lg-6 vertical-divider px-lg-5">
+      <div class="subsection-label">Mestrado</div>
+      <div class="row row-cols-1 row-cols-sm-2 g-3 mb-4">
+        <div class="col"><div class="student-card p-3"><div><img src="./img/bol/aao.jpeg" class="student-img"><div class="student-name">Afonso Augusto de Oliveira Neto</div><div class="student-course">Mestrado em Engenharia Civil</div><div class="student-dates">Início: 04/2026<br>Término: 04/2028</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/9156501489278313" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/afonso-augusto" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
+        <div class="col"><div class="student-card p-3"><div><img src="./img/bol/gf.jpeg" class="student-img"><div class="student-name">Gabriel Facundo Simão</div><div class="student-course">Mestrado em Engenharia Química</div><div class="student-dates">Início: 01/2025<br>Término: 12/2026</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/3047920951175737" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/gabriel-simao" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
+        <div class="col"><div class="student-card p-3"><div><img src="./img/bol/mcs.jpeg" class="student-img"><div class="student-name">Marina Chavante Soeiro</div><div class="student-course">Mestrado em Engenharia Química</div><div class="student-dates">Início: 04/2026<br>Término: 04/2028</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/9788013132380685" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/marina-chavante" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
+        <div class="col"><div class="student-card p-3"><div><img src="./img/bol/lla.jpeg" class="student-img"><div class="student-name">Lucas de Lima Araújo</div><div class="student-course">Mestrado em Engenharia Química</div><div class="student-dates">Início: 03/2025<br>Término: 03/2027</div></div><div class="d-flex"><a href="https://lattes.cnpq.br/6766855569818327" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/lucas-araújo-8b4649307" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
+      </div>
+    </div>
+
+    <!-- EGRESSOS: MESTRADO -->
+    <div class="col-lg-6 px-lg-5">
       <div class="subsection-label">Mestrado</div>
       <div class="row row-cols-1 row-cols-sm-2 g-3 mb-4">
         <div class="col"><div class="student-card p-3"><div><img src="./img/bol/jab.jpeg" class="student-img"><div class="student-name">Jose Anderson Lucas Barboza</div><div class="student-course">Engenharia Química</div><div class="student-dates">Início: MM/AAAA<br>Término: MM/AAAA</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/0099563283560875" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/anderson-barboza-980115197" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
       </div>
+    </div>
 
+  </div>
+
+  <!-- ============ DOUTORADO ============ -->
+  <div class="row">
+
+    <!-- ATUAIS: DOUTORADO -->
+    <div class="col-lg-6 vertical-divider px-lg-5">
+      <div class="subsection-label">Doutorado</div>
+      <div class="row row-cols-1 row-cols-sm-2 g-3 mb-4">
+        <div class="col"><div class="student-card p-3"><div><img src="./img/bol/mflc.jpeg" class="student-img"><div class="student-name">Moacir Frutuoso Leal da Costa</div><div class="student-course">Doutorado em Engenharia Química</div><div class="student-dates">Início: 01/2025<br>Término: 12/2028</div></div><div class="d-flex"><a href="https://lattes.cnpq.br/5147738945256583" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/moacir-costa-0ba094133/" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
+
+        <div class="col"><div class="student-card p-3"><div><img src="./img/bol/np.jpeg" class="student-img"><div class="student-name">Natalia Porto Alexandre</div><div class="student-course">Doutorado em Química</div><div class="student-dates">Início: 07/2024<br>Término: 09/2026</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/6562079455551921" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/nataliapalexandre170894" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
+
+        <div class="col"><div class="student-card p-3"><div><img src="./img/bol/vnso.jpeg" class="student-img"><div class="student-name">Vitória Natasha Silva Oliveira</div><div class="student-course">Doutorado em Engenharia Química</div><div class="student-dates">Início: 01/2025<br>Término: 12/2028</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/5023577209472434" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/vitoria26430/" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
+      </div>
+    </div>
+
+    <!-- EGRESSOS: DOUTORADO -->
+    <div class="col-lg-6 px-lg-5">
       <div class="subsection-label">Doutorado</div>
       <div class="row row-cols-1 row-cols-sm-2 g-3 mb-4">
         <div class="col"><div class="student-card p-3"><div><img src="./img/bol/cvp.jpeg" class="student-img"><div class="student-name">Caio Victor Pereira Pascoal</div><div class="student-course">Engenharia e Ciência de Materiais</div><div class="student-dates">Início: MM/AAAA<br>Término: MM/AAAA</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/0939548181358631" target="_blank" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/caiovppascoal" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
       </div>
+    </div>
 
+  </div>
+
+  <!-- ============ PÓS-DOUTORADO ============ -->
+  <div class="row">
+
+    <!-- ATUAIS: PÓS-DOUTORADO (vazio: cole o card aqui dentro quando entrar alguém) -->
+    <div class="col-lg-6 vertical-divider px-lg-5">
+      <div class="subsection-label">Pós-doutorado</div>
+      <div class="row row-cols-1 row-cols-sm-2 g-3 mb-4">
+        <!-- MODELO DE CARD (copie sem este comentário e preencha):
+
+        <div class="col"><div class="student-card p-3"><div><img src="./img/bol/XXX.jpeg" class="student-img" alt="Nome"><div class="student-name">Nome Completo</div><div class="student-course">Curso</div><div class="student-dates">Início: MM/AAAA<br>Término: MM/AAAA</div></div><div class="d-flex"><a href="LINK_LATTES" target="_blank" class="btn btn-social">Lattes</a><a href="LINK_LINKEDIN" target="_blank" class="btn btn-social">LinkedIn</a></div></div></div>
+
+        -->
+      </div>
+    </div>
+
+    <!-- EGRESSOS: PÓS-DOUTORADO -->
+    <div class="col-lg-6 px-lg-5">
       <div class="subsection-label">Pós-doutorado</div>
       <div class="row row-cols-1 row-cols-sm-2 g-3 mb-4">
         <div class="col"><div class="student-card p-3"><div><img src="./img/bol/lf.jpeg" class="student-img" alt="Lara Sucupira Furtado"><div class="student-name">Lara Sucupira Furtado</div><div class="student-course">Engenharia de Transportes</div><div class="student-dates">Início: MM/AAAA<br>Término: MM/AAAA</div></div><div class="d-flex"><a href="http://lattes.cnpq.br/0331861615204521" target="_blank" rel="noopener noreferrer" class="btn btn-social">Lattes</a><a href="https://www.linkedin.com/in/lara-furtado-b57b0910b" target="_blank" rel="noopener noreferrer" class="btn btn-social">LinkedIn</a></div></div></div>
       </div>
-    </div> <!-- fecha a coluna direita (Egressos) -->
-  </div> <!-- fecha a row que contém as duas colunas -->
+    </div>
+
+  </div>
+
 </main>
 
 <footer class="text-center">
